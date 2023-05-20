@@ -6,20 +6,21 @@
 
 	const navItems = [
 		{ label: '首页', href: '/' },
-		{ label: '推荐', href: '/' },
+		{ label: '推荐文章', href: '/' },
 		{ label: '博客', href: '/' },
-		{ label: '关于', href: '/' }
+		{ label: '关于本站', href: '/' }
 	];
 </script>
 
-<header class="bg-white">
+<header class="bg-white border-b">
 	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-		<a href="/" class="-m-1.5 p-1.5">
+		<a href="/" class="-m-1.5 p-1.5 flex items-center gap-2">
 			<img
 				class="h-8 w-auto"
 				src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
 				alt=""
 			/>
+			<h1 class="text-lg font-medium">积薪</h1>
 		</a>
 		<div class="flex lg:hidden">
 			<button
@@ -44,9 +45,9 @@
 			</button>
 		</div>
 		<div class="hidden lg:flex lg:gap-x-12">
-			{#each navItems as nav }
-        <a href={nav.href} class="text-sm font-semibold leading-6 text-gray-900">{nav.label}</a>
-      {/each}
+			{#each navItems as nav}
+				<a href={nav.href} class="text-sm font-semibold leading-6 text-gray-900">{nav.label}</a>
+			{/each}
 		</div>
 	</nav>
 
@@ -84,8 +85,12 @@
 				<div class="-my-6 divide-y divide-gray-500/10">
 					<div class="space-y-2 py-6">
 						{#each navItems as nav}
-              <a href={nav.href} class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{nav.label}</a>
-            {/each}
+							<a
+								href={nav.href}
+								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								>{nav.label}</a
+							>
+						{/each}
 					</div>
 				</div>
 			</div>
