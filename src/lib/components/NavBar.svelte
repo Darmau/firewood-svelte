@@ -1,4 +1,6 @@
 <script>
+	import { slide } from 'svelte/transition';
+
 	let menuShown = false;
 	const toogleMenu = () => {
 		menuShown = !menuShown;
@@ -10,9 +12,15 @@
 		{ label: '博客', href: '/' },
 		{ label: '关于本站', href: '/' }
 	];
+
+	export let show = true;
 </script>
 
-<header class="bg-white border-b">
+<header
+	class={`bg-white border-b fixed top-0 w-full transition-all duration-300 ${
+		show ? '' : 'transform -translate-y-full'
+	}`}
+>
 	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
 		<a href="/" class="-m-1.5 p-1.5 flex items-center gap-2">
 			<img
