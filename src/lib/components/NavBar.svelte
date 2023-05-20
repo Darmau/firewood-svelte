@@ -17,7 +17,7 @@
 </script>
 
 <header
-	class={`bg-white border-b fixed top-0 w-full transition-all duration-300 ${
+	class={`bg-white border-b z-20 fixed top-0 w-full transition-all duration-300 ${
 		show ? '' : 'transform -translate-y-full'
 	}`}
 >
