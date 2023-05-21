@@ -7,6 +7,9 @@
 </script>
 
 <main class="mx-auto max-w-4xl px-6 py-8 md:py-12">
+  <div class="border-b border-gray-200 pb-5 mb-8">
+    <h1 class="text-base font-semibold leading-6 text-gray-900">最新文章</h1>
+  </div>
   <div class="flex flex-col gap-12 md:gap-16">
     {#each data.articles as article}
       {#if article.isFeatured}
