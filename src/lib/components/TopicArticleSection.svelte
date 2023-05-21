@@ -9,7 +9,7 @@
 
 <section class="py-8 border-b dark:border-zinc-700 lg:py-16">
 	<h2 class="text-2xl font-medium text-slate-900 dark:text-slate-100">{title}</h2>
-	<div class="grid gap-8 grid-cols-1 md:grid-cols-2 md:gap-12">
+	<div class="grid gap-12 grid-cols-1 md:grid-cols-2 md:gap-16">
 		{#each articles as article, index}
 			{#if index === 0}
 				<CoverArticle {article} />
