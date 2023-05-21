@@ -1,3 +1,4 @@
+<!-- 博客主页，展示有全部文章 -->
 <script lang="ts">
 	import type { PageServerData } from './$types';
 

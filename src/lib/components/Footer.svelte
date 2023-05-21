@@ -2,16 +2,16 @@
 	const thisYear = new Date().getFullYear();
 
 	const catelogList = [
-		{ label: '科技', href: '/topic/tech' },
-		{ label: '社会', href: '/topic/society' },
-		{ label: '文化', href: '/topic/culture' },
-		{ label: '旅游', href: '/topic/travel' }
+		{ label: '科技', href: '/topic/tech/1' },
+		{ label: '社会', href: '/topic/society/1' },
+		{ label: '文化', href: '/topic/culture/1' },
+		{ label: '旅游', href: '/topic/travel/1' }
 	];
 
 	const articleList = [
-		{ label: '推荐', href: '/' },
+		{ label: '推荐', href: '/feature/1' },
 		{ label: '热门', href: '/' },
-		{ label: '发布时间', href: '/' }
+		{ label: '发布时间', href: '/latest/1' }
 	];
 
 	const aboutList = [

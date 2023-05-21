@@ -6,9 +6,9 @@
 
 	const navItems = [
 		{ label: '首页', href: '/' },
-		{ label: '推荐文章', href: '/' },
-		{ label: '博客', href: '/' },
-		{ label: '关于本站', href: '/' }
+		{ label: '推荐文章', href: '/feature/1' },
+		{ label: '博客', href: '/blog' },
+		{ label: '关于本站', href: '/about' }
 	];
 
 	export let show = true;

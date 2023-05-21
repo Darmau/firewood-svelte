@@ -1,4 +1,5 @@
 <script lang="ts">
+	import addPageView from '$lib/functions/addPageView';
 	import generateDate from '$lib/functions/generateDate';
 	import getImgUrl from '$lib/functions/getImgUrl';
 	import type { Article } from '$lib/types/article.type.svelte';
@@ -6,7 +7,7 @@
 </script>
 
 <article class="col-span-1">
-	<a href={article.url} target="_blank" class="flex gap-4 group lg:gap-6">
+	<a href={article.url} target="_blank" class="flex gap-4 group lg:gap-6" on:click={() => addPageView(article._id)}>
 		{#if article.cover}
 			<picture class="col-span-1 aspect-square w-40 h-40 rounded overflow-hidden bg-slate-100 dark:bg-slate-900">
 				<source srcset={getImgUrl(article.cover.avif)} type="image/avif" />
@@ -15,6 +16,7 @@
 					src={getImgUrl(article.cover.jpg)}
 					alt={article.title}
 					class="object-cover object-center w-full h-full transition-all duration-300 group-hover:scale-105"
+					loading="lazy"
 				/>
 			</picture>
 			<div class="space-y-2 flex-1 md:space-y-4">

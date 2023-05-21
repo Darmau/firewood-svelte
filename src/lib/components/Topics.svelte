@@ -1,10 +1,10 @@
 <script>
 	const topicList = [
-		{ label: '技术', href: '/topic/tech' },
-		{ label: '社会', href: '/topic/society' },
-		{ label: '文化', href: '/topic/culture' },
-		{ label: '旅游', href: '/topic/travel' },
-    { label: '生活', href: '/topic/emotion' },
+		{ label: '技术', href: '/topic/tech/1' },
+		{ label: '社会', href: '/topic/society/1' },
+		{ label: '文化', href: '/topic/culture/1' },
+		{ label: '旅游', href: '/topic/travel/1' },
+    { label: '生活', href: '/topic/emotion/1' },
 	];
 </script>
 
