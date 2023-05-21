@@ -1,6 +1,4 @@
 <script>
-	import { slide } from 'svelte/transition';
-
 	let menuShown = false;
 	const toogleMenu = () => {
 		menuShown = !menuShown;
@@ -17,7 +15,7 @@
 </script>
 
 <header
-	class={`bg-white border-b z-20 fixed top-0 w-full transition-all duration-300 ${
+	class={`bg-white dark:bg-zinc-900 border-b dark:border-zinc-700 z-20 fixed top-0 w-full transition-all duration-300 ${
 		show ? '' : 'transform -translate-y-full'
 	}`}
 >
@@ -33,7 +31,7 @@
 		<div class="flex lg:hidden">
 			<button
 				type="button"
-				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 cursor-pointer"
+				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-700 dark:text-slate-100 cursor-pointer"
 				on:click={toogleMenu}
 			>
 				<svg
@@ -54,7 +52,9 @@
 		</div>
 		<div class="hidden lg:flex lg:gap-x-12">
 			{#each navItems as nav}
-				<a href={nav.href} class="text-sm font-semibold leading-6 text-gray-900">{nav.label}</a>
+				<a href={nav.href} class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100"
+					>{nav.label}</a
+				>
 			{/each}
 		</div>
 	</nav>
@@ -64,18 +64,22 @@
 		<!-- Background backdrop, show/hide based on slide-over state. -->
 		<div class="fixed inset-0 z-10 bg-gray-500/30" on:click={toogleMenu} on:keydown={toogleMenu} />
 		<div
-			class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+			class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-zinc-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
 		>
 			<div class="flex items-center justify-between">
 				<a href="/" class="-m-1.5 p-1.5">
-					<span class="sr-only">Your Company</span>
+					<span class="sr-only">可可托海没有海</span>
 					<img
 						class="h-8 w-auto"
 						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
 						alt=""
 					/>
 				</a>
-				<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" on:click={toogleMenu}>
+				<button
+					type="button"
+					class="-m-2.5 rounded-md p-2.5 text-slate-700 dark:text-slate-100"
+					on:click={toogleMenu}
+				>
 					<span class="sr-only">Close menu</span>
 					<svg
 						class="h-6 w-6"
@@ -95,7 +99,7 @@
 						{#each navItems as nav}
 							<a
 								href={nav.href}
-								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-zinc-50 dark:text-slate-50 dark:hover:bg-zinc-800"
 								>{nav.label}</a
 							>
 						{/each}

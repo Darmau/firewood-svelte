@@ -9,9 +9,9 @@
 </script>
 
 <div
-	class="flex justify-center p-4 w-full border-b gap-x-8 text-sm leading-6 sm:w-auto sm:border-gray-200 sm:pl-6 sm:leading-7"
+	class="flex justify-center p-4 w-full border-b dark:border-zinc-700 gap-x-8 text-sm leading-6 sm:w-auto sm:pl-6 sm:leading-7"
 >
 	{#each topicList as topic}
-		<a href={topic.href} class="text-gray-800 transition-all duration-150 hover:text-red-600 hover:font-medium">{topic.label}</a>
+		<a href={topic.href} class="text-slate-800 dark:text-slate-200 transition-all duration-150 hover:text-red-600 hover:font-medium dark:hover:text-red-400">{topic.label}</a>
 	{/each}
 </div>

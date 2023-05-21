@@ -1,0 +1,38 @@
+<script lang="ts">
+	import type { Article } from '$lib/types/article.type.svelte';
+	import CoverArticle from './CoverArticle.svelte';
+	import NormalArticle from './NormalArticle.svelte';
+	export let title: string;
+	export let articles: Article[];
+	export let link: string;
+</script>
+
+<section class="py-8 border-b dark:border-zinc-700 lg:py-16">
+	<h2 class="text-2xl font-medium text-slate-900 dark:text-slate-100">{title}</h2>
+	<div class="grid gap-8 grid-cols-1 md:grid-cols-2 md:gap-12">
+		{#each articles as article, index}
+			{#if index === 0}
+				<CoverArticle {article} />
+			{:else}
+				<NormalArticle {article} />
+			{/if}
+		{/each}
+	</div>
+</section>
+<div class="flex justify-end gap-1 py-4 text-slate-700 cursor-pointer group dark:text-slate-300">
+	<a href={link} class="font-medium group-hover:text-red-600 dark:group-hover:text-red-500">More</a>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		stroke="currentColor"
+		class="w-6 h-6 group-hover:translate-x-1 transition-all duration-200"
+	>
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+		/>
+	</svg>
+</div>

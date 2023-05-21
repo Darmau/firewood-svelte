@@ -20,7 +20,7 @@
 	];
 </script>
 
-<footer class="bg-white" aria-labelledby="footer-heading">
+<footer class="bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800" aria-labelledby="footer-heading">
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
 	<div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -30,11 +30,11 @@
 					src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
 					alt="Company name"
 				/>
-				<p class="text-sm leading-6 text-gray-600">
+				<p class="text-sm leading-6 text-slate-700 dark:text-slate-300">
 					在这个时代依然相信文字的力量，和自由思考的价值
 				</p>
 				<div class="flex space-x-6">
-					<a href="https://darmau.design" class="text-gray-400 hover:text-gray-500" target="_blank">
+					<a href="https://darmau.design" class="text-slate-400 hover:text-gray-500" target="_blank">
 						<span class="sr-only">可可托海没有海</span>
 						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 							<path
@@ -73,11 +73,11 @@
 			<div class="">
 				<div class="grid grid-cols-2 md:grid-cols-3 md:gap-8">
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-semibold leading-6 text-gray-900">文章分类</h3>
+						<h3 class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-50">文章分类</h3>
 						<ul class="mt-6 space-y-4">
 							{#each catelogList as item}
 								<li>
-									<a href={item.href} class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									<a href={item.href} class="text-sm leading-6 text-slate-600 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-zinc-600"
 										>{item.label}</a
 									>
 								</li>
@@ -85,11 +85,11 @@
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-semibold leading-6 text-gray-900">全部文章</h3>
+						<h3 class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-50">全部文章</h3>
 						<ul class="mt-6 space-y-4">
 							{#each articleList as item}
 								<li>
-									<a href={item.href} class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									<a href={item.href} class="text-sm leading-6 text-slate-600 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-zinc-600"
 										>{item.label}</a
 									>
 								</li>
@@ -97,11 +97,11 @@
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-semibold leading-6 text-gray-900">关于</h3>
+						<h3 class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-50">关于</h3>
 						<ul class="mt-6 space-y-4">
 							{#each aboutList as item}
 								<li>
-									<a href={item.href} class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									<a href={item.href} class="text-sm leading-6 text-slate-600 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-zinc-600"
 										>{item.label}</a
 									>
 								</li>
@@ -111,8 +111,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-			<p class="text-xs leading-5 text-gray-500">
+		<div class="mt-16 border-t border-gray-900/10 dark:border-gray-50/10 pt-8 sm:mt-20 lg:mt-24">
+			<p class="text-xs leading-5 text-gray-500 dark:text-gray-400">
 				&copy; {thisYear} Design and Develop by 李大毛没有猫. All rights reserved.
 			</p>
 		</div>
