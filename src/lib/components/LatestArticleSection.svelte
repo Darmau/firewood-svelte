@@ -9,7 +9,7 @@
 
 <section class="py-16 border-b dark:border-zinc-700">
 	<h2 class="text-2xl font-medium text-slate-900 dark:text-slate-100">最新文章</h2>
-	<div class="grid gap-6 grid-cols-1 mt-8 md:gap-8 md:grid-cols-2 lg:px-0 md:gap-12 lg:grid-cols-3">
+	<div class="grid gap-6 grid-cols-1 mt-8 md:grid-cols-2 lg:px-0 md:gap-12 lg:grid-cols-3">
 		{#each articles as article}
 			<article class="flex max-w-xl flex-col items-start justify-start">
 				<div class="flex items-center gap-x-4 text-xs">
