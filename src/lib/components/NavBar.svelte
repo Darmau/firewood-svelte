@@ -100,6 +100,7 @@
 							<a
 								href={nav.href}
 								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-zinc-50 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
+								on:click={toogleMenu}
 								>{nav.label}</a
 							>
 						{/each}
