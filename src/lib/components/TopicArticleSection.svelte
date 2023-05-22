@@ -7,8 +7,8 @@
 	export let link: string;
 </script>
 
-<section class="py-8 border-b dark:border-zinc-700 lg:py-16">
-	<h2 class="text-2xl font-medium text-slate-900 dark:text-slate-100">{title}</h2>
+<section class="py-8 border-b border-zinc-200 dark:border-zinc-700/40">
+	<h2 class="text-2xl font-medium text-zinc-800 dark:text-zinc-100">{title}</h2>
 	<div class="grid gap-12 grid-cols-1 md:grid-cols-2 md:gap-16">
 		{#each articles as article, index}
 			{#if index === 0}
@@ -20,7 +20,7 @@
 	</div>
 </section>
 <div class="flex justify-end gap-1 py-4 text-slate-700 cursor-pointer group dark:text-slate-300">
-	<a href={link} class="font-medium group-hover:text-red-600 dark:group-hover:text-red-500">More</a>
+	<a href={link} class="font-medium group-hover:text-teal-600 dark:hover:text-teal-400">More</a>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"

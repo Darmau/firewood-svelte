@@ -67,7 +67,7 @@
 				<nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
 					<a
 						href={`${path}/${+currentPage - 1}`}
-						class={`relative inline-flex items-center rounded-l-md border dark:border-zinc-600 bg-white dark:bg-zinc-800 px-2 py-2 text-sm font-medium dark:hover:bg-zinc-700 ${
+						class={`relative inline-flex items-center rounded-l-md border dark:border-zinc-600 bg-white dark:bg-teal-800/10 px-2 py-2 text-sm font-medium dark:hover:bg-zinc-700 ${
 							currentPage === 1
 								? `text-slate-300 pointer-events-none	`
 								: `text-slate-500 hover:bg-gray-50 focus:z-20 dark:hover:text-slate-300`
@@ -92,10 +92,10 @@
 						{#if typeof pageNumber === 'number'}
 							<a
 								href={`${path}/${pageNumber}`}
-								class={`relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20 dark:hover:bg-zinc-700 ${
+								class={`relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20 dark:hover:bg-teal-700 ${
 									pageNumber === currentPage
-										? 'z-10 border-gray-500 bg-gray-50 text-slate-800 dark:bg-zinc-900 dark:text-slate-200'
-										: 'dark:border-gray-600 bg-white dark:bg-zinc-800 text-slate-500 dark:text-slate-300 hover:bg-gray-50 dark:hover:text-slate-300'
+										? 'z-10 border-teal-500 bg-teal-50 text-teal-800 dark:bg-teal-900 dark:text-zinc-100'
+										: 'dark:border-gray-600 bg-white dark:bg-teal-800/10 text-zinc-500 dark:text-slate-300 hover:bg-gray-50 dark:hover:text-slate-300'
 								} ${typeof pageNumber === 'string' ? 'disabled' : ''}`}
 							>
 								{pageNumber}
@@ -111,7 +111,7 @@
 
 					<a
 						href={`${path}/${+currentPage + 1}`}
-						class={`relative inline-flex items-center rounded-r-md border dark:border-zinc-600 bg-white dark:bg-zinc-800 px-2 py-2 text-sm font-medium dark:hover:bg-zinc-700 ${
+						class={`relative inline-flex items-center rounded-r-md border dark:border-zinc-600 bg-white dark:bg-teal-800/10 px-2 py-2 text-sm font-medium dark:hover:bg-zinc-700 ${
 							currentPage === totalPages
 								? `text-slate-300 pointer-events-none`
 								: `text-slate-500 hover:bg-gray-50 focus:z-20 dark:hover:text-slate-300`
@@ -122,7 +122,7 @@
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="w-5 h-5"
+							class="w-4 h-4"
 						>
 							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 						</svg>

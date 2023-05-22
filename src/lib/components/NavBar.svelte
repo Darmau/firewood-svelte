@@ -31,7 +31,7 @@
 		<div class="flex lg:hidden">
 			<button
 				type="button"
-				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-700 dark:text-slate-100 cursor-pointer"
+				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-500 dark:text-zinc-100 cursor-pointer"
 				on:click={toogleMenu}
 			>
 				<svg
@@ -52,7 +52,7 @@
 		</div>
 		<div class="hidden lg:flex lg:gap-x-12">
 			{#each navItems as nav}
-				<a href={nav.href} class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100"
+				<a href={nav.href} class="text-sm font-semibold leading-6 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
 					>{nav.label}</a
 				>
 			{/each}
@@ -77,7 +77,7 @@
 				</a>
 				<button
 					type="button"
-					class="-m-2.5 rounded-md p-2.5 text-slate-700 dark:text-slate-100"
+					class="-m-2.5 rounded-md p-2.5 text-zinc-500 dark:text-zinc-100"
 					on:click={toogleMenu}
 				>
 					<span class="sr-only">Close menu</span>
@@ -99,7 +99,7 @@
 						{#each navItems as nav}
 							<a
 								href={nav.href}
-								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-zinc-50 dark:text-slate-50 dark:hover:bg-zinc-800"
+								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-zinc-50 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
 								>{nav.label}</a
 							>
 						{/each}
