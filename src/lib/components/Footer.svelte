@@ -33,7 +33,7 @@
 					在这个时代依然相信文字的力量，和自由思考的价值
 				</p>
 				<div class="flex space-x-6">
-					<a href="https://darmau.design" class="text-zinc-400 hover:text-teal-500" target="_blank">
+					<a href="https://darmau.design" class="text-zinc-400 hover:text-teal-500" target="_blank" title="站长的博客">
 						<span class="sr-only">可可托海没有海</span>
 						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 							<path
@@ -45,6 +45,7 @@
 						href="https://twitter.com/home"
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
+						title="站长的推特"
 					>
 						<span class="sr-only">Twitter</span>
 						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

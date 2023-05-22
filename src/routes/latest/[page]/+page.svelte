@@ -6,6 +6,11 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>最新文章 - 积薪</title>
+	<meta name="description" content="最新文章" />
+</svelte:head>
+
 <main class="mx-auto max-w-4xl px-6 py-8 md:py-12">
   <div class="border-b border-gray-200 dark:border-gray-700 pb-5 mb-8">
     <h1 class="text-base font-semibold leading-6 text-zinc-800 dark:text-zinc-100">最新文章</h1>

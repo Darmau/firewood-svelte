@@ -6,6 +6,11 @@
 	export let data: PageServerData;
 </script>
 
+<svelte:head>
+	<title>积薪 - 独立博客不孤立</title>
+	<meta name="description" content="依然相信文字的力量 找到值得阅读的文章和值得关注的作者" />
+</svelte:head>
+
 <Topics />
 <main class="mx-auto max-w-7xl px-6 mb-8 md:mb-16">
 	<TopicArticle title="推荐" articles={data.feature} link="/feature/1" />
