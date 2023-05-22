@@ -1,5 +1,7 @@
 <!-- 全部博客 -->
 <script lang="ts">
+	import Pagination from "$lib/components/Pagination.svelte";
+
 
 	export let data;
 </script>
@@ -10,4 +12,9 @@
       {website.name}
     {/each}
   </div>
+  <Pagination
+    bind:currentPage={data.page}
+    totalArticles={data.count}
+    itemPerPage={10}
+    path={'/author'} />
 </main>

@@ -1,4 +1,4 @@
-import type { PageServerLoad } from '../../$types';
+import type { PageServerLoad } from '../../../$types';
 import { API_URL } from '$env/static/private';
 
 // 获取博客
@@ -13,10 +13,9 @@ export const load = (async ({ params: { page } }) => {
       },
     }
   )
-  const websiteCount = await count.json();
   return {
     websites: data,
-    count: websiteCount,
+    count: count.json(),
     page: Number(page),
   };
 }) satisfies PageServerLoad;

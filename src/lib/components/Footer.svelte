@@ -10,8 +10,7 @@
 
 	const articleList = [
 		{ label: '推荐', href: '/feature/1' },
-		{ label: '热门', href: '/' },
-		{ label: '发布时间', href: '/latest/1' }
+		{ label: '最新', href: '/latest/1' }
 	];
 
 	const aboutList = [
