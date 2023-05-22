@@ -3,10 +3,11 @@ export default {
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
 	],
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/forms'),
+	],
 	theme: {
 		extend: {
-			
 		}
 	},
 	plugins: []

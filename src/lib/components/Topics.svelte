@@ -4,7 +4,9 @@
 		{ label: '社会', href: '/topic/society/1' },
 		{ label: '文化', href: '/topic/culture/1' },
 		{ label: '旅游', href: '/topic/travel/1' },
-		{ label: '生活', href: '/topic/emotion/1' }
+		{ label: '生活', href: '/topic/emotion/1' },
+		{ label: '时事', href: '/topic/politics/1' },
+		{ label: '游戏', href: '/topic/game/1' },
 	];
 </script>
 
