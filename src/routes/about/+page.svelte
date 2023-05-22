@@ -1,150 +1,70 @@
 <script>
+	const rules = [
+		{ title: '独立博客', content: '只要内容够好，有没有独立的域名、服务器不重要。因此托管于GitHub Pages的博客可以收录，但Medium、简书之类的平台上的博客不予收录。因为这些博客已经有官方流量了。' },
+		{ title: '更新频率', content: '没有硬性限制。但一般来说，上线时间越久的博客，对更新频率的要求越低。最近一年上线的博客一般要求至少有10篇文章' },
+		{ title: 'RSS', content: '本站的抓取来源是各博客的RSS文件，因此没有提供RSS链接的博客无法收录' },
+		{ title: '原创', content: '显然，博客的内容必须以原创为主，译文可以算原创' },
+		{ title: '中文', content: '文章内容必须以中文为主，可以是繁体中文' },
+		{ title: '设计和体验', content: '对于界面设计优秀、加载速度快的博客，其他要求都可以放宽' }
+	];
 	export let data;
 </script>
 
+<svelte:head>
+	<title>关于本站 - 积薪</title>
+	<meta name="description" content="积薪是什么意思 本站的介绍 收录独立博客的标准 如何提交博客" />
+</svelte:head>
+
 <main>
-	<div class="relative isolate -z-10">
-		<svg
-			class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-			aria-hidden="true"
-		>
-			<defs>
-				<pattern
-					id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-					width="200"
-					height="200"
-					x="50%"
-					y="-1"
-					patternUnits="userSpaceOnUse"
-				>
-					<path d="M.5 200V.5H200" fill="none" />
-				</pattern>
-			</defs>
-			<svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-				<path
-					d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-					stroke-width="0"
-				/>
-			</svg>
-			<rect
-				width="100%"
-				height="100%"
-				stroke-width="0"
-				fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
-			/>
-		</svg>
+	<div class="relative -z-10 isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
 		<div
-			class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+			class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
 			aria-hidden="true"
-		>
+		/>
+		<div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
 			<div
-				class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-				style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"
-			/>
-		</div>
-		<div class="overflow-hidden">
-			<div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-				<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-					<div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-							致敬那些还在写博客的人
-						</h1>
-						<p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-							Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute
-							velit. Et labore commodo nulla aliqua proident mollit ullamco exercitation tempor.
-							Sint aliqua anim nulla sunt mollit id pariatur in voluptate cillum. Eu voluptate
-							tempor esse minim amet fugiat veniam occaecat aliqua.
-						</p>
-					</div>
-					<div
-						class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
-					>
-						<div
-							class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
-						>
-							<div class="relative">
-								<img
-									src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-									alt=""
-									class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-								/>
-								<div
-									class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-								/>
-							</div>
-						</div>
-						<div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-							<div class="relative">
-								<img
-									src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-									alt=""
-									class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-								/>
-								<div
-									class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-								/>
-							</div>
-							<div class="relative">
-								<img
-									src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-									alt=""
-									class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-								/>
-								<div
-									class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-								/>
-							</div>
-						</div>
-						<div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-							<div class="relative">
-								<img
-									src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
-									alt=""
-									class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-								/>
-								<div
-									class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-								/>
-							</div>
-							<div class="relative">
-								<img
-									src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-									alt=""
-									class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-								/>
-								<div
-									class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-								/>
-							</div>
-						</div>
-					</div>
+				class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
+			>
+				<h1
+					class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto"
+				>
+					致敬那些还在写博客的人
+				</h1>
+				<div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+					<p class="text-lg leading-8 text-gray-600">
+						写作从来都不是大多数人具有的能力。在如今这个《1984》和《美丽新世界》完美共存的国家，愿意产出优秀的内容，并且向全世界共享的人是值得尊敬的。
+					</p>
 				</div>
+				<img
+					src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
+					alt=""
+					class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+				/>
 			</div>
 		</div>
+		<div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
 	</div>
 
 	<div class="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
 		<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our mission</h2>
+			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">关于本站</h2>
 			<div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
 				<div class="lg:w-full lg:max-w-2xl lg:flex-auto">
 					<p class="text-xl leading-8 text-gray-600">
-						Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi,
-						nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at
-						in viverra scelerisque eget. Eleifend egestas fringilla sapien.
+						作为一个经历过那个共享、开放的互联网的遗老，我拥护开放和自由。可惜如今的中国互联网在本就是一个巨大的监狱内，建立起一个个小监狱。这些小监狱禁止搜索引擎，禁止外链，管控评论。而数据的所有权实际上并不在创作者手里。
+					</p>
+					<p class="text-xl leading-8 text-gray-600 mt-8">
+						因此在这个环境下仍然坚持输出原创的内容并且开放的人显得尤为不容易。我希望有个地方能让这些内容被更多人看到。所以我开发了这个网站。尽管在抓取的时候已经将正文内容存入数据库用作备份，本站并不会将用户强行留在这里，而是将流量导入原博客。
+					</p>
+					<p class="text-xl leading-8 text-gray-600 mt-8">
+						积薪就是积聚的木柴。在敦煌的汉长城遗址附近，有很多一堆一堆的土堆。这就是当年储存的木柴经过两千年的风化，已经变成了化石。我希望这些文字也能像这些木柴一样，能穿越时空，被更多的人看到。
 					</p>
 					<div class="mt-10 max-w-xl text-base leading-7 text-gray-700">
 						<p>
-							Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-							semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus
-							viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat.
-							Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+							这也是我学习Node的练手项目。本站后端使用<a class="border-b-2 hover:border-teal-500" href="https://nestjs.com/" target="_blank">Nest.js</a>，负责管理博客的信息。并定时根据RSS内的链接抓取文章信息，转换OpenGraph的图片存入OSS，并将相关数据存入MongoDB。以及提供各类CRUD接口。
 						</p>
 						<p class="mt-10">
-							Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id
-							blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel.
-							Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac
-							tempor et ut. Ac lorem vel integer orci.
+							前端上我放弃了熟悉的React和Next，采用了SvelteKit进行开发。除了生态不如React，很多功能都要自己实现以外，其他方面倒还不错。
 						</p>
 					</div>
 				</div>
@@ -166,77 +86,40 @@
 
 	<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:mx-0">
-			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our values</h2>
+			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">收录标准</h2>
 			<p class="mt-6 text-lg leading-8 text-gray-600">
-				Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate
-				veritatis in accusamus quisquam.
+				收不收录站长说了算。然而还是能总结出一些收录标准的：
 			</p>
 		</div>
 		<dl
 			class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
 		>
-			<div>
-				<dt class="font-semibold text-gray-900">Be world-class</dt>
-				<dd class="mt-1 text-gray-600">
-					Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam
-					exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro
-					vero.
-				</dd>
-			</div>
-			<div>
-				<dt class="font-semibold text-gray-900">Share everything you know</dt>
-				<dd class="mt-1 text-gray-600">
-					Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id
-					molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.
-				</dd>
-			</div>
-			<div>
-				<dt class="font-semibold text-gray-900">Always learning</dt>
-				<dd class="mt-1 text-gray-600">
-					Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore
-					quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.
-				</dd>
-			</div>
-			<div>
-				<dt class="font-semibold text-gray-900">Be supportive</dt>
-				<dd class="mt-1 text-gray-600">
-					Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis
-					ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.
-				</dd>
-			</div>
-			<div>
-				<dt class="font-semibold text-gray-900">Take responsibility</dt>
-				<dd class="mt-1 text-gray-600">
-					Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non
-					nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.
-				</dd>
-			</div>
-			<div>
-				<dt class="font-semibold text-gray-900">Enjoy downtime</dt>
-				<dd class="mt-1 text-gray-600">
-					Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius.
-					Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.
-				</dd>
-			</div>
+			{#each rules as rule}
+				<div>
+					<dt class="font-semibold text-gray-900">{rule.title}</dt>
+					<dd class="mt-1 text-gray-600">
+						{rule.content}
+					</dd>
+				</div>
+			{/each}
 		</dl>
 	</div>
 
 	<!-- 提交博客 -->
 	<div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-				Boost your productivity.<br />Start using our app today.
+			<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+				如果你有值得推荐的博客<br />请通过下方邮件提交
 			</h2>
 			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-				Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua
-				proident excepteur commodo do ea.
+				不保证提交就能收录
 			</p>
 			<div class="mt-10 flex items-center justify-center gap-x-6">
 				<a
 					href="mailto:submit@darmau.design"
-          target="_blank"
-					class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-					>Get started</a
+					target="_blank"
+					class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+					>发邮件</a
 				>
 			</div>
 		</div>
