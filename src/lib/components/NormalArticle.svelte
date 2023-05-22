@@ -7,9 +7,9 @@
 </script>
 
 <article class="col-span-1">
-	<a href={article.url} target="_blank" class="flex gap-4 group lg:gap-6" on:click={() => addPageView(article._id)}>
+	<a href={article.url} target="_blank" class="flex flex-col gap-4 group lg:gap-6 lg:flex-row" on:click={() => addPageView(article._id)}>
 		{#if article.cover}
-			<picture class="col-span-1 aspect-square w-40 h-40 rounded overflow-hidden bg-slate-100 dark:bg-slate-900">
+			<picture class="aspect-video md:aspect=[4/3] rounded overflow-hidden bg-slate-100 lg:aspect-square lg:w-40 lg:h-40 dark:bg-slate-900">
 				<source srcset={getImgUrl(article.cover.avif)} type="image/avif" />
 				<source srcset={getImgUrl(article.cover.webp)} type="image/webp" />
 				<img
