@@ -85,7 +85,8 @@ export const GET = (async () => {
 
   return new Response(JSON.stringify(result), {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'cache-control': 'public, max-age=3600'
     }
   });
 }) satisfies RequestHandler;

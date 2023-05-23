@@ -7,27 +7,24 @@ interface CachedResponse {
 }
 
 export const handle: Handle = async ({ event, resolve }): Promise<Response> => {
-  const { url }= event;
-  if(url.pathname === '/') {
+  const { url } = event;
+  if (url.pathname === '/') {
     return resolve(event);
   }
   const key: string = `rendered:${url.pathname}`;
 
-  const cachedRaw: { [key: string]: string | null } = await redis.hGetAll(key);
-  let cached: CachedResponse | null = null;
-  
-  if (cachedRaw.body) {
-    cached = cachedRaw as CachedResponse;
-  } else {
-    const response: Response = await resolve(event);
+  let cached: CachedResponse = await redis.hGetAll(key);
+  if (!cached.body) {
+    // if it wasn't cached, we render the pages
+    const response: Response = await resolve(event)
+
+    // then convert it into a cachable object
+    cached = Object.fromEntries(response.headers.entries());
+    cached.body = await response.text();
 
     if (response.status === 200) {
-      const headers = Object.fromEntries(response.headers.entries());
-      const body = await response.text();
-      cached = { body, ...headers };
-
-      redis.hSet(key, cached);
-      redis.expire(key, 1800);
+      redis.hSet(key, cached)
+      redis.expire(key, 1800)
     } else {
       return response;
     }
