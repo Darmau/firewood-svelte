@@ -21,12 +21,14 @@
 	<div class="grid gap-4 grid-cols-2 mt-8 md:grid-cols-3 lg:grid-cols-4">
 		{#each topics as topic}
 			<a href={topic.href}>
-				<div class="bg-gray-200 relative overflow-hidden rounded-md">
-          <p class="text-white font-medium text-lg absolute z-10 flex items-center justify-center">{topic.label}</p>
-					<picture class="w-full h-full brightness-60">
+				<div class="bg-gray-200 relative overflow-hidden rounded-md group">
+          <div class="absolute inset-0 flex items-center justify-center z-10">
+						<p class="text-white font-medium text-lg">{topic.label}</p>
+					</div>
+					<picture class="w-full h-full">
 						<source srcset={`${COS_URL}${topic.cover}.avif`} type="image/avif" />
 						<source srcset={`${COS_URL}${topic.cover}.webp`} type="image/webp" />
-						<img class="aspect-[5/2] object-cover rounded-md hover:blur hover:brightness-80 transition-all duration-300" src={`${COS_URL}${topic.cover}.jpg`} alt={topic.label} />
+						<img class="aspect-[5/2] object-cover rounded-md group-hover:blur-sm transition-all duration-300 group-hover:scale-105 group-hover:brightness-75" src={`${COS_URL}${topic.cover}.jpg`} alt={topic.label} />
 					</picture>
 				</div>
 			</a>
