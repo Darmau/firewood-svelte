@@ -1,9 +1,12 @@
-import type { PageServerLoad, RouteParams } from '../$types';
+import type { PageServerLoad } from '../$types';
 import { API_URL } from '$env/static/private';
 
 // 负责获取最新的推荐
-export const load = (async ({ params }: { params: RouteParams }) => {
-  const articles = await fetch(`${API_URL}/article/featured?page=${params.page}&limit=15`)
+export const load = (async ({ params: { page }, setHeaders }) => {
+  setHeaders({
+    'Cache-Control': 'max-age=300'
+  })
+  const articles = await fetch(`${API_URL}/article/featured?page=${page}&limit=15`)
   const data = await articles.json();
   const count = await fetch(`${API_URL}/article/count`,
     {
@@ -20,6 +23,6 @@ export const load = (async ({ params }: { params: RouteParams }) => {
   return {
     articles: data,
     count: articleCount,
-    page: params.page
+    page: page
   };
 }) satisfies PageServerLoad;

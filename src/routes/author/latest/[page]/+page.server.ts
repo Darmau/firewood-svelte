@@ -1,9 +1,12 @@
-import type { PageServerLoad } from '../../../$types';
+import type { PageServerLoad } from '../../$types';
 import { API_URL } from '$env/static/private';
 import type { Website } from '$lib/types/website.type.svelte';
 
 // 获取博客
-export const load = (async ({ params: { page } }) => {
+export const load = (async ({ params: { page }, setHeaders }) => {
+  setHeaders({
+    'Cache-Control': 'max-age=300'
+  })
   const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=16`)
   const websites = await websiteJson.json();
   const mergedWebsite = await Promise.all(websites.map(async (website: Website) => {
