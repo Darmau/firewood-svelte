@@ -3,7 +3,7 @@ import type { Article } from '$lib/types/article.type.svelte';
 import type { RequestHandler } from './$types';
 
 // 二次封装接口，用于从latest获取文章，然后分别存入相应数组，在首页不同区域显示
-export const GET = (async ({ setHeaders }) => {
+export const GET = (async () => {
   const featureArticles = await fetch(`${API_URL}/article/featured?limit=7`)
     .then(res => res.json())
     .catch((error) => {
@@ -21,14 +21,12 @@ export const GET = (async ({ setHeaders }) => {
   let techArticles: Article[] = [];
   let societyArticles: Article[] = [];
   let cultureArticles: Article[] = [];
-  let travelArticles: Article[] = [];
   let emotionArticles: Article[] = [];
 
   while (
     techArticles.length < topicLimit ||
     societyArticles.length < topicLimit ||
-    cultureArticles.length < topicLimit ||
-    travelArticles.length < topicLimit
+    cultureArticles.length < topicLimit
   ) {
     // 每一次获取10篇最新文章
     const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=10`)
@@ -64,9 +62,6 @@ export const GET = (async ({ setHeaders }) => {
           case 'culture':
             if (cultureArticles.length < topicLimit) cultureArticles.push(article);
             break;
-          case 'travel':
-            if (travelArticles.length < topicLimit) travelArticles.push(article);
-            break;
           case 'emotion':
             if (emotionArticles.length < topicLimit) emotionArticles.push(article);
             break;
@@ -85,13 +80,8 @@ export const GET = (async ({ setHeaders }) => {
     techArticles,
     societyArticles,
     cultureArticles,
-    travelArticles,
     emotionArticles
   }
-
-  setHeaders({
-    'Cache-Control': 'max-age=300'
-  })
 
   return new Response(JSON.stringify(result), {
     headers: {
