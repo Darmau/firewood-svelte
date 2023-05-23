@@ -1,7 +1,8 @@
 import type { PageServerLoad } from './$types';
 
 // 本文件负责fetch首页需要的数据
-export const load = (async ({ fetch }) => {
+export const load = (async ({ fetch, setHeaders }) => {
+  setHeaders({ 'Cache-Control': 'max-age=300' })
   const response = await fetch('/api/homepage')
 
   const data = await response.json()
