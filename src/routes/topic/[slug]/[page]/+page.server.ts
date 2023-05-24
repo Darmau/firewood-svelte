@@ -1,7 +1,7 @@
 import type { PageServerLoad } from '../../[slug]/[page]/$types';
 import { API_URL } from '$env/static/private';
 
-export const prerender = true;
+// export const prerender = true;
 
 // 获取指定话题的文章
 export const load = (async ({ params: { slug, page }, setHeaders }) => {

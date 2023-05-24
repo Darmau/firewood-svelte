@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 
-export const prerender = true;
+// export const prerender = true;
 
 // 本文件负责fetch首页需要的数据
 export const load = (async ({ fetch, setHeaders }) => {

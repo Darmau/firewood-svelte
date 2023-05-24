@@ -1,7 +1,7 @@
 import type { PageServerLoad } from '../$types';
 import { API_URL } from '$env/static/private';
 
-export const prerender = true;
+// export const prerender = true;
 
 // 负责获取最新的文章
 export const load = (async ({ params: { page }, setHeaders }) => {

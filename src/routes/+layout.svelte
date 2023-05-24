@@ -20,6 +20,7 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
+
 </script>
 
 <svelte:head>
