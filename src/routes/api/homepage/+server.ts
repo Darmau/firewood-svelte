@@ -2,6 +2,8 @@ import { API_URL } from '$env/static/private';
 import type { Article } from '$lib/types/article.type.svelte';
 import type { RequestHandler } from './$types';
 
+export const prerender = true;
+
 // 二次封装接口，用于从latest获取文章，然后分别存入相应数组，在首页不同区域显示
 export const GET = (async () => {
   const featureArticles = await fetch(`${API_URL}/article/featured?limit=7`)
@@ -86,7 +88,7 @@ export const GET = (async () => {
   return new Response(JSON.stringify(result), {
     headers: {
       'Content-Type': 'application/json',
-      'cache-control': 'public, max-age=3600'
+      'cache-control': 'public, max-age=600'
     }
   });
 }) satisfies RequestHandler;

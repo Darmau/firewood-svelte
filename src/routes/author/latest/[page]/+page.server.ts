@@ -2,10 +2,12 @@ import type { PageServerLoad } from '../../$types';
 import { API_URL } from '$env/static/private';
 import type { Website } from '$lib/types/website.type.svelte';
 
+export const prerender = true;
+
 // 获取博客
 export const load = (async ({ params: { page }, setHeaders }) => {
   setHeaders({
-    'Cache-Control': 'max-age=300'
+    'Cache-Control': 'max-age=600'
   })
   const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=16`)
   const websites = await websiteJson.json();

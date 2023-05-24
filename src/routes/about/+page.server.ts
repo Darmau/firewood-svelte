@@ -1,6 +1,8 @@
 import type { PageServerLoad } from './$types';
 import { API_URL } from '$env/static/private';
 
+export const prerender = true;
+
 export const load = (async () => {
   const articleCount = await fetch(`${API_URL}/article/count`, {
     method: 'POST',

@@ -1,10 +1,12 @@
 import type { PageServerLoad } from '../../[slug]/[page]/$types';
 import { API_URL } from '$env/static/private';
 
+export const prerender = true;
+
 // 获取指定话题的文章
 export const load = (async ({ params: { slug, page }, setHeaders }) => {
   setHeaders({
-    'Cache-Control': 'max-age=300'
+    'Cache-Control': 'max-age=600'
   })
   const articles = await fetch(`${API_URL}/article/topic?topic=${slug}&page=${page}&limit=15`)
   const data = await articles.json();
