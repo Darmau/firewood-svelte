@@ -28,7 +28,6 @@ export const handle: Handle = async ({ event, resolve }): Promise<Response> => {
   let cached: {[key: string]: string} = await redis.hGetAll(key);
 
   if(!cached.body) {
-    console.log('Cannot find cache')
     const response: Response = await resolve(event);
     // 转换为可缓存格式
     cached = Object.fromEntries(response.headers.entries());
@@ -37,14 +36,12 @@ export const handle: Handle = async ({ event, resolve }): Promise<Response> => {
     if(response.status === 200) {
       redis.hSet(key, cached)
       redis.expire(key, 7200)
-      console.log('Saving cache:', url.pathname)
     } else {
       return response
     }
   }
 
   const { body, ...headers }: CachedResponse = cached;
-  console.log('Serving from cache', url.pathname)
   return new Response(
     body,
     { headers: new Headers(headers) }
