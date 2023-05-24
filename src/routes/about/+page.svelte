@@ -121,7 +121,7 @@
 			</p>
 			<div class="mt-10 flex items-center justify-center gap-x-6">
 				<a
-					href="mailto:submit@darmau.design"
+					href="mailto:submit@darmau.design?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E5%9C%B0%E5%9D%80%EF%BC%9A"
 					target="_blank"
 					class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
 					>发邮件</a

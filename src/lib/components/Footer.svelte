@@ -15,7 +15,10 @@
 
 	const aboutList = [
 		{ label: '本站', href: '/about' },
-		{ label: '提交博客', href: 'mailto:submit@darmau.design' }
+		{
+			label: '提交博客',
+			href: 'mailto:submit@darmau.design?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E5%9C%B0%E5%9D%80%EF%BC%9A'
+		}
 	];
 </script>
 
@@ -33,7 +36,12 @@
 					在这个时代依然相信文字的力量，和自由思考的价值
 				</p>
 				<div class="flex space-x-6">
-					<a href="https://darmau.design" class="text-zinc-400 hover:text-teal-500" target="_blank" title="站长的博客">
+					<a
+						href="https://darmau.design"
+						class="text-zinc-400 hover:text-teal-500"
+						target="_blank"
+						title="站长的博客"
+					>
 						<span class="sr-only">可可托海没有海</span>
 						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 							<path
@@ -73,11 +81,15 @@
 			<div class="">
 				<div class="grid grid-cols-2 md:grid-cols-3 md:gap-8">
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-semibold leading-6 text-zinc-800 dark:text-zinc-100">文章分类</h3>
+						<h3 class="text-sm font-semibold leading-6 text-zinc-800 dark:text-zinc-100">
+							文章分类
+						</h3>
 						<ul class="mt-6 space-y-4">
 							{#each catelogList as item}
 								<li>
-									<a href={item.href} class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
+									<a
+										href={item.href}
+										class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
 										>{item.label}</a
 									>
 								</li>
@@ -85,11 +97,15 @@
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-semibold leading-6 text-zinc-800 dark:text-zinc-100">全部文章</h3>
+						<h3 class="text-sm font-semibold leading-6 text-zinc-800 dark:text-zinc-100">
+							全部文章
+						</h3>
 						<ul class="mt-6 space-y-4">
 							{#each articleList as item}
 								<li>
-									<a href={item.href} class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
+									<a
+										href={item.href}
+										class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
 										>{item.label}</a
 									>
 								</li>
@@ -101,7 +117,9 @@
 						<ul class="mt-6 space-y-4">
 							{#each aboutList as item}
 								<li>
-									<a href={item.href} class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
+									<a
+										href={item.href}
+										class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
 										>{item.label}</a
 									>
 								</li>
