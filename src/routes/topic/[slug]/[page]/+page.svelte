@@ -18,7 +18,7 @@
 	<meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="firewood.news">
   <meta property="twitter:url" content={`https://firewood.news/topic/${data.slug}/1`}>
-  <meta name="twitter:title" content={topicTranslate(data.slug)}专题 - 积薪>
+  <meta name="twitter:title" content={`${topicTranslate(data.slug)}专题 - 积薪`}>
   <meta name="twitter:description" content={`关于${topicTranslate(data.slug)}话题的文章`}>
   <meta name="twitter:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/topic.jpg">
 </svelte:head>
