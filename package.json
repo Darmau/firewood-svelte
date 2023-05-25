@@ -35,7 +35,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dotenv": "^16.0.3",
-		"redis": "^4.6.6"
+		"dotenv": "^16.0.3"
 	}
 }
