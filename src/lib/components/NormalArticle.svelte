@@ -24,6 +24,8 @@
 					alt={article.title}
 					class="object-cover object-center w-full h-full transition-all duration-300 group-hover:scale-105"
 					loading="lazy"
+					width="160"
+					height="160"
 				/>
 			</picture>
 			<div class="space-y-2 flex-1 md:space-y-4">

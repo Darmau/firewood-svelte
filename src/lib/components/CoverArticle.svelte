@@ -23,6 +23,7 @@
 					alt={article.title}
 					class="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
 					loading="lazy"
+					width="408"
 				/>
 			</picture>
 			<div class="col-span-1 space-y-6 md:space-y-8">

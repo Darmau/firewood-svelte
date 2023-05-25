@@ -10,7 +10,7 @@
 >
 	<a href={website.url} class="flex gap-2 items-center" target="_blank">
 		{#if website.cover}
-			<img src={website.cover} alt={website.name} class="w-5 h-5 dark:bg-white" />
+			<img src={website.cover} alt={website.name} class="w-5 h-5 dark:bg-white" width="20" height="20" />
 		{/if}
 		<h2
 			class="text-zinc-800 dark:text-zinc-100 text-lg font-medium hover:text-teal-600 dark:hover:text-teal-400"
