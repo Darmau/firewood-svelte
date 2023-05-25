@@ -9,7 +9,7 @@ export const load = (async ({ params: { page }, setHeaders }) => {
   setHeaders({
     'Cache-Control': 'max-age=600'
   })
-  const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=16`)
+  const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=18`)
   const websites = await websiteJson.json();
   const mergedWebsite = await Promise.all(websites.map(async (website: Website) => {
     const articleJson = await fetch(`${API_URL}/article?website=${website.url}&page=1&limit=3`)
