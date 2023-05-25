@@ -33,7 +33,7 @@
 	<Pagination
 		bind:currentPage={data.page}
 		totalArticles={data.count}
-		itemPerPage={12}
+		itemPerPage={18}
 		path={'/author/latest'}
 	/>
 </main>
