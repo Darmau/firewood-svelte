@@ -35,7 +35,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/noto-serif-sc": "^5.0.1",
 		"dotenv": "^16.0.3",
 		"redis": "^4.6.6"
 	}

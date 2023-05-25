@@ -4,9 +4,6 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import { onMount } from 'svelte';
 
-	import '@fontsource/noto-serif-sc/400.css';
-	import '@fontsource/noto-serif-sc/700.css';
-
 	let showNavBar = true;
 	let lastScrollTop = 0;
 
@@ -36,6 +33,12 @@
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
 		crossorigin="anonymous"
 	></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 <NavBar show={showNavBar} />
