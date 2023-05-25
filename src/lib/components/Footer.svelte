@@ -17,7 +17,7 @@
 		{ label: '本站', href: '/about' },
 		{
 			label: '提交博客',
-			href: 'mailto:submit@darmau.design?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E5%9C%B0%E5%9D%80%EF%BC%9A'
+			href: 'mailto:submit@darmau.design?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2%20-%20%E7%A7%AF%E8%96%AA&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0D%0ARSS%EF%BC%9A'
 		}
 	];
 </script>
@@ -118,7 +118,9 @@
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">关于</h3>
+						<h3 class="text-sm font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
+							关于
+						</h3>
 						<ul class="mt-6 space-y-4">
 							{#each aboutList as item}
 								<li>
@@ -136,7 +138,7 @@
 		</div>
 		<div class="mt-16 border-t border-gray-900/10 dark:border-gray-50/10 pt-8 sm:mt-20 lg:mt-24">
 			<p class="text-xs leading-5 text-zinc-400 dark:text-zinc-500">
-				&copy; {thisYear} Design and Develop by 李大毛没有猫. All rights reserved.
+				&copy; {thisYear} Design and Develop by <a href="https://darmau.dev" target="_blank">李大毛没有猫</a>. All rights reserved.
 			</p>
 		</div>
 	</div>
