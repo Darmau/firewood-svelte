@@ -8,6 +8,11 @@
 <svelte:head>
 	<title>作者 - 积薪</title>
 	<meta name="description" content="本站收录的所有博客" />
+	<meta property="og:url" content="https://firewood.news/author/latest/1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="作者 - 积薪">
+  <meta property="og:description" content="本站收录的所有博客">
+  <meta property="og:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/author.jpg">
 </svelte:head>
 
 <main class="mx-auto max-w-7xl px-6 py-8 md:py-12">

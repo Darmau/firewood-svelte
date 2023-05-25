@@ -8,6 +8,11 @@
 <svelte:head>
 	<title>推荐文章 - 积薪</title>
 	<meta name="description" content="一些我觉得值得推荐的文章" />
+	<meta property="og:url" content="https://firewood.news/feature/1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="推荐文章 - 积薪">
+  <meta property="og:description" content="一些我觉得值得推荐的文章">
+  <meta property="og:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/feature.jpg">
 </svelte:head>
 
 <main class="mx-auto max-w-4xl px-6 py-8 md:py-12">

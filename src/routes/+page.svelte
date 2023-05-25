@@ -8,8 +8,13 @@
 </script>
 
 <svelte:head>
-	<title>积薪 - 独立博客不孤立</title>
-	<meta name="description" content="依然相信文字的力量 找到值得阅读的文章和值得关注的作者" />
+	<title>积薪 - 依然相信文字的力量</title>
+	<meta name="description" content="找到值得关注的独立博客" />
+	<meta property="og:url" content={`https://firewood.news/topic/${data.slug}/1`}>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="积薪 - 依然相信文字的力量">
+  <meta property="og:description" content="找到值得关注的独立博客">
+  <meta property="og:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/homepage.jpg">
 </svelte:head>
 
 <Topics />

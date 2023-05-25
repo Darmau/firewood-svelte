@@ -8,7 +8,12 @@
 
 <svelte:head>
 	<title>最新文章 - 积薪</title>
-	<meta name="description" content="最新文章" />
+	<meta name="description" content="最新文章 4小时更新一次" />
+  <meta property="og:url" content="https://firewood.news/latest/1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="最新文章 - 积薪">
+  <meta property="og:description" content="最新文章 4小时更新一次">
+  <meta property="og:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/latest.jpg">
 </svelte:head>
 
 <main class="mx-auto max-w-4xl px-6 py-8 md:py-12">
