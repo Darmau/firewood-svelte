@@ -20,7 +20,6 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
-
 </script>
 
 <svelte:head>
@@ -28,6 +27,11 @@
 		async
 		src="https://analytics.darmau.design/script.js"
 		data-website-id="e8bdffeb-b9da-4541-afc3-4d0a8dc5664b"
+	></script>
+	<script
+		async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
+		crossorigin="anonymous"
 	></script>
 </svelte:head>
 
