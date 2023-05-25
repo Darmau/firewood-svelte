@@ -18,6 +18,12 @@
   <meta property="og:title" content="关于本站 - 积薪">
   <meta property="og:description" content="积薪是什么意思 本站的介绍 收录独立博客的标准 如何提交博客">
   <meta property="og:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/about.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="firewood.news">
+  <meta property="twitter:url" content="https://firewood.news/about">
+  <meta name="twitter:title" content="关于本站 - 积薪">
+  <meta name="twitter:description" content="积薪是什么意思 本站的介绍 收录独立博客的标准 如何提交博客">
+  <meta name="twitter:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/about.jpg">
 </svelte:head>
 
 <main>
