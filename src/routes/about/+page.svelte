@@ -37,7 +37,7 @@
 				class="mx-auto max-w-2xl flex flex-col lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
 			>
 				<h1
-					class="max-w-2xl text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl lg:col-span-2 xl:col-auto"
+					class="max-w-2xl text-4xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl lg:col-span-2 xl:col-auto"
 				>
 					致敬那些还在写博客的人
 				</h1>
@@ -63,7 +63,7 @@
 
 	<div class="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
 		<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-			<h2 class="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">关于本站</h2>
+			<h2 class="text-3xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">关于本站</h2>
 			<div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
 				<div class="lg:w-full lg:max-w-2xl lg:flex-auto">
 					<p class="text-xl leading-8 text-zinc-600 dark:text-zinc-400">
@@ -102,7 +102,7 @@
 
 	<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:mx-0">
-			<h2 class="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">收录标准</h2>
+			<h2 class="text-3xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">收录标准</h2>
 			<p class="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
 				收不收录站长说了算。然而还是能总结出一些收录标准的：
 			</p>
@@ -112,7 +112,7 @@
 		>
 			{#each rules as rule}
 				<div>
-					<dt class="font-semibold text-teal-600 dark:text-teal-300">{rule.title}</dt>
+					<dt class="font-serif font-bold text-teal-600 dark:text-teal-300">{rule.title}</dt>
 					<dd class="mt-1 text-zinc-600 dark:text-zinc-400">
 						{rule.content}
 					</dd>
@@ -124,8 +124,11 @@
 	<!-- 提交博客 -->
 	<div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="text-3xl font-bold text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-				如果你有值得推荐的博客<br />请通过下方邮件提交
+			<h2 class="text-3xl font-serif font-bold text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+				如果你有值得推荐的博客
+			</h2>
+			<h2 class="mt-4 text-3xl font-serif font-bold text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+				请通过下方邮件提交
 			</h2>
 			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
 				不保证提交就能收录

@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@fontsource/noto-serif-sc':
+    specifier: ^5.0.1
+    version: 5.0.1
   dotenv:
     specifier: ^16.0.3
     version: 16.0.3
@@ -308,6 +311,10 @@ packages:
     resolution: {integrity: sha512-LxcyMGxwmTh2lY9FwHPGWOHmYFCZvbrFCBZL4FzSSsxsRPuhrYUg/49/0KDfW8tnIEaEHtfmn6+NPN+1DqaNmA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/noto-serif-sc@5.0.1:
+    resolution: {integrity: sha512-Odfu6vBP9Ow09HQjySyZUIq2kEjXmiiy5y/nouLnBZHd9/b2kHEaFe3yNPJbNNEUIrD1BD2PvqYyqrEzdfY5PQ==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}

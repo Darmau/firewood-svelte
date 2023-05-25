@@ -55,7 +55,7 @@
 		</div>
 		<div class="hidden lg:flex lg:gap-x-12">
 			{#each navItems as nav}
-				<a href={nav.href} class="text-sm font-semibold leading-6 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
+				<a href={nav.href} class="text-sm font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
 					>{nav.label}</a
 				>
 			{/each}

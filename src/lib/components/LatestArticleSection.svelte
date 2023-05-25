@@ -8,7 +8,7 @@
 </script>
 
 <section class="py-16 border-b border-zinc-200 dark:border-zinc-700/40">
-	<h2 class="text-2xl font-medium text-zinc-800 dark:text-zinc-100">最新文章</h2>
+	<h2 class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100">最新文章</h2>
 	<div class="grid gap-6 grid-cols-1 mt-8 md:grid-cols-2 lg:px-0 md:gap-12 lg:grid-cols-3">
 		{#each articles as article}
 			<article class="flex max-w-xl flex-col items-start justify-start">
@@ -24,7 +24,7 @@
 				</div>
 				<div class="group relative">
 					<h3
-						class="mt-3 text-lg font-semibold leading-6 text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:group-hover:text-teal-400"
+						class="mt-3 text-xl font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:group-hover:text-teal-400"
 					>
 						<a href={article.url} target="_blank" on:click={() => addPageView(article._id)}>
 							<span class="absolute inset-0" />
@@ -49,7 +49,7 @@
 				</div>
 				<div class="relative mt-4 flex items-center gap-x-4">
 					<div class="text-sm leading-6">
-						<p class="font-semibold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
+						<p class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 							<a href={article.website}>
 								<span class="absolute inset-0" />
 								{article.author}

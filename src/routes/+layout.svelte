@@ -4,6 +4,9 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import { onMount } from 'svelte';
 
+	import '@fontsource/noto-serif-sc/400.css';
+	import '@fontsource/noto-serif-sc/700.css';
+
 	let showNavBar = true;
 	let lastScrollTop = 0;
 
