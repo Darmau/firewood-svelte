@@ -35,7 +35,7 @@ export const handle: Handle = async ({ event, resolve }): Promise<Response> => {
 
     if (response.status === 200) {
       redis.hSet(key, cached)
-      redis.expire(key, 7200)
+      redis.expire(key, 600)
     } else {
       return response
     }
