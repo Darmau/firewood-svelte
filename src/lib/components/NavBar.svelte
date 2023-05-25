@@ -20,7 +20,7 @@
 		show ? '' : 'transform -translate-y-full'
 	}`}
 >
-	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+	<nav class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8" aria-label="Global">
 		<a href="/" class="text-black hover:text-teal-500 dark:text-white" title="回到首页">
 			<svg class="w-20" fill="currentColor" viewBox="0 0 166 80" aria-hidden="true">
 				<path
@@ -102,7 +102,7 @@
 						{#each navItems as nav}
 							<a
 								href={nav.href}
-								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-zinc-50 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
+								class="-mx-3 block rounded-lg px-3 py-2 text-base font-serif font-bold leading-7 hover:bg-zinc-50 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
 								on:click={toogleMenu}
 								>{nav.label}</a
 							>
