@@ -27,7 +27,7 @@
 				/>
 			</picture>
 			<div class="col-span-1 space-y-6 md:space-y-8">
-				<h3 class="text-4xl font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
+				<h3 class="text-4xl font-bold leading-tight text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
 					{article.title}
 				</h3>
 				<p class="text-zinc-600 leading-7 line-clamp-3 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500">
@@ -67,7 +67,7 @@
 		{:else}
 			<!-- 如果没有封面图 -->
 			<div class="space-y-8 col-span-2">
-				<h3 class="text-5xl font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
+				<h3 class="text-5xl font-bold leading-snug text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
 					{article.title}
 				</h3>
 				<p class="text-zinc-600 leading-7 line-clamp-3 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500">

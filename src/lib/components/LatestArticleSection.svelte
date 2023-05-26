@@ -9,12 +9,12 @@
 
 <section class="py-16 border-b border-zinc-200 dark:border-zinc-700/40">
 	<h2 class="text-2xl font-bold text-zinc-800 dark:text-zinc-100">最新文章</h2>
-	<div class="grid gap-6 grid-cols-1 mt-8 md:grid-cols-2 lg:px-0 md:gap-12 lg:grid-cols-3">
+	<div class="grid gap-8 grid-cols-1 mt-8 md:grid-cols-2 lg:px-0 md:gap-12 lg:grid-cols-3">
 		{#each articles as article}
 			<article class="flex max-w-xl flex-col items-start justify-start">
 				<div class="flex items-center gap-x-4 text-xs">
 					<a
-						href={`/topic/${article.topic}`}
+						href={`/topic/${article.topic}/1`}
 						class="relative z-10 rounded-full bg-slate-50 dark:bg-slate-800 px-3 py-1.5 font-medium text-slate-600 dark:text-slate-300 hover:bg-zinc-100 dark:hover:bg-zinc-500"
 						>{topicTranslate(article.topic)}</a
 					>
