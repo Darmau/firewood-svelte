@@ -31,7 +31,7 @@
       {#if article.isFeatured}
         <CoverArticle {article} />
       {:else}
-        <NormalArticle {article} />
+        <NormalArticle {article} topic={true} />
       {/if}
     {/each}
   </div>

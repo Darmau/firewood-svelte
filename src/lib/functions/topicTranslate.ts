@@ -28,5 +28,6 @@ const topicList = new Map([
   ['constellation', '星座'],
   ['history', '历史'],
   ['music', '音乐'],
-  ['others', '综合']
+  ['others', '综合'],
+  [null, '无分类'],
 ])
