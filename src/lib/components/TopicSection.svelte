@@ -1,5 +1,5 @@
 <script>
-	const COS_URL = 'https://firewood-1256887306.cos.accelerate.myqcloud.com/normal/';
+	const COS_URL = 'https://firewood.darmau.design/normal/';
 	const topics = [
 		{ label: '技术', href: '/topic/tech/1', cover: 'tech' },
 		{ label: '社会', href: '/topic/society/1', cover: 'society' },
