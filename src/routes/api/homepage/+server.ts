@@ -26,10 +26,11 @@ export const GET = (async () => {
   while (
     techArticles.length < topicLimit ||
     societyArticles.length < topicLimit ||
-    cultureArticles.length < topicLimit
+    cultureArticles.length < topicLimit ||
+    emotionArticles.length < topicLimit
   ) {
     // 每一次获取10篇最新文章
-    const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=10`)
+    const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=30`)
       .then(res => res.json())
       .catch((error) => {
         console.error(`获取第${latestPage}页最新文章失败：`, error);
