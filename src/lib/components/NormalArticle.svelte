@@ -30,7 +30,7 @@
 			</picture>
 			<div class="space-y-2 flex-1 md:space-y-4">
 				<h3
-					class="text-2xl font-serif font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="text-2xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -41,7 +41,7 @@
 				</p>
 				<div class="flex gap-2 text-sm">
 					<h4
-						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
+						class="font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						<a href={article.website} target="_blank">{article.author}</a>
 					</h4>
@@ -61,7 +61,7 @@
 		{:else}
 			<div class="space-y-2 md:space-y-4">
 				<h3
-					class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="text-2xl font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -71,7 +71,7 @@
 					{article.description}
 				</p>
 				<div class="flex gap-2 text-sm">
-					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
+					<h4 class="font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a href={article.website} target="_blank">{article.author}</a>
 					</h4>
 					<span>·</span>

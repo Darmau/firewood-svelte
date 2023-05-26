@@ -13,7 +13,7 @@
 			<img src={website.cover} alt={website.name} class="w-5 h-5 dark:bg-white" width="20" height="20" />
 		{/if}
 		<h2
-			class="text-zinc-800 dark:text-zinc-100 text-lg font-serif font-bold hover:text-teal-600 dark:hover:text-teal-400"
+			class="text-zinc-800 dark:text-zinc-100 text-lg font-bold hover:text-teal-600 dark:hover:text-teal-400"
 		>
 			{website.name}
 		</h2>
