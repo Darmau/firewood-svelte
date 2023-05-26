@@ -16,14 +16,7 @@
 		on:click={() => addPageView(article._id)}
 	>
 		{#if article.cover}
-			{#if topic}
-				<a
-					href={`/topic/${article.topic}/1`}
-					class="self-start text-xs relative z-10 rounded-full bg-slate-50 dark:bg-slate-800 px-3 py-1.5 font-medium text-slate-600 dark:text-slate-300 hover:bg-zinc-100 dark:hover:bg-zinc-500"
-					>{topicTranslate(article.topic)}</a
-				>
-			{/if}
-			<div class="flex flex-col gap-4 group lg:gap-6 lg:flex-row">
+			<div class="flex flex-col gap-4 group lg:gap-6 lg:flex-row-reverse">
 				<picture
 					class="aspect-video md:aspect=[4/3] rounded overflow-hidden bg-slate-100 lg:aspect-square lg:w-40 lg:h-40 dark:bg-slate-900"
 				>
@@ -39,6 +32,13 @@
 					/>
 				</picture>
 				<div class="space-y-2 flex-1 md:space-y-4">
+					{#if topic}
+						<a
+							href={`/topic/${article.topic}/1`}
+							class="self-start text-xs relative z-10 rounded-full bg-slate-50 dark:bg-slate-800 px-3 py-1.5 font-medium text-slate-600 dark:text-slate-300 hover:bg-zinc-100 dark:hover:bg-zinc-500"
+							>{topicTranslate(article.topic)}</a
+						>
+					{/if}
 					<h3
 						class="text-2xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 					>
