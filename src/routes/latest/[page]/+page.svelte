@@ -24,7 +24,7 @@
 
 <main class="mx-auto max-w-4xl px-6 py-8 md:py-12">
   <div class="border-b border-gray-200 dark:border-gray-700 pb-5 mb-8">
-    <h1 class="text-base font-bold leading-6 text-zinc-800 dark:text-zinc-100">最新文章</h1>
+    <h1 class="text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">最新文章</h1>
   </div>
   <div class="flex flex-col gap-12 md:gap-16">
     {#each data.articles as article}

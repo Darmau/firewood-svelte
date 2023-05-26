@@ -17,7 +17,7 @@
 </script>
 
 <section class="py-8 border-b border-zinc-200 dark:border-zinc-700/40">
-	<h2 class="text-2xl font-bold text-zinc-800 dark:text-zinc-100">分类</h2>
+	<h2 class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100">分类</h2>
 	<div class="grid gap-4 grid-cols-2 mt-8 md:grid-cols-3 lg:grid-cols-4">
 		{#each topics as topic}
 			<a href={topic.href}>

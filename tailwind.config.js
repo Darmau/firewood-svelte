@@ -11,9 +11,9 @@ export default {
 	],
 	theme: {
 		extend: {
-			// fontFamily: {
-			// 	'serif': ['Noto Serif SC', ...defaultTheme.fontFamily.serif],
-			// },
+			fontFamily: {
+				'serif': ['Noto Serif SC', ...defaultTheme.fontFamily.serif],
+			},
 		}
 	},
 	plugins: []
