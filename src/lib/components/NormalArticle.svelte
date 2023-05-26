@@ -14,6 +14,7 @@
 		target="_blank"
 		class="flex flex-col gap-4"
 		on:click={() => addPageView(article._id)}
+		data-umami-event="article"
 	>
 		{#if article.cover}
 			<div class="flex flex-col gap-4 group lg:gap-6 lg:flex-row-reverse">
@@ -53,7 +54,7 @@
 						<h4
 							class="font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 						>
-							<a href={article.website} target="_blank">{article.author}</a>
+							<a href={article.website} target="_blank" data-umami-event="blog">{article.author}</a>
 						</h4>
 						<span>·</span>
 						<time
@@ -90,7 +91,7 @@
 				</p>
 				<div class="flex gap-2 text-sm">
 					<h4 class="font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
-						<a href={article.website} target="_blank">{article.author}</a>
+						<a href={article.website} target="_blank" data-umami-event="blog">{article.author}</a>
 					</h4>
 					<span>·</span>
 					<time

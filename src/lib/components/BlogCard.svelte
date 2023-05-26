@@ -8,7 +8,7 @@
 <div
 	class="bg-white dark:bg-zinc-900 border dark:border-gray-700 rounded-md p-6 gap-4 hover:shadow-md transition-all duration-200 grid"
 >
-	<a href={website.url} class="flex gap-2 items-center" target="_blank">
+	<a href={website.url} class="flex gap-2 items-center" target="_blank" data-umami-event="blog">
 		{#if website.cover}
 			<img src={website.cover} alt={website.name} class="w-5 h-5 dark:bg-white" width="20" height="20" />
 		{/if}
@@ -39,7 +39,7 @@
 			<ol class="space-y-3">
 				{#each website.latest as article}
 					<li class="text-zinc-800 hover:text-teal-600 dark:text-zinc-100 dark:hover:text-teal-400">
-						<a href={article.url} target="_blank">
+						<a href={article.url} target="_blank" data-umami-event="article">
 							{article.title}
 						</a>
 					</li>

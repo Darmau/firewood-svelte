@@ -13,6 +13,7 @@
 		href={article.url}
 		target="_blank"
 		on:click={() => addPageView(article._id)}
+		data-umami-event="article"
 	>
 		{#if article.cover}
 			<picture class="col-span-1 aspect-[4/3] rounded overflow-hidden">
@@ -89,7 +90,7 @@
 				{/if}
 				<div class="flex gap-2 text-sm">
 					<h4 class="font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400">
-						<a href={article.website} target="_blank">{article.author}</a>
+						<a href={article.website} target="_blank" data-umami-event="blog">{article.author}</a>
 					</h4>
 					<span>·</span>
 					<time

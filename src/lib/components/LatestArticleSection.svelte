@@ -26,7 +26,7 @@
 					<h3
 						class="mt-3 text-xl font-bold leading-6 text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:group-hover:text-teal-400"
 					>
-						<a href={article.url} target="_blank" on:click={() => addPageView(article._id)}>
+						<a href={article.url} target="_blank" on:click={() => addPageView(article._id)} data-umami-event="article">
 							<span class="absolute inset-0" />
 							{article.title}
 						</a>
@@ -50,7 +50,7 @@
 				<div class="relative mt-4 flex items-center gap-x-4">
 					<div class="text-sm leading-6">
 						<p class="font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
-							<a href={article.website}>
+							<a href={article.website} data-umami-event="blog">
 								<span class="absolute inset-0" />
 								{article.author}
 							</a>
