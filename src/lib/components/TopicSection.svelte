@@ -28,7 +28,7 @@
 					<picture class="w-full h-full">
 						<source srcset={`${COS_URL}${topic.cover}.avif`} type="image/avif" />
 						<source srcset={`${COS_URL}${topic.cover}.webp`} type="image/webp" />
-						<img class="aspect-[5/2] object-cover rounded-md group-hover:blur-sm transition-all duration-300 group-hover:scale-105 group-hover:brightness-75" src={`${COS_URL}${topic.cover}.jpg`} alt={topic.label} />
+						<img class="aspect-[5/2] object-cover rounded-md group-hover:blur-sm transition-all duration-300 group-hover:scale-105 group-hover:brightness-75" src={`${COS_URL}${topic.cover}.jpg`} alt={topic.label} loading="lazy" />
 					</picture>
 				</div>
 			</a>
