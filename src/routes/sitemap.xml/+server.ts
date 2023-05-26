@@ -32,7 +32,32 @@ export async function GET() {
             <priority>0.8</priority>
           </url>
           <url>
+            <loc>https://firewood.news/feature/2</loc>
+            <lastmod>${time}</lastmod>
+            <priority>0.8</priority>
+          </url>
+          <url>
             <loc>https://firewood.news/latest/1</loc>
+            <lastmod>${time}</lastmod>
+            <priority>0.8</priority>
+          </url>
+          <url>
+            <loc>https://firewood.news/latest/2</loc>
+            <lastmod>${time}</lastmod>
+            <priority>0.8</priority>
+          </url>
+          <url>
+            <loc>https://firewood.news/latest/3</loc>
+            <lastmod>${time}</lastmod>
+            <priority>0.8</priority>
+          </url>
+          <url>
+            <loc>https://firewood.news/latest/4</loc>
+            <lastmod>${time}</lastmod>
+            <priority>0.8</priority>
+          </url>
+          <url>
+            <loc>https://firewood.news/latest/5</loc>
             <lastmod>${time}</lastmod>
             <priority>0.8</priority>
           </url>
