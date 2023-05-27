@@ -25,6 +25,7 @@
 
 <Topics />
 <main class="mx-auto max-w-7xl px-6 mb-8 md:mb-16">
+	<section class="p-8 text-center text-lg text-red-500 font-bold font-serif">本站目前还在开发中。但你可以保存为书签</section>
 	<TopicArticle title="推荐" articles={data.feature} link="/feature/1" />
 	<LatestArticle articles={data.latest} link="/latest/1" />
 	<TopicSection />
