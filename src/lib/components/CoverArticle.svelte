@@ -1,7 +1,6 @@
 <script lang="ts">
 	import addPageView from '$lib/functions/addPageView';
 	import generateDate from '$lib/functions/generateDate';
-	import getImgUrl from '$lib/functions/getImgUrl';
 	import type { Article } from '$lib/types/article.type.svelte';
 	import Tags from './Tags.svelte';
 	export let article: Article;
