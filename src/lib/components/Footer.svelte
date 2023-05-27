@@ -17,7 +17,7 @@
 		{ label: '本站', href: '/about' },
 		{
 			label: '提交博客',
-			href: 'mailto:submit@darmau.design?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2%20-%20%E7%A7%AF%E8%96%AA&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0D%0ARSS%EF%BC%9A'
+			href: 'mailto:submit@firewood.news?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2%20-%20%E7%A7%AF%E8%96%AA&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0D%0ARSS%EF%BC%9A'
 		}
 	];
 </script>
