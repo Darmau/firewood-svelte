@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="积薪 - 依然相信文字的力量">
   <meta property="og:description" content="找到值得关注的独立博客">
-  <meta property="og:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/homepage.jpg">
+  <meta property="og:image" content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200">
 	<meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="firewood.news">
   <meta property="twitter:url" content="https://firewood.news">
   <meta name="twitter:title" content="积薪 - 依然相信文字的力量">
   <meta name="twitter:description" content="找到值得关注的独立博客">
-  <meta name="twitter:image" content="https://firewood-1256887306.cos.accelerate.myqcloud.com/opengraph/homepage.jpg">
+  <meta name="twitter:image" content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200">
 </svelte:head>
 
 <Topics />
