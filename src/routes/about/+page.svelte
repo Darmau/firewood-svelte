@@ -73,24 +73,16 @@
 						写作从来都不是大多数人具有的能力。在如今这个《1984》和《美丽新世界》完美共存的国家，愿意产出优秀的内容，并且向全世界共享的人是值得尊敬的。
 					</p>
 				</div>
-				<picture
+				<div
 					class="mt-10 aspect-[4/3] w-full max-w-lg rounded-2xl sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36 overflow-hidden"
 				>
-					<source
-						srcset="https://firewood-1256887306.cos.accelerate.myqcloud.com/normal/about.avif"
-						type="image/avif"
-					/>
-					<source
-						srcset="https://firewood-1256887306.cos.accelerate.myqcloud.com/normal/about.webp"
-						type="image/webp"
-					/>
 					<img
-						src="https://firewood-1256887306.cos.accelerate.myqcloud.com/normal/about.jpg"
+						src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/880e7bb6-d44e-45fa-23e3-062c3e004100/width=800"
 						alt="打字机"
 						class="object-cover h-full"
 						loading="lazy"
 					/>
-				</picture>
+				</div>
 			</div>
 		</div>
 		<div

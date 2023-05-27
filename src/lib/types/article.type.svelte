@@ -5,11 +5,7 @@
 		title: string;
 		description?: string;
 		publish_date: string;
-		cover?: {
-			jpg: string;
-			webp: string;
-			avif: string;
-		};
+		cover?: string;
 		isFeatured: boolean;
 		tags?: string[];
 		topic: string;

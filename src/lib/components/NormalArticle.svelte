@@ -18,20 +18,18 @@
 	>
 		{#if article.cover}
 			<div class="flex flex-col gap-4 group lg:gap-6 lg:flex-row-reverse">
-				<picture
+				<div
 					class="aspect-video md:aspect=[4/3] rounded overflow-hidden bg-slate-100 lg:aspect-square lg:w-40 lg:h-40 dark:bg-slate-900"
 				>
-					<source srcset={getImgUrl(article.cover.avif)} type="image/avif" />
-					<source srcset={getImgUrl(article.cover.webp)} type="image/webp" />
 					<img
-						src={getImgUrl(article.cover.jpg)}
+						src={`${article.cover}/width=320`}
 						alt={article.title}
 						class="object-cover object-center w-full h-full transition-all duration-300 group-hover:scale-105"
 						loading="lazy"
 						width="160"
 						height="160"
 					/>
-				</picture>
+				</div>
 				<div class="space-y-2 flex-1 md:space-y-4">
 					{#if topic}
 						<a

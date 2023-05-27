@@ -16,17 +16,15 @@
 		data-umami-event="article"
 	>
 		{#if article.cover}
-			<picture class="col-span-1 aspect-[4/3] rounded overflow-hidden">
-				<source srcset={getImgUrl(article.cover.avif)} type="image/avif" />
-				<source srcset={getImgUrl(article.cover.webp)} type="image/webp" />
+		<div class="col-span-1 aspect-[4/3] rounded overflow-hidden">
 				<img
-					src={getImgUrl(article.cover.jpg)}
+					src={`${article.cover}/width=960`}
 					alt={article.title}
 					class="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
 					loading="lazy"
 					width="408"
 				/>
-			</picture>
+		</div>
 			<div class="col-span-1 space-y-6 md:space-y-8">
 				<h3 class="text-4xl font-serif font-bold leading-tight text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
 					{article.title}
