@@ -1,6 +1,5 @@
 import { loginUser, verifyUser } from '$lib/functions/user.module';
-import type { PageServerLoad } from '../$types';
-import type { Actions } from './$types';
+import type { PageServerLoad, Actions } from '../$types';
 import { fail, redirect } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({cookies}) => {
