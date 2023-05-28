@@ -1,7 +1,7 @@
 <script lang="ts">
 	import addPageView from '$lib/functions/addPageView';
 	import generateDate from '$lib/functions/generateDate';
-	import getImgUrl from '$lib/functions/getImgUrl';
+	import Tags from './Tags.svelte';
 	import topicTranslate from '$lib/functions/topicTranslate';
 	import type { Article } from '$lib/types/article.type.svelte';
 	export let article: Article;
@@ -48,6 +48,13 @@
 					>
 						{article.description}
 					</p>
+					{#if article.tags}
+						<div class="flex flex-wrap">
+							{#each article.tags as tag}
+								<Tags {tag} />
+							{/each}
+						</div>
+					{/if}
 					<div class="flex gap-2 text-sm">
 						<h4
 							class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
@@ -87,6 +94,13 @@
 				>
 					{article.description}
 				</p>
+				{#if article.tags}
+					<div class="flex flex-wrap">
+						{#each article.tags as tag}
+							<Tags {tag} />
+						{/each}
+					</div>
+				{/if}
 				<div class="flex gap-2 text-sm">
 					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a href={article.website} target="_blank" data-umami-event="blog">{article.author}</a>

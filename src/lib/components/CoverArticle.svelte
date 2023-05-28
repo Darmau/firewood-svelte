@@ -15,7 +15,7 @@
 		data-umami-event="article"
 	>
 		{#if article.cover}
-		<div class="col-span-1 aspect-[4/3] rounded overflow-hidden">
+			<div class="col-span-1 aspect-[4/3] rounded overflow-hidden">
 				<img
 					src={`${article.cover}/width=960`}
 					alt={article.title}
@@ -23,12 +23,16 @@
 					loading="lazy"
 					width="408"
 				/>
-		</div>
-			<div class="col-span-1 space-y-6 md:space-y-8">
-				<h3 class="text-4xl font-serif font-bold leading-tight text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
+			</div>
+			<div class="col-span-1 space-y-4 md:space-y-6">
+				<h3
+					class="text-2xl md:text-4xl font-serif font-bold leading-tight text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+				>
 					{article.title}
 				</h3>
-				<p class="text-zinc-600 leading-7 line-clamp-3 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500">
+				<p
+					class="text-zinc-600 leading-7 line-clamp-3 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500"
+				>
 					{article.description}
 				</p>
 				{#if article.abstract}
@@ -39,14 +43,16 @@
 					</div>
 				{/if}
 				{#if article.tags}
-					<div class="flex flex-wrap gap-2">
+					<div class="flex flex-wrap">
 						{#each article.tags as tag}
 							<Tags {tag} />
 						{/each}
 					</div>
 				{/if}
 				<div class="flex gap-2 text-sm items-center">
-					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400">
+					<h4
+						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
+					>
 						<a href={article.website} target="_blank">{article.author}</a>
 					</h4>
 					<span>·</span>
@@ -64,11 +70,15 @@
 			</div>
 		{:else}
 			<!-- 如果没有封面图 -->
-			<div class="space-y-8 col-span-2">
-				<h3 class="text-5xl font-serif font-bold leading-snug text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">
+			<div class="space-y-4 md:space-y-8 col-span-2">
+				<h3
+					class="text-3xl md:text-5xl font-serif font-bold leading-snug text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+				>
 					{article.title}
 				</h3>
-				<p class="text-zinc-600 leading-7 line-clamp-3 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500">
+				<p
+					class="text-zinc-600 leading-7 line-clamp-3 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500"
+				>
 					{article.description}
 				</p>
 				{#if article.abstract}
@@ -79,14 +89,16 @@
 					</div>
 				{/if}
 				{#if article.tags}
-					<div class="flex flex-wrap gap-2">
+					<div class="flex flex-wrap">
 						{#each article.tags as tag}
 							<Tags {tag} />
 						{/each}
 					</div>
 				{/if}
 				<div class="flex gap-2 text-sm">
-					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400">
+					<h4
+						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
+					>
 						<a href={article.website} target="_blank" data-umami-event="blog">{article.author}</a>
 					</h4>
 					<span>·</span>
