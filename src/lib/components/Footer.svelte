@@ -55,7 +55,7 @@
 						</svg>
 					</a>
 					<a
-						href="https://twitter.com/home"
+						href="https://twitter.com/darmaulee"
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="站长的推特"
@@ -138,7 +138,7 @@
 		</div>
 		<div class="mt-16 border-t border-gray-900/10 dark:border-gray-50/10 pt-8 sm:mt-20 lg:mt-24">
 			<p class="text-xs leading-5 text-zinc-400 dark:text-zinc-500">
-				&copy; {thisYear} Design and Develop by <a href="https://darmau.dev" target="_blank">李大毛没有猫</a>. All rights reserved.
+				&copy; {thisYear} Design and Develop by 李大毛没有猫. All rights reserved.
 			</p>
 		</div>
 	</div>
