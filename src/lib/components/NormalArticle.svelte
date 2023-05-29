@@ -76,7 +76,7 @@
 				</div>
 			</div>
 		{:else}
-			<div class="space-y-2 md:space-y-4">
+			<div class="space-y-2 md:space-y-4 group">
 				{#if topic}
 					<a
 						href={`/topic/${article.topic}/1`}
