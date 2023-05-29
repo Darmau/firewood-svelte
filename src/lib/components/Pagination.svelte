@@ -7,25 +7,6 @@
 	export let path: string;
 
 	const totalPages = Math.ceil(totalArticles / itemPerPage);
-	let pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
-	let pagesToRender: (number | string)[] = [];
-
-	// 根据总页数生成一个数组，数组中的每一个元素将被渲染成一个页码，链接到对应页面。
-	$: if (totalPages >= 2 && totalPages <= 7) {
-		pagesToRender = pageNumbers;
-	} else if (currentPage <= 3) {
-		pagesToRender = [...pageNumbers.slice(0, 3), '...', ...pageNumbers.slice(-3)];
-	} else if (currentPage > totalPages - 3) {
-		pagesToRender = [...pageNumbers.slice(0, 3), '...', ...pageNumbers.slice(-3)];
-	} else {
-		pagesToRender = [1, currentPage - 1, +currentPage, +currentPage + 1, totalPages];
-		if (currentPage > 4) {
-			pagesToRender = [1, '...', ...pagesToRender.slice(1)];
-		}
-		if (currentPage < totalPages - 3) {
-			pagesToRender = [...pagesToRender.slice(0, -1), '...', totalPages];
-		}
-	}
 
 	onMount(() => {
 		currentPage;
