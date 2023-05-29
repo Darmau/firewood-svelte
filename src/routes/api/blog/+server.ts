@@ -21,3 +21,24 @@ export const PUT = (async ({ request }) => {
 
   return new Response(JSON.stringify(response.json()), { status: response.status });
 }) satisfies RequestHandler;
+
+// 在body中包含name和url，向/website/add POST 新增网站
+export const POST = (async ({ request }) => {
+  const token = request.headers.get('authorization');
+  const submitData = JSON.parse(await request.text());
+
+  const response = await fetch(`${API_URL}/website/add`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': token !== null ? token : '',
+    },
+    body: JSON.stringify(submitData)
+  });
+
+  if (response.ok) {
+    return new Response(JSON.stringify(response.json()));
+  }
+
+  return new Response(JSON.stringify(response.json()), { status: response.status });
+}) satisfies RequestHandler;
