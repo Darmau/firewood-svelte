@@ -8,7 +8,7 @@
 	let page: number = 1;
 	async function getArticles(newPage: number) {
 		page = newPage;
-		articles = await fetch(`/api/articles?page=${page}`).then((res) => res.json());
+		articles = (await fetch(`/api/articles?page=${page}`).then((res) => res.json())) || [];
 	}
 	getArticles(page);
 
@@ -48,14 +48,18 @@
 					<a href={article.url} target="_blank">{article.title}</a>
 				</h3>
 				<p class="text-zinc-600 pb-4">{article.description}</p>
-				<span class="p-1 bg-teal-700 text-white text-sm rounded mr-2">{topicTranslate(article.topic)}</span>
+				<span class="p-1 bg-teal-700 text-white text-sm rounded mr-2"
+					>{topicTranslate(article.topic)}</span
+				>
 				<time datetime={article.publish_date} class="text-sm text-zinc-400"
 					>{generateDate(article.publish_date)}</time
 				>
 
-				{#each article.tags as tag}
-					<p class="inline-block text-zinc-400 mr-2 text-sm">#{tag}</p>
-				{/each}
+				{#if article.tags}
+					{#each article.tags as tag}
+						<p class="inline-block text-zinc-400 mr-2 text-sm">#{tag}</p>
+					{/each}
+				{/if}
 
 				{#if article.abstract}
 					<p class="text-zinc-700 border-l pl-4 border-teal-600">{article.abstract}</p>
