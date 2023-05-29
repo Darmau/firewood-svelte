@@ -19,45 +19,46 @@
 		await fetch(`/api/article/feature?id=${article._id}`, {
 			method: 'PUT',
 			headers: {
-					'Content-Type': 'application/json',
-					'Authorization': `Bearer ${token}`,
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${token}`
 			}
 		});
 		getArticles(page);
-	};
+	}
 
 	// 切换封禁状态
 	async function toggleBlock(article: Article) {
 		await fetch(`/api/article/block?id=${article._id}`, {
 			method: 'PUT',
 			headers: {
-					'Content-Type': 'application/json',
-					'Authorization': `Bearer ${token}`,
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${token}`
 			}
 		});
 		getArticles(page);
-	};
+	}
 </script>
 
 <div class="space-y-12 max-w-4xl mx-auto">
 	{#each articles as article}
 		<article class="border-b pb-12 flex gap-4 md:gap-12 justify-between">
-			<div class="space-y-3">
-				<h4>{article.author}</h4>
-				<h3>
+			<div class="space-y-4">
+				<h4 class="text-sm font-bold font-serif text-zinc-800">{article.author}</h4>
+				<h3 class="text-2xl font-bold font-serif text-zinc-800">
 					<a href={article.url} target="_blank">{article.title}</a>
 				</h3>
-				<p>{article.description}</p>
-				<time datetime={article.publish_date}>{generateDate(article.publish_date)}</time>
-
-				<p>{topicTranslate(article.topic)}</p>
+				<p class="text-zinc-600 pb-4">{article.description}</p>
+				<span class="p-1 bg-teal-700 text-white text-sm rounded mr-2">{topicTranslate(article.topic)}</span>
+				<time datetime={article.publish_date} class="text-sm text-zinc-400"
+					>{generateDate(article.publish_date)}</time
+				>
 
 				{#each article.tags as tag}
 					<p class="inline-block text-zinc-400 mr-2 text-sm">#{tag}</p>
 				{/each}
 
 				{#if article.abstract}
-					<p>{article.abstract}</p>
+					<p class="text-zinc-700 border-l pl-4 border-teal-600">{article.abstract}</p>
 				{/if}
 
 				<!-- 推荐和封禁 -->
