@@ -12,5 +12,6 @@
     last_publish: string;
     last_crawl: string;
     latest: Article[];
+    rss?: string;
   }
 </script>

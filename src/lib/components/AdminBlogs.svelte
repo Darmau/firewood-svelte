@@ -1,22 +1,43 @@
 <script lang="ts">
 	import generateDate from '$lib/functions/generateDate';
+	import type { Website } from '$lib/types/website.type.svelte';
+	import EditBlog from './EditBlog.svelte';
 
-	let blogs: any[] = [];
+	// 获取数据
+	let blogs: Website[] = [];
 	let page: number = 1;
-	// let selectBlogId: number;
 	async function getBlogs(newPage: number) {
 		page = newPage;
 		blogs = await fetch(`/api/blogs?page=${page}`).then((res) => res.json());
 	}
-
 	getBlogs(page);
-	// export let token: string;
+
+	// 控制编辑组件的显示
+	let isEditing: boolean = false;
+	function closeEdit() {
+		isEditing = false;
+		getBlogs(page);
+	}
+
+	let activeBlog: Website;
+	function openEdit(blog: Website) {
+		isEditing = true;
+		activeBlog = blog;
+	}
+
+	export let token: string;
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 	{#each blogs as blog}
-		<div class="border rounded p-4 space-y-4">
-			<h3 class="font-serif text-lg font-bold text-zinc-800">{blog.name}</h3>
+		<div class="border rounded p-6 space-y-4">
+			<div class="flex justify-between">
+				<h3 class="font-serif text-lg font-bold text-zinc-800">{blog.name}</h3>
+				<button
+					on:click={() => openEdit(blog)}
+					class="text-teal-700 text-sm hover:font-bold hover;text-teal-900">修改</button
+				>
+			</div>
 			<p class="text-zinc-600">{blog.description}</p>
 			<p class="font-mono text-sm text-teal-600">{blog.url}</p>
 			<p class="font-mono text-sm text-teal-600">{blog.rss}</p>
@@ -60,3 +81,11 @@
 		class="border p-2 rounded text-zinc-800 hover:bg-zinc-100">下一页</button
 	>
 </div>
+
+{#if isEditing}
+	<div
+		class="fixed top-0 left-0 w-screen h-screen bg-zinc-900/20 z-50 flex justify-center items-center backdrop-blur-sm"
+	>
+		<EditBlog blog={activeBlog} {closeEdit} {token} />
+	</div>
+{/if}
