@@ -2,8 +2,6 @@ import type { PageServerLoad } from '../../$types';
 import { API_URL } from '$env/static/private';
 import type { Website } from '$lib/types/website.type.svelte';
 
-// export const prerender = true;
-
 // 获取博客
 export const load = (async ({ params: { page }, setHeaders }) => {
   setHeaders({
