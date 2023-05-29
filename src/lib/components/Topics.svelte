@@ -6,14 +6,13 @@
 		{ label: '旅游', href: '/topic/travel/1' },
 		{ label: '生活', href: '/topic/emotion/1' },
 		{ label: '时事', href: '/topic/politics/1' },
-		{ label: '游戏', href: '/topic/game/1' }
 	];
 </script>
 
 <div
 	class="flex justify-center items-center w-full py-4 px-6 border-b dark:border-zinc-700 text-sm"
 >
-	<div class="flex items-center gap-6 overflow-x-scroll md:gap-8">
+	<div class="flex items-center gap-6 overflow-x-auto md:gap-8">
 		{#each topicList as topic}
 			<a
 				href={topic.href}

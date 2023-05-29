@@ -24,7 +24,7 @@
 				</div>
 				<div class="group relative">
 					<h3
-						class="mt-3 text-xl font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:group-hover:text-teal-400"
+						class="mt-3 text-xl font-serif font-bold leading-7 text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:group-hover:text-teal-400"
 					>
 						<a href={article.url} target="_blank" on:click={() => addPageView(article._id)} data-umami-event="article">
 							<span class="absolute inset-0" />
