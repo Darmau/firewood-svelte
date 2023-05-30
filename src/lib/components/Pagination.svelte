@@ -14,7 +14,7 @@
 </script>
 
 {#if totalPages > 1}
-	<div class="flex items-center justify-between border-t dark:border-zinc-800 mt-8 py-8">
+	<div class="flex items-center justify-between mt-8 py-8">
 		<div class="flex flex-1 justify-between">
 			<div class={currentPage === 1 ? 'invisible pointer-events-none' : ''}>
 				<a
