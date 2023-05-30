@@ -43,6 +43,6 @@
 		bind:currentPage={data.page}
 		totalArticles={data.count}
 		itemPerPage={18}
-		path={'/author/latest'}
+		path={'/author/most-view'}
 	/>
 </main>
