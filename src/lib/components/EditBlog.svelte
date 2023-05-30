@@ -23,20 +23,42 @@
 			console.error(res);
 		}
 	}
+
+	async function deleteBlog(event: Event) {
+		event.preventDefault();
+		const formElement = document.getElementById("blog") as HTMLFormElement;
+		const formData = new FormData(formElement)
+		const blogData = Object.fromEntries(formData.entries());
+
+		const res = await fetch(`/api/blog`, {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${token}`
+			},
+			body: JSON.stringify(blogData)
+		});
+		if (res.ok) {
+			closeEdit();
+		} else {
+			console.error(res);
+		}
+	}
 </script>
 
 <form
 	method="POST"
 	on:submit={submitForm}
+	id="blog"
 	class="bg-white p-4 space-y-6 lg:p-8 rounded-lg w-11/12 lg:w-1/2"
 >
-	<div class="sm:col-span-4">
+	<div class="w-full">
 		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">博客</label>
 		<div class="mt-2">
 			<div
-				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600 sm:max-w-md"
+				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
 			>
-			  <!-- 存储blog的id -->
+				<!-- 存储blog的id -->
 				<input type="hidden" name="id" value={blog._id} />
 				<input
 					type="text"
@@ -48,11 +70,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="sm:col-span-4">
+	<div class="w-full">
 		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">简介</label>
 		<div class="mt-2">
 			<div
-				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600 sm:max-w-md"
+				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
 			>
 				<input
 					type="text"
@@ -64,11 +86,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="sm:col-span-4">
+	<div class="w-full">
 		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">网址</label>
 		<div class="mt-2">
 			<div
-				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600 sm:max-w-md"
+				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
 			>
 				<input
 					type="text"
@@ -80,11 +102,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="sm:col-span-4">
+	<div class="w-full">
 		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">RSS</label>
 		<div class="mt-2">
 			<div
-				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600 sm:max-w-md"
+				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
 			>
 				<input
 					type="text"
@@ -96,6 +118,15 @@
 			</div>
 		</div>
 	</div>
-	<button type="submit" class="border py-2 px-4 rounded bg-teal-600 text-white mr-2"> 保存 </button>
-	<button on:click={closeEdit} class="border py-2 px-4 rounded bg-zinc-100"> 取消 </button>
+	<div class="flex justify-between">
+		<div>
+			<button type="submit" class="border py-2 px-4 rounded bg-teal-600 text-white mr-2">
+				保存
+			</button>
+			<button on:click={closeEdit} class="border py-2 px-4 rounded bg-zinc-100"> 取消 </button>
+		</div>
+		<button on:click={deleteBlog} class="border py-2 px-4 rounded bg-zinc-100 text-red-700">
+			删除</button
+		>
+	</div>
 </form>

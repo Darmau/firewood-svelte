@@ -42,3 +42,23 @@ export const POST = (async ({ request }) => {
 
   return new Response(JSON.stringify(response.json()), { status: response.status });
 }) satisfies RequestHandler;
+
+// 删除某个网站
+export const DELETE = (async ({ request }) => {
+  const token = request.headers.get('authorization');
+  const submitData = JSON.parse(await request.text());
+
+  const response = await fetch(`${API_URL}/website?id=${submitData.id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': token !== null ? token : '',
+    },
+  });
+
+  if (response.ok) {
+    return new Response(await response.text());
+  }
+
+  return new Response(JSON.stringify(response.json()), { status: response.status });
+}) satisfies RequestHandler;
