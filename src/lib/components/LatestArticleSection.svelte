@@ -33,15 +33,9 @@
 					</h3>
 					{#if article.description}
 						<p
-							class="mt-5 line-clamp-3 break-words text-sm leading-6 text-zinc-600 dark:text-zinc-400 text-ellipsis group-hover:text-zinc-500"
+							class="mt-5 line-clamp-3 break-all text-sm leading-6 text-zinc-600 dark:text-zinc-400 text-ellipsis group-hover:text-zinc-500"
 						>
 							{article.description}
-						</p>
-					{:else if article.abstract}
-						<p
-							class="mt-5 line-clamp-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400 text-ellipsis group-hover:text-zinc-500"
-						>
-							{article.abstract}
 						</p>
 					{:else}
 						<p />

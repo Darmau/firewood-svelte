@@ -23,7 +23,7 @@
 			<a href={topic.href}>
 				<div class="bg-gray-200 relative overflow-hidden rounded-md group">
           <div class="absolute inset-0 flex items-center justify-center z-10">
-						<p class="text-white font-bold text-lg">{topic.label}</p>
+						<p class="text-white font-bold font-serif text-lg">{topic.label}</p>
 					</div>
 					<div class="w-full h-full">
 						<img class="aspect-[5/2] object-cover rounded-md group-hover:blur-sm transition-all duration-300 group-hover:scale-105 group-hover:brightness-75" src={`${CF_URL}${topic.cover}/topics`} alt={topic.label} loading="lazy" />

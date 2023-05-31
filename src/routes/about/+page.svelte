@@ -119,6 +119,9 @@
 						<p class="mt-10">
 							前端上我放弃了熟悉的React和Next，采用了SvelteKit进行开发。除了生态不如React，很多功能都要自己实现以外，其他方面倒还不错。
 						</p>
+						<p class="mt-10">
+							更多技术细节请见《<a class="text-teal-700" href="https://darmau.design/article/tech-behind-firewood" target="_blank">积薪的技术架构</a>》。
+						</p>
 					</div>
 				</div>
 				<div class="lg:flex lg:flex-auto lg:justify-center">
@@ -157,7 +160,9 @@
 		>
 			{#each rules as rule}
 				<div class="space-y-4">
-					<dt class="font-serif font-bold text-lg text-teal-600 dark:text-teal-300">{rule.title}</dt>
+					<dt class="font-serif font-bold text-lg text-teal-600 dark:text-teal-300">
+						{rule.title}
+					</dt>
 					<dd class="mt-1 text-zinc-600 dark:text-zinc-400">
 						{rule.content}
 					</dd>
