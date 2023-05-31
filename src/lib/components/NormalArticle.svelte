@@ -44,7 +44,7 @@
 						{article.title}
 					</h3>
 					<p
-						class="text-zinc-600 leading-7 line-clamp-2 text-ellipsis dark:text-zinc-400 group-hover:text-zinc-500"
+						class="text-zinc-600 leading-7 line-clamp-2 text-ellipsis break-words dark:text-zinc-400 group-hover:text-zinc-500"
 					>
 						{article.description}
 					</p>
@@ -90,7 +90,7 @@
 					{article.title}
 				</h3>
 				<p
-					class="text-zinc-600 leading-7 line-clamp-2 text-ellipsis group-hover:text-zinc-500 dark:text-zinc-400"
+					class="text-zinc-600 leading-7 line-clamp-2 break-words text-ellipsis group-hover:text-zinc-500 dark:text-zinc-400"
 				>
 					{article.description}
 				</p>
