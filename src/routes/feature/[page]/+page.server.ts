@@ -25,6 +25,6 @@ export const load = (async ({ params: { page }, setHeaders }) => {
   return {
     articles: data,
     count: articleCount,
-    page: page
+    page: Number(page),
   };
 }) satisfies PageServerLoad;
