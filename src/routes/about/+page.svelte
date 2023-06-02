@@ -124,21 +124,32 @@
 						</p>
 					</div>
 				</div>
-				<div class="lg:flex lg:flex-auto lg:justify-center">
+				<div class="flex flex-col gap-8 lg:gap-16">
 					<dl class="w-64 space-y-8 xl:w-80">
-						<div class="flex flex-col-reverse gap-y-4">
+						<div class="flex flex-col-reverse md:items-center gap-y-4">
 							<dt class="text-base leading-7 text-zinc-600 dark:text-zinc-400">收录文章</dt>
 							<dd class="text-5xl font-semibold tracking-tight text-teal-600 dark:text-teal-300">
 								{data.article}篇
 							</dd>
 						</div>
-						<div class="flex flex-col-reverse gap-y-4">
+						<div class="flex flex-col-reverse md:items-center gap-y-4">
 							<dt class="text-base leading-7 text-zinc-600 dark:text-zinc-400">收录博客</dt>
 							<dd class="text-5xl font-semibold tracking-tight text-teal-600 dark:text-teal-300">
 								{data.website}个
 							</dd>
 						</div>
 					</dl>
+					<div class="flex flex-col gap-2 md:items-center">
+						<p class="flex gap-1 items-center leading-7 text-zinc-600 dark:text-zinc-400">
+							<svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-teal-600 dark:text-teal-400">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9 7.5l3 4.5m0 0l3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>							
+							如果你想支持本站</p>
+						<img
+							class="w-64 h-64 rounded-lg object-cover object-center shadow-2xl"
+							src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/447aa0e7-c8de-49d0-2f54-2f94e8f90a00/width=640"
+							alt="Bookshelves"
+						/>
 				</div>
 			</div>
 		</div>
