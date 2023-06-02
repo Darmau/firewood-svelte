@@ -124,7 +124,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="flex flex-col gap-8 lg:gap-16">
+				<div class="flex flex-col items-center gap-8 lg:gap-16">
 					<dl class="w-64 space-y-8 xl:w-80">
 						<div class="flex flex-col-reverse md:items-center gap-y-4">
 							<dt class="text-base leading-7 text-zinc-600 dark:text-zinc-400">收录文章</dt>
@@ -155,7 +155,7 @@
 		</div>
 	</div>
 
-	<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+	<div class="mx-auto mt-32 max-w-7xl sm:mt-40">
 		<div class="mx-auto max-w-2xl lg:mx-0">
 			<h2
 				class="text-3xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl"
