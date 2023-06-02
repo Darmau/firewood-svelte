@@ -34,6 +34,7 @@
 		<div class="flex lg:hidden">
 			<button
 				type="button"
+				aria-label="Open menu"
 				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-500 dark:text-zinc-100 cursor-pointer"
 				on:click={toogleMenu}
 			>
@@ -82,10 +83,10 @@
 				</a>
 				<button
 					type="button"
+					aria-label="Close menu"
 					class="-m-2.5 rounded-md p-2.5 text-zinc-500 dark:text-zinc-100"
 					on:click={toogleMenu}
 				>
-					<span class="sr-only">Close menu</span>
 					<svg
 						class="h-6 w-6"
 						fill="none"

@@ -20,7 +20,6 @@
 					src={`${article.cover}/width=960`}
 					alt={article.title}
 					class="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
-					loading="lazy"
 					width="408"
 				/>
 			</div>
