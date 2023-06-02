@@ -100,7 +100,7 @@
 				</div>
 			</div>
 			{#if article.cover}
-				<div class="flex-none aspect-square overflow-hidden w-20 h-20 md:w-40 lg:h-40">
+				<div class="hidden md:block flex-none aspect-square overflow-hidden w-20 h-20 md:w-40 lg:h-40">
 					<img
 						src={`${article.cover}/width=240`}
 						alt={article.title}
