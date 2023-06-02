@@ -1,7 +1,5 @@
 import type { PageServerLoad } from './$types';
 
-// export const prerender = true;
-
 // 本文件负责fetch首页需要的数据
 export const load = (async ({ fetch, setHeaders }) => {
   setHeaders({ 'Cache-Control': 'max-age=600' })
