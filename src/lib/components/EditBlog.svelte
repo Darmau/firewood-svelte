@@ -53,7 +53,7 @@
 	class="bg-white p-4 space-y-6 lg:p-8 rounded-lg w-11/12 lg:w-1/2"
 >
 	<div class="w-full">
-		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">博客</label>
+		<label for="name" class="block text-sm font-medium leading-6 text-gray-900">博客</label>
 		<div class="mt-2">
 			<div
 				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<div class="w-full">
-		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">简介</label>
+		<label for="description" class="block text-sm font-medium leading-6 text-gray-900">简介</label>
 		<div class="mt-2">
 			<div
 				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
@@ -87,7 +87,7 @@
 		</div>
 	</div>
 	<div class="w-full">
-		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">网址</label>
+		<label for="url" class="block text-sm font-medium leading-6 text-gray-900">网址</label>
 		<div class="mt-2">
 			<div
 				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
@@ -103,7 +103,7 @@
 		</div>
 	</div>
 	<div class="w-full">
-		<label for="username" class="block text-sm font-medium leading-6 text-gray-900">RSS</label>
+		<label for="rss" class="block text-sm font-medium leading-6 text-gray-900">RSS</label>
 		<div class="mt-2">
 			<div
 				class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-teal-600"
