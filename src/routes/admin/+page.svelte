@@ -30,6 +30,11 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>管理后台</title>
+	<meta name="description" content="管理收录网站和文章" />
+</svelte:head>
+
 <main class="mx-auto max-w-7xl px-6">
 	<div
 		class="flex justify-center items-center w-full py-4 px-6 border-b dark:border-zinc-700 text-sm"
