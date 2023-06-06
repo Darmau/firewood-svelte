@@ -11,7 +11,7 @@ export const GET = (async () => {
       return []
     })
   // 将7篇推荐文章的id存入Set，避免后续产生重复文章
-  const featuredIds = new Set(featureArticles.map((article: Article) => article._id))
+  const pushedIds = new Set(featureArticles.map((article: Article) => article._id))
 
   let latestPage = 1;
   const latestLimit = 9;
@@ -30,7 +30,7 @@ export const GET = (async () => {
     emotionArticles.length < topicLimit
   ) {
     // 每一次获取10篇最新文章
-    const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=30`)
+    const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=10`)
       .then(res => res.json())
       .catch((error) => {
         console.error(`获取第${latestPage}页最新文章失败：`, error);
@@ -44,9 +44,9 @@ export const GET = (async () => {
 
     latestBatch.forEach((article: Article) => {
       // 检测是否在刚才的推荐文章中
-      if (!featuredIds.has(article._id)) {
+      if (!pushedIds.has(article._id)) {
 
-        // 首先增加最新的12篇文章
+        // 首先增加最新的9篇文章
         if (latestArticles.length < latestLimit) {
           latestArticles.push(article);
           return;
@@ -55,16 +55,16 @@ export const GET = (async () => {
         //接着处理各分类的文章
         switch (article.topic) {
           case 'tech':
-            if (techArticles.length < topicLimit) techArticles.push(article);
+            if (techArticles.length < topicLimit) { techArticles.push(article); pushedIds.add(article._id) };
             break;
           case 'society':
-            if (societyArticles.length < topicLimit) societyArticles.push(article);
+            if (societyArticles.length < topicLimit) { societyArticles.push(article); pushedIds.add(article._id) };
             break;
           case 'culture':
-            if (cultureArticles.length < topicLimit) cultureArticles.push(article);
+            if (cultureArticles.length < topicLimit) { cultureArticles.push(article); pushedIds.add(article._id) };
             break;
           case 'emotion':
-            if (emotionArticles.length < topicLimit) emotionArticles.push(article);
+            if (emotionArticles.length < topicLimit) { emotionArticles.push(article); pushedIds.add(article._id) };
             break;
           default:
             break;
