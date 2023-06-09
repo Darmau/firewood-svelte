@@ -23,6 +23,7 @@
 </script>
 
 <svelte:head>
+	<link rel="manifest" href="/manifest.json">
 	<script
 		async
 		src="https://analytics.darmau.design/script.js"
