@@ -66,7 +66,7 @@
 	<!-- Mobile menu, show/hide based on menu open state. -->
 	<div class={`${menuShown ? 'block' : 'hidden'} lg:hidden`} role="dialog" aria-modal="true">
 		<!-- Background backdrop, show/hide based on slide-over state. -->
-		<div class="fixed inset-0 z-10 bg-gray-500/30" on:click={toogleMenu} on:keydown={toogleMenu} />
+		<div class="fixed inset-0 z-10 bg-gray-500/30" on:click={toogleMenu} on:keydown={toogleMenu} role="button" tabindex="0" />
 		<div
 			class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-zinc-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
 		>
