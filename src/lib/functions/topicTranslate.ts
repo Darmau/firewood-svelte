@@ -12,7 +12,7 @@ const topicList = new Map([
   ['career', '职场'],
   ['travel', '旅行'],
   ['culture', '人文'],
-  ['education', '教育'],
+  ['education', '学习'],
   ['emotion', '情感'],
   ['others', '综合'],
   [null, '无分类'],
