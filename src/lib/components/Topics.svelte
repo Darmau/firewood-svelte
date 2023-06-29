@@ -1,11 +1,11 @@
 <script>
 	const topicList = [
 		{ label: '技术', href: '/topic/tech/1' },
+		{ label: '日记', href: '/topic/diary/1' },
+		{ label: '生活', href: '/topic/life/1' },
 		{ label: '社会', href: '/topic/society/1' },
-		{ label: '文化', href: '/topic/culture/1' },
-		{ label: '旅游', href: '/topic/travel/1' },
-		{ label: '生活', href: '/topic/emotion/1' },
-		{ label: '时事', href: '/topic/politics/1' },
+		{ label: '编程', href: '/topic/code/1' },
+		{ label: '人文', href: '/topic/culture/1' },
 	];
 </script>
 
