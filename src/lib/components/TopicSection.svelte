@@ -2,17 +2,17 @@
 	const CF_URL = 'https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/';
 	const topics = [
 		{ label: '技术', href: '/topic/tech/1', cover: '1a101745-c956-4363-fbf2-f7c2a4d49300' },
+		{ label: '编程', href: '/topic/code/1', cover: '8d3919c0-d428-4dc5-0d98-5aae9b38f600' },
 		{ label: '社会', href: '/topic/society/1', cover: 'c0bee2a5-d178-474d-aa51-a093abc41c00' },
-		{ label: '文化', href: '/topic/culture/1', cover: '9fb3140a-a8fb-4827-7ae4-f20835481b00' },
+		{ label: '日记', href: '/topic/diary/1', cover: '6a0c09bb-7c98-4845-dca4-8f6686cd1500' },
+		{ label: '生活', href: '/topic/life/1', cover: 'ff272716-ebae-44cb-b2dc-019b5af85400' },
+		{ label: '政治', href: '/topic/politics/1', cover: '2c3a97d3-65ce-482b-51f6-bf1cb187ee00' },
+		{ label: '职场', href: '/topic/career/1', cover: '7c68281c-b2fb-423a-11dd-32ac101ca800' },
 		{ label: '旅行', href: '/topic/travel/1', cover: '07c6f29d-a8d9-4d91-2a11-7fc2d1997700' },
-		{ label: '生活情感', href: '/topic/emotion/1', cover: '6773ac82-d3b2-4ea6-c49e-bf4a4e401c00' },
-		{ label: '历史', href: '/topic/history/1', cover: 'ff272716-ebae-44cb-b2dc-019b5af85400' },
-		{ label: '游戏', href: '/topic/game/1', cover: 'c739c0ff-b713-4563-e0e4-7ff5261e7100' },
-		{ label: '时事', href: '/topic/politics/1', cover: '2c3a97d3-65ce-482b-51f6-bf1cb187ee00' },
-		{ label: '国际', href: '/topic/international/1', cover: '46d98a2a-12ea-48cf-5c6d-d0c6cec68800' },
-		{ label: '体育', href: '/topic/sports/1', cover: '69fb60f4-eb91-4e7e-ef45-067f2d4d7600' },
+		{ label: '人文', href: '/topic/culture/1', cover: '9fb3140a-a8fb-4827-7ae4-f20835481b00' },
+		{ label: '学习', href: '/topic/education/1', cover: '16c935f8-f4ed-45f9-3d7a-9371b6be4600' },
+		{ label: '情感', href: '/topic/emotion/1', cover: '6773ac82-d3b2-4ea6-c49e-bf4a4e401c00' },
 		{ label: '综合', href: '/topic/others/1', cover: 'e515c66d-bcc4-4c13-e3c8-fb09067f6500' },
-		{ label: '财经', href: '/topic/finance/1', cover: 'df507b9f-1ea1-4b7d-b438-d9b37c0d4800' }
 	];
 </script>
 
