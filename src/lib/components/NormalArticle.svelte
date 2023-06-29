@@ -40,7 +40,7 @@
 						>
 					{/if}
 					<h3
-						class="text-2xl font-serif font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+						class="text-2xl font-serif font-bold break-words text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						{article.title}
 					</h3>
@@ -90,7 +90,7 @@
 					>
 				{/if}
 				<h3
-					class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="text-2xl font-serif font-bold break-words text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
