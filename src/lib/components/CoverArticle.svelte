@@ -36,7 +36,9 @@
 				</p>
 				{#if article.abstract}
 					<div class="border-l border-teal-600 pl-2">
-						<p class="text-zinc-600 p-2 rounded leading-7 dark:text-zinc-400">
+						<p class="text-zinc-600 p-2 rounded leading-7 dark:text-zinc-400"
+						  title={article.abstract}
+						>
 							{article.abstract}
 						</p>
 					</div>

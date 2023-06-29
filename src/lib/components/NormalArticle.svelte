@@ -15,6 +15,7 @@
 		class="flex flex-col gap-4"
 		on:click={() => addPageView(article._id)}
 		data-umami-event="article"
+		title={article.abstract || article.description}
 	>
 		{#if article.cover}
 			<div class="flex flex-col gap-4 group lg:gap-6 lg:flex-row-reverse">
@@ -95,6 +96,7 @@
 				</h3>
 				<p
 					class="text-zinc-600 leading-7 line-clamp-3 break-words text-ellipsis group-hover:text-zinc-500 dark:text-zinc-400"
+					title={article.abstract || article.description}
 				>
 					{#if article.abstract}
 						{article.abstract}

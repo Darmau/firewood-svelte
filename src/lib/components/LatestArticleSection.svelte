@@ -31,6 +31,7 @@
 							target="_blank"
 							on:click={() => addPageView(article._id)}
 							data-umami-event="article"
+							title={article.abstract || article.description}
 						>
 							<span class="absolute inset-0" />
 							{article.title}
