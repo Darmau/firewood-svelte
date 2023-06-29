@@ -46,7 +46,11 @@
 					<p
 						class="text-zinc-600 leading-7 line-clamp-2 text-ellipsis break-words dark:text-zinc-400 group-hover:text-zinc-500"
 					>
-						{article.description}
+						{#if article.abstract}
+							{article.abstract}
+						{:else}
+							{article.description}
+						{/if}
 					</p>
 					{#if article.tags}
 						<div class="flex flex-wrap">
@@ -92,7 +96,11 @@
 				<p
 					class="text-zinc-600 leading-7 line-clamp-2 break-words text-ellipsis group-hover:text-zinc-500 dark:text-zinc-400"
 				>
-					{article.description}
+					{#if article.abstract}
+						{article.abstract}
+					{:else}
+						{article.description}
+					{/if}
 				</p>
 				{#if article.tags}
 					<div class="flex flex-wrap">
