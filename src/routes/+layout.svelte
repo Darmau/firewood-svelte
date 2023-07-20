@@ -37,7 +37,7 @@
 	<script
 		async
 		src="https://analytics.darmau.design/script.js"
-		data-website-id="e8bdffeb-b9da-4541-afc3-4d0a8dc5664b"
+		data-website-id="2746988f-1aa5-4dd3-9a34-428ea9317040"
 	></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
