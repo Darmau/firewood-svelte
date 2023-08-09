@@ -17,11 +17,11 @@ export const GET = (async () => {
   const latestLimit = 9;
   const topicLimit = 7
 
-  let latestArticles: Article[] = [];
-  let techArticles: Article[] = [];
-  let societyArticles: Article[] = [];
-  let cultureArticles: Article[] = [];
-  let emotionArticles: Article[] = [];
+  const latestArticles: Article[] = [];
+  const techArticles: Article[] = [];
+  const societyArticles: Article[] = [];
+  const cultureArticles: Article[] = [];
+  const emotionArticles: Article[] = [];
 
   while (
     techArticles.length < topicLimit ||
@@ -29,8 +29,8 @@ export const GET = (async () => {
     cultureArticles.length < topicLimit ||
     emotionArticles.length < topicLimit
   ) {
-    // 每一次获取10篇最新文章
-    const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=10`)
+    // 每一次获取30篇最新文章
+    const latestBatch = await fetch(`${API_URL}/article/latest?page=${latestPage}&limit=30`)
       .then(res => res.json())
       .catch((error) => {
         console.error(`获取第${latestPage}页最新文章失败：`, error);
