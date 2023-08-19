@@ -13,6 +13,7 @@
 		target="_blank"
 		on:click={() => addPageView(article._id)}
 		data-umami-event="article"
+		data-umami-event-source = "feature"
 	>
 		{#if article.cover}
 			<div class="col-span-2 aspect-[4/3] rounded overflow-hidden">

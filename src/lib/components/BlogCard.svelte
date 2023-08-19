@@ -39,7 +39,11 @@
 			<ol class="space-y-3">
 				{#each website.latest as article}
 					<li class="font-serif font-bold text-zinc-800 hover:text-teal-600 dark:text-zinc-100 dark:hover:text-teal-400">
-						<a href={article.url} target="_blank" data-umami-event="article">
+						<a href={article.url} 
+						  target="_blank" 
+							data-umami-event="article"
+							data-umami-event-source = "author"
+							>
 							{article.title}
 						</a>
 					</li>

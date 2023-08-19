@@ -15,6 +15,7 @@
 		class="flex flex-col gap-4"
 		on:click={() => addPageView(article._id)}
 		data-umami-event="article"
+		data-umami-event-source = "normal"
 		title={article.abstract || article.description}
 	>
 		{#if article.cover}
