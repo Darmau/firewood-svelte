@@ -101,7 +101,11 @@
 					<h4
 						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
-						<a href={article.website} target="_blank" data-umami-event="blog">{article.author}</a>
+						<a href={article.website}
+							 target="_blank"
+							 data-umami-event="blog"
+							 data-umami-event-source = "feature"
+						>{article.author}</a>
 					</h4>
 					<span>·</span>
 					<time

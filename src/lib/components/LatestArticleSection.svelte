@@ -31,7 +31,7 @@
 							target="_blank"
 							on:click={() => addPageView(article._id)}
 							data-umami-event="article"
-							data-umami-event-source = "latest"
+							data-umami-event-source = "homepage"
 							title={article.abstract || article.description}
 						>
 							<span class="absolute inset-0" />
@@ -55,7 +55,10 @@
 				<div class="relative mt-4 flex items-center gap-x-4">
 					<div class="text-sm leading-6">
 						<p class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
-							<a href={article.website} data-umami-event="blog">
+							<a href={article.website}
+								 data-umami-event="blog"
+								 data-umami-event-source = "homepage"
+							>
 								<span class="absolute inset-0" />
 								{article.author}
 							</a>
