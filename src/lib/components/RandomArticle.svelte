@@ -35,8 +35,8 @@
           src = {`${randomArticle.cover}/width=320`}
           alt = {randomArticle.title}
           width = "320"
-          height = "240"
-          class = "object-cover w-full h-60 rounded-md bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+          height = "192"
+          class = "object-cover w-full h-48 rounded-md bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
         />
       {/if}
     </a>
