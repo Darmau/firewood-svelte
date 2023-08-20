@@ -1,4 +1,6 @@
-import type { PageServerLoad } from '../$types';
+import type {
+  PageServerLoad
+} from "../../../../.svelte-kit/types/src/routes/$types";
 import { API_URL } from '$env/static/private';
 
 // export const prerender = true;
