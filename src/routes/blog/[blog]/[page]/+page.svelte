@@ -51,35 +51,46 @@
       <div class = "space-y-4">
         {#if data.blog.cover}
           <img src = {data.blog.cover} alt = {data.blog.name}
-               class = "h-12 w-12 dark:bg-white" width = "20" height = "20"/>
+               class =
+                 "h-12 w-12 dark:bg-white border border-zinc-200 dark:border-zinc-700 rounded-full"
+               width =
+                 "20" height = "20"/>
         {/if}
-        <h1 class = "font-bold font-serif text-2xl">{data.blog.name}</h1>
+        <h1
+          class =
+            "font-bold font-serif text-2xl text-zinc-800 dark:text-zinc-100">{data.blog.name}</h1>
         <p
-          class = "text-zinc-700">{data.blog.description || "貌似这位作者没有留下博客介绍"}
+          class = "text-zinc-700 dark:text-zinc-300">{data.blog.description ||
+        "貌似这位作者没有留下博客介绍"}
         </p>
       </div>
       <!--      文章数量/近一年发布/访问量/上次发布/抓取错误次数/分类统计-->
       <div class = "grid grid-cols-4 py-4">
         <div class = "flex flex-col-reverse items-start gap-1">
           <h3 class = "text-sm text-zinc-400">上次发布</h3>
-          <p class = "text-teal-700">{convertDate(data.blog.last_publish)}</p>
+          <p
+            class = "text-teal-700 dark:text-teal-300">{convertDate(data.blog.last_publish)}</p>
         </div>
         <div class = "flex flex-col-reverse items-start gap-1">
           <h3 class = "text-sm text-zinc-400">近一年发布</h3>
-          <p class = "text-teal-700">{data.articleCountLastYear}篇</p>
+          <p
+            class = "text-teal-700 dark:text-teal-300">{data.articleCountLastYear}篇
+          </p>
         </div>
         <div class = "flex flex-col-reverse items-start gap-1">
           <h3 class = "text-sm text-zinc-400">访问量</h3>
-          <p class = "text-teal-700">{convertNumber(data.blog.page_view)}</p>
+          <p
+            class = "text-teal-700 dark:text-teal-300">{convertNumber(data.blog.page_view)}</p>
         </div>
         <div class = "flex flex-col-reverse items-start gap-1">
           <h3 class = "text-sm text-zinc-400">收录文章</h3>
-          <p class = "text-teal-700">{data.blog.article_count}</p>
+          <p
+            class = "text-teal-700 dark:text-teal-300">{data.blog.article_count}</p>
         </div>
       </div>
       <!--      分类信息统计-->
       <div class = "space-y-4">
-        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-200">
+        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
           文章分类</h3>
         <ol class = "flex gap-4 flex-wrap items-start">
           {#each data.categories as item}
@@ -93,10 +104,11 @@
       </div>
       <!--      抓取错误次数-->
       <div class = "space-y-4">
-        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-200">
+        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
           抓取错误次数
         </h3>
-        <p>{data.blog.crawl_error}</p>
+        <p
+          class="font-mono text-zinc-700 dark:text-zinc-300">{data.blog.crawl_error}</p>
       </div>
       <!--      按钮-->
       <div class = "flex gap-4 items-center">
@@ -106,7 +118,7 @@
           href = {data.blog.url}
           target = "_blank"
           data-umami-event = "blog"
-          data-umami-event-source = "personal page"
+          data-umami-event-source = "profile"
         >访问博客
           <span class = "ml-2">
             <svg xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 20 20"
