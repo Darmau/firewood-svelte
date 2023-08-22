@@ -4,7 +4,8 @@
 	import Tags from './Tags.svelte';
 	import topicTranslate from '$lib/functions/topicTranslate';
 	import type { Article } from '$lib/types/article.type.js';
-	import getDomain from "$lib/functions/getDomain";
+  import getDomain from "$lib/functions/getDomain";
+
 	export let article: Article;
 	export let topic: boolean = false;
 </script>

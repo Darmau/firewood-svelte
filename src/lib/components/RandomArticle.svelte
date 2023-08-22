@@ -61,6 +61,7 @@
     </div>
   {/if}
   <button on:click = {fetchRandomArticle} type = "button"
+          data-umami-event = "new random article"
           class = "inline-flex justify-centeru items-center px-4 py-2 font-bold leading-6 text-sm shadow rounded-md text-white bg-teal-500 hover:bg-teal-400 transition ease-in-out duration-150">
     {#if randomArticle}
       换一篇
