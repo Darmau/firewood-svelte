@@ -1,7 +1,7 @@
 <script lang="ts">
 	import generateDate from '$lib/functions/generateDate';
 	import topicTranslate from '$lib/functions/topicTranslate';
-	import type { Article } from '$lib/types/article.type.svelte';
+	import type { Article } from '$lib/types/article.type.js';
 	import addPageView from '$lib/functions/addPageView';
 	export let articles: Article[];
 	export let link: string;

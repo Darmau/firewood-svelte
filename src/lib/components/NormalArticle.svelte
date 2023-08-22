@@ -3,7 +3,7 @@
 	import generateDate from '$lib/functions/generateDate';
 	import Tags from './Tags.svelte';
 	import topicTranslate from '$lib/functions/topicTranslate';
-	import type { Article } from '$lib/types/article.type.svelte';
+	import type { Article } from '$lib/types/article.type.js';
 	export let article: Article;
 	export let topic: boolean = false;
 </script>

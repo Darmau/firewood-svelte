@@ -9,9 +9,7 @@ function sortCategoryByValue(obj: object) {
   entries.sort((a, b) => b[1] - a[1]);
 
   // 构建排序后的数组
-  const result = entries.map(([key, value]) => ({ [key]: value }));
-
-  return result;
+  return entries.map(([key, value]) => ({ [key]: value }));
 }
 
 export const load = (async ({ params: { blog, page }, setHeaders }) => {
@@ -26,11 +24,15 @@ export const load = (async ({ params: { blog, page }, setHeaders }) => {
 
 	const categories = sortCategoryByValue(blogInfo.categories);
 
+	const articleCount = await fetch(`${API_URL}/article/article-count?id=${blogInfo._id}`).then(res => res.json());
+
 	return {
 		blog: blogInfo,
     articles: articles,
 		articleCountLastYear: articleCountLastYear,
 		categories: categories,
-		url: blog
+		articleCount: articleCount,
+		url: blog,
+		page: page
 	};
 }) satisfies PageServerLoad;

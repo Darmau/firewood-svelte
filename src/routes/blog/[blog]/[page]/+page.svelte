@@ -3,10 +3,7 @@
   import convertNumber from "$lib/functions/convertNumber";
   import {convertDate} from "$lib/functions/convertDate";
   import topicTranslate from "$lib/functions/topicTranslate";
-
-  function renderCategory() {
-    return Object.entries(data.blog.categories)
-  }
+  import Pagination from "$lib/components/Pagination.svelte";
 
   export let data;
 </script>
@@ -33,17 +30,25 @@
         content = "https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200">
 </svelte:head>
 
-<div class = "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-3">
-  <main class = "px-6 py-8 md:py-12 lg:col-span-2">
-    <div class = "flex flex-col py-8 gap-8 md:gap-12">
+<div class =
+       "mx-auto max-w-7xl flex flex-col-reverse md:grid md:grid-cols-3 md:gap-8">
+  <main class = "px-4 py-4 md:py-8 md:col-span-2">
+    <div class = "flex flex-col py-8 gap-12 md:gap-16">
       {#each data.articles as article}
         <BlogArticle article = {article}/>
       {/each}
     </div>
+    <Pagination
+      bind:currentPage = {data.page}
+      totalArticles = {data.articleCount}
+      itemPerPage = {15}
+      path = {`/blog/${data.url}`}
+    />
   </main>
-  <aside class = "px-6 py-4 space-y-8 lg:py-8 lg:col-span-1">
+  <aside class =
+           "px-6 py-4 space-y-8 md:py-8 md:col-span-1">
     <div class = "space-y-4 lg:space-y-8 mt-4">
-      <div class="space-y-4">
+      <div class = "space-y-4">
         {#if data.blog.cover}
           <img src = {data.blog.cover} alt = {data.blog.name}
                class = "h-12 w-12 dark:bg-white" width = "20" height = "20"/>
@@ -73,21 +78,23 @@
         </div>
       </div>
       <!--      分类信息统计-->
-      <div class="space-y-4">
-        <h3 class="text-base font-bold text-teal-800 dark:text-teal-200">文章分类</h3>
-        <ol class="flex gap-4 flex-wrap items-start">
+      <div class = "space-y-4">
+        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-200">
+          文章分类</h3>
+        <ol class = "flex gap-4 flex-wrap items-start">
           {#each data.categories as item}
             <li
-              class="flex gap-1 text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 p-2 text-sm rounded">
+              class = "flex gap-1 text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 p-2 text-sm rounded">
               <span>{topicTranslate(Object.keys(item)[0])}</span>
-              <span class="font-mono">({Object.values(item)[0]})</span>
+              <span class = "font-mono">({Object.values(item)[0]})</span>
             </li>
           {/each}
         </ol>
       </div>
       <!--      抓取错误次数-->
-      <div class="space-y-4">
-        <h3 class="text-base font-bold text-teal-800 dark:text-teal-200">抓取错误次数
+      <div class = "space-y-4">
+        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-200">
+          抓取错误次数
         </h3>
         <p>{data.blog.crawl_error}</p>
       </div>
@@ -95,7 +102,7 @@
       <div class = "flex gap-4 items-center">
         <a
           class =
-            "inline-flex justify-centeru items-center px-4 py-2 font-bold leading-6 text-sm shadow rounded-md text-white bg-teal-600 hover:bg-teal-500 transition ease-in-out duration-150"
+            "inline-flex justify-center items-center px-4 py-2 font-bold leading-6 text-sm shadow rounded-md text-white bg-teal-600 hover:bg-teal-500 transition ease-in-out duration-150"
           href = {data.blog.url}
           target = "_blank"
           data-umami-event = "blog"

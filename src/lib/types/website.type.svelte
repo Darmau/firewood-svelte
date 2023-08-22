@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import type {Article} from "./article.type.svelte";
+  import type {Article} from "./article.type.js";
   export type Website = {
     _id: string;
     name: string;
