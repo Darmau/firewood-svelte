@@ -3,6 +3,7 @@
 	import generateDate from '$lib/functions/generateDate';
 	import type { Article } from '$lib/types/article.type.js';
 	import Tags from './Tags.svelte';
+	import getDomain from "$lib/functions/getDomain";
 	export let article: Article;
 </script>
 
@@ -55,7 +56,7 @@
 					<h4
 						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
-						<a href={article.website} target="_blank">{article.author}</a>
+						<a href={`/blog/${getDomain(article.website)}/1`}>{article.author}</a>
 					</h4>
 					<span>·</span>
 					<time
@@ -101,10 +102,7 @@
 					<h4
 						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
-						<a href={article.website}
-							 target="_blank"
-							 data-umami-event="blog"
-							 data-umami-event-source = "feature"
+						<a href={`/blog/${getDomain(article.website)}/1`}}
 						>{article.author}</a>
 					</h4>
 					<span>·</span>

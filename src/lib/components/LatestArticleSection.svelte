@@ -3,6 +3,7 @@
 	import topicTranslate from '$lib/functions/topicTranslate';
 	import type { Article } from '$lib/types/article.type.js';
 	import addPageView from '$lib/functions/addPageView';
+	import getDomain from "$lib/functions/getDomain";
 	export let articles: Article[];
 	export let link: string;
 </script>
@@ -55,10 +56,7 @@
 				<div class="relative mt-4 flex items-center gap-x-4">
 					<div class="text-sm leading-6">
 						<p class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
-							<a href={article.website}
-								 data-umami-event="blog"
-								 data-umami-event-source = "homepage"
-							>
+							<a href={`/blog/${getDomain(article.website)}/1`}>
 								<span class="absolute inset-0" />
 								{article.author}
 							</a>

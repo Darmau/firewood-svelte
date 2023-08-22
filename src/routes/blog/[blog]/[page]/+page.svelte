@@ -118,7 +118,7 @@
           href = {data.blog.url}
           target = "_blank"
           data-umami-event = "blog"
-          data-umami-event-source = "personal page"
+          data-umami-event-source = "profile"
         >访问博客
           <span class = "ml-2">
             <svg xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 20 20"
