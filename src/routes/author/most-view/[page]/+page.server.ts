@@ -1,9 +1,11 @@
-import type { PageServerLoad } from '../../$types';
-import { API_URL } from '$env/static/private';
-import type { Website } from '$lib/types/website.type.svelte';
+import {API_URL} from '$env/static/private';
+import type {Website} from "$lib/types/website.type.svelte";
+import type {
+  PageServerLoad
+} from "../../../../../.svelte-kit/types/src/routes/$types";
 
 // 获取博客
-export const load = (async ({ params: { page }, setHeaders }) => {
+export const load = (async ({params: {page}, setHeaders}) => {
   setHeaders({
     'Cache-Control': 'max-age=600'
   })
@@ -18,12 +20,12 @@ export const load = (async ({ params: { page }, setHeaders }) => {
     }
   }))
   const count = await fetch(`${API_URL}/website/count`,
-    {
-      method: 'Get',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
+      {
+        method: 'Get',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
   )
   return {
     websites: mergedWebsite,

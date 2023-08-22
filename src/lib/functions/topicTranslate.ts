@@ -16,6 +16,7 @@ const topicList = new Map([
   ['emotion', '情感'],
   ['others', '综合'],
   [null, '无分类'],
+  ['未分类', '无分类'],
   // 以下为历史遗留分类
   ['international', '国际'],
   ['sports', '体育'],

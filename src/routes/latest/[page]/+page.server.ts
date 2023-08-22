@@ -1,4 +1,4 @@
-import type { PageServerLoad } from '../$types';
+import type { PageServerLoad } from './$types';
 import { API_URL } from '$env/static/private';
 
 // 负责获取最新的文章

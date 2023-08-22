@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Article } from '$lib/types/article.type.svelte';
+	import type { Article } from '$lib/types/article.type.js';
 	import CoverArticle from './CoverArticle.svelte';
 	import NormalArticle from './NormalArticle.svelte';
 	export let title: string;

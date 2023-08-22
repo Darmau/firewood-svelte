@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import {onMount} from 'svelte';
 
 	export let currentPage: number = 1;
 	export let totalArticles: number = 1;

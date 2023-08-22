@@ -1,7 +1,7 @@
 <script lang="ts">
 	import generateDate from '$lib/functions/generateDate';
 	import topicTranslate from '$lib/functions/topicTranslate';
-	import type Article from '$lib/types/article.type.svelte';
+	import type Article from '$lib/types/article.type.js';
 
 	// 获取最新文章
 	let articles: Article[] = [];

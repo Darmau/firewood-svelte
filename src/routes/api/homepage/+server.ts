@@ -1,5 +1,5 @@
 import { API_URL } from '$env/static/private';
-import type { Article } from '$lib/types/article.type.svelte';
+import type { Article } from '$lib/types/article.type.js';
 import type { RequestHandler } from './$types';
 
 // 二次封装接口，用于从latest获取文章，然后分别存入相应数组，在首页不同区域显示
