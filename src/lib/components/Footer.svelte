@@ -2,10 +2,18 @@
 	const thisYear = new Date().getFullYear();
 
 	const catelogList = [
-		{ label: '科技', href: '/topic/tech/1' },
+		{ label: '技术', href: '/topic/tech/1' },
+		{ label: '编程', href: '/topic/code/1' },
 		{ label: '社会', href: '/topic/society/1' },
-		{ label: '文化', href: '/topic/culture/1' },
-		{ label: '旅游', href: '/topic/travel/1' }
+		{ label: '日记', href: '/topic/diary/1' },
+		{ label: '生活', href: '/topic/life/1' },
+		{ label: '政治', href: '/topic/politics/1' },
+		{ label: '职场', href: '/topic/career/1' },
+		{ label: '旅行', href: '/topic/travel/1' },
+		{ label: '人文', href: '/topic/culture/1' },
+		{ label: '学习', href: '/topic/education/1' },
+		{ label: '情感', href: '/topic/emotion/1' },
+		{ label: '综合', href: '/topic/others/1' },
 	];
 
 	const articleList = [
@@ -25,8 +33,8 @@
 <footer class="border-t border-zinc-200 dark:border-zinc-700/40" aria-labelledby="footer-heading">
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
 	<div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-			<div class="space-y-8">
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+			<div class="space-y-8 col-span-1">
 				<a href="/" class="text-black hover:text-teal-500 dark:text-white" title="回到首页">
 					<svg class="w-20" fill="currentColor" viewBox="0 0 166 80" aria-hidden="true">
 						<path
@@ -83,15 +91,15 @@
 					</a>
 				</div>
 			</div>
-			<div class="">
-				<div class="grid grid-cols-2 md:grid-cols-3 md:gap-8">
+			<div
+				class="grid grid-cols-1 md:col-span-2 md:flex md:justify-between md:gap-8">
 					<div class="mt-10 md:mt-0">
 						<h3 class="font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
 							文章分类
 						</h3>
-						<ul class="mt-6 space-y-4">
+						<ul class="mt-6 grid grid-cols-3 gap-4 md:gap-6">
 							{#each catelogList as item}
-								<li>
+								<li class="md:pr-8">
 									<a
 										href={item.href}
 										class="text-sm leading-6 text-zinc-600 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400"
@@ -105,7 +113,7 @@
 						<h3 class="font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
 							全部文章
 						</h3>
-						<ul class="mt-6 space-y-4">
+						<ul class="mt-6 grid grid-cols-2 md:gap-6 md:grid-cols-1">
 							{#each articleList as item}
 								<li>
 									<a
@@ -121,7 +129,7 @@
 						<h3 class="font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
 							关于
 						</h3>
-						<ul class="mt-6 space-y-4">
+						<ul class="mt-6 grid grid-cols-2 md:gap-6 md:grid-cols-1">
 							{#each aboutList as item}
 								<li>
 									<a
@@ -134,7 +142,6 @@
 						</ul>
 					</div>
 				</div>
-			</div>
 		</div>
 		<div class="mt-16 border-t border-gray-900/10 dark:border-gray-50/10 pt-8 sm:mt-20 lg:mt-24">
 			<p class="text-xs leading-5 text-zinc-400 dark:text-zinc-500">
