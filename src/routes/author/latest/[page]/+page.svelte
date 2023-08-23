@@ -36,7 +36,9 @@
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 		{#each data.websites as website}
-			<BlogCard {website} />
+			{#if website.latest.length > 0}
+				<BlogCard {website} />
+			{/if}
 		{/each}
 	</div>
 	<Pagination

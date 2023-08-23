@@ -31,8 +31,8 @@
 </svelte:head>
 
 <div class =
-       "mx-auto max-w-7xl flex flex-col-reverse md:grid md:grid-cols-3 md:gap-8">
-  <main class = "px-4 py-4 md:py-8 md:col-span-2">
+       "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-8">
+  <main class = "px-4 py-4 lg:py-8 lg:col-span-2">
     <div class = "flex flex-col py-8 gap-12 md:gap-16">
       {#each data.articles as article}
         <BlogArticle article = {article}/>
@@ -46,7 +46,7 @@
     />
   </main>
   <aside class =
-           "px-6 py-4 space-y-8 md:py-8 md:col-span-1">
+           "px-6 py-4 space-y-8 lg:py-8 lg:col-span-1">
     <div class = "space-y-4 lg:space-y-8 mt-4">
       <div class = "space-y-4">
         {#if data.blog.cover}
@@ -103,7 +103,7 @@
         </ol>
       </div>
       <!--      抓取错误次数-->
-      <div class = "space-y-4">
+      <div class = "flex gap-4">
         <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
           抓取错误次数
         </h3>

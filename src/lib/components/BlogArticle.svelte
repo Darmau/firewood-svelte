@@ -7,27 +7,30 @@
   export let article;
 </script>
 
-<article>
+<article class="colspan-1">
   <a
     href = {article.url}
     target = "_blank"
     on:click = {() => addPageView(article._id)}
     data-umami-event = "article"
-    data-umami-event-source = "normal"
+    data-umami-event-source = "personal"
     title = {article.abstract || article.description}
-    class = "w-full flex flex-col-reverse lg:flex-row lg:justify-between gap-4"
+    class = "flex flex-col-reverse gap-4 sm:flex-row sm:gap-8 group"
   >
-    <div class = "space-y-4">
+    <div class = "space-y-4 flex-1">
       <h3
-        class = "font-serif font-bold text-2xl text-zinc-800 dark:text-zinc-100">{article.title}</h3>
+        class =
+          "font-serif font-bold text-2xl break-words text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>
       {#if article.description}
         <p
-          class = "text-zinc-600 leading-7 line-clamp-3 text-ellipsis break-words dark:text-zinc-400">{article.description}</p>
+          class =
+            "text-zinc-600 leading-7 line-clamp-3 text-ellipsis break-all dark:text-zinc-400 group-hover:text-zinc-500">{article.description}</p>
       {/if}
       {#if article.abstract}
-        <div class = "border-l border-teal-600 p-2 pl-4 overflow-y-hidden">
+        <div class = "border-l border-teal-600 pl-2">
           <p
-            class = "text-zinc-600 rounded leading-7 line-clamp-3 text-ellipsis break-words dark:text-zinc-400"
+            class =
+              "break-all text-zinc-600 p-2 rounded leading-7 dark:text-zinc-400"
             title = {article.abstract}
           >
             {article.abstract}
@@ -69,8 +72,17 @@
       </ol>
     </div>
     {#if article.cover}
-      <img src = {`${article.cover}/width=360`} alt = {article.title}
-           class = "w-full h-48 object-cover lg:w-36 lg:h-36 rounded"/>
+      <div
+        class="rounded w-full h-auto aspect-video overflow-hidden bg-slate-100 sm:aspect-square sm:h-32 sm:w-32">
+        <img src = {`${article.cover}/width=360`}
+             alt = {article.title}
+             class =
+               "object-cover object-center w-full h-full transition-all duration-300 group-hover:scale-105"
+             loading="lazy"
+             width="360"
+             height="360"
+        />
+      </div>
     {/if}
   </a>
 </article>
