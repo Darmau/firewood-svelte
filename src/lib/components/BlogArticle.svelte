@@ -64,7 +64,7 @@
         <li class = "text-sm text-zinc-400 dark:text-zinc-600">
           {article.page_view}次浏览
         </li>
-        {#if article.crawl_error > 1}
+        {#if article.crawl_error > 0}
           <li class = "text-sm text-zinc-400 dark:text-zinc-600">
             {article.crawl_error}次抓取失败
           </li>

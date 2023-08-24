@@ -2,6 +2,7 @@
 	import type { Article } from '$lib/types/article.type.js';
 	import CoverArticle from './CoverArticle.svelte';
 	import NormalArticle from './NormalArticle.svelte';
+	import TopArticle from "$lib/components/TopArticle.svelte";
 	export let title: string;
 	export let articles: Article[];
 	export let link: string;
@@ -9,7 +10,7 @@
 
 <section class="py-8 border-b border-zinc-200 dark:border-zinc-700/40">
 	<h2 class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100">{title}</h2>
-	<div class="grid gap-12 grid-cols-1 md:grid-cols-2 md:gap-16">
+	<div class="flex flex-col gap-8">
 		{#each articles as article, index}
 			{#if index === 0}
 				<CoverArticle {article} />

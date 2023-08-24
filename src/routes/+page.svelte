@@ -1,15 +1,18 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import LatestArticle from '$lib/components/LatestArticleSection.svelte';
-	import TopicArticle from '$lib/components/TopicArticleSection.svelte';
+	import TopArticleSection from '$lib/components/TopArticleSection.svelte';
 	import TopicSection from '$lib/components/TopicSection.svelte';
 	import Topics from '$lib/components/Topics.svelte';
 	import type { PageServerData } from './$types';
+	import HottestArticle from "$lib/components/HottestArticle.svelte";
+	import NormalArticle from "$lib/components/NormalArticle.svelte";
 
 	export let data: PageServerData;
 	let loaded = false;
+	let isMobile = false;
 
 	onMount(async () => {
+		isMobile = window.innerWidth < 1024;
 		loaded = true;
 	});
 </script>
@@ -37,14 +40,30 @@
 </svelte:head>
 
 <Topics />
-<main class="mx-auto max-w-7xl px-6 mb-8 md:mb-16">
-	<TopicArticle title="推荐" articles={data.feature} link="/feature/1" />
-	{#if loaded}
-		<LatestArticle articles={data.latest} link="/latest/1" />
-		<TopicSection />
-		<TopicArticle title="技术" articles={data.tech} link="/topic/tech/1" />
-		<TopicArticle title="社会" articles={data.society} link="/topic/society/1" />
-		<TopicArticle title="文化" articles={data.culture} link="/topic/culture/1" />
-		<TopicArticle title="生活情感" articles={data.emotion} link="/topic/emotion/1" />
-	{/if}
-</main>
+<div class = "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-7">
+	<main class="px-6 py-8 md:py-12 lg:col-span-5">
+		<TopArticleSection title="推荐" articles={data.feature} link="/feature/1" />
+		{#if loaded}
+			<section class="py-12">
+				<h2
+					class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100">最近发布</h2>
+				<div class="flex flex-col py-8 gap-8 md:gap-12">
+				{#each data.random as article}
+					<NormalArticle article={article} />
+				{/each}
+				</div>
+			</section>
+		{/if}
+	</main>
+	<aside class = "px-6 py-8 lg:py-12 lg:col-span-2">
+		<div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
+			<h2 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">本周热门</h2>
+		</div>
+		<div class = "space-y-4 pt-8">
+			<!--      检测屏幕宽度，小于1024时，只显示5篇-->
+			<HottestArticle articles={data.hottest.slice(0, isMobile ? 5 :
+      undefined)} />
+			<TopicSection />
+		</div>
+	</aside>
+</div>

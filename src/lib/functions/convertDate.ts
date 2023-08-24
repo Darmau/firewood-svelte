@@ -6,6 +6,9 @@ export const convertDate = (date: string) => {
   const diffDay = diff / (1000 * 60 * 60 * 24);
   const diffMonth = diff / (1000 * 60 * 60 * 24 * 30);
   const diffYear = diff / (1000 * 60 * 60 * 24 * 365);
+  if(diff < 3600000) {
+    return `${Math.floor(diff / (1000 * 60))}分钟前`;
+  }
   if (diffDay < 1) {
     return `${Math.floor(diff / (1000 * 60 * 60))}小时前`;
   }

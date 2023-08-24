@@ -1,9 +1,9 @@
 <script lang="ts">
 	import addPageView from '$lib/functions/addPageView';
-	import generateDate from '$lib/functions/generateDate';
 	import type { Article } from '$lib/types/article.type.js';
 	import Tags from './Tags.svelte';
 	import getDomain from "$lib/functions/getDomain";
+	import {convertDate} from "$lib/functions/convertDate";
 	export let article: Article;
 </script>
 
@@ -27,7 +27,7 @@
 			</div>
 			<div class="col-span-3 space-y-4 md:space-y-6">
 				<h3
-					class="text-2xl md:text-4xl font-serif font-bold leading-snug text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="text-2xl md:text-4xl font-serif font-bold leading-relaxed text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -63,7 +63,7 @@
 						datetime={article.publish_date}
 						class="inline-block text-zinc-400 dark:text-zinc-500"
 					>
-						{generateDate(article.publish_date)}
+						{convertDate(article.publish_date)}
 					</time>
 					<span>·</span>
 					<p class="text-zinc-400 dark:text-zinc-500">
@@ -75,7 +75,7 @@
 			<!-- 如果没有封面图 -->
 			<div class="space-y-4 md:space-y-8 col-span-2 md:col-span-5">
 				<h3
-					class="text-3xl md:text-5xl font-serif font-bold leading-snug text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="text-3xl md:text-5xl font-serif font-bold leading-relaxed text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -110,7 +110,7 @@
 						datetime={article.publish_date}
 						class="inline-block text-zinc-400 dark:text-zinc-500"
 					>
-						{generateDate(article.publish_date)}
+						{convertDate(article.publish_date)}
 					</time>
 					<span>·</span>
 					<p class="text-zinc-400 dark:text-zinc-500">

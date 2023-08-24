@@ -1,10 +1,10 @@
 <script lang="ts">
 	import addPageView from '$lib/functions/addPageView';
-	import generateDate from '$lib/functions/generateDate';
 	import Tags from './Tags.svelte';
 	import topicTranslate from '$lib/functions/topicTranslate';
 	import type { Article } from '$lib/types/article.type.js';
   import getDomain from "$lib/functions/getDomain";
+	import {convertDate} from "$lib/functions/convertDate";
 
 	export let article: Article;
 	export let topic: boolean = false;
@@ -74,7 +74,7 @@
 							datetime={article.publish_date}
 							class="inline-block text-zinc-400 dark:text-zinc-500"
 						>
-							{generateDate(article.publish_date)}
+							{convertDate(article.publish_date)}
 						</time>
 						<span>·</span>
 						<p class="text-zinc-400 dark:text-zinc-500">
@@ -124,7 +124,7 @@
 						datetime={article.publish_date}
 						class="inline-block text-zinc-400 dark:text-zinc-500"
 					>
-						{generateDate(article.publish_date)}
+						{convertDate(article.publish_date)}
 					</time>
 					<span>·</span>
 					<p class="text-zinc-400 dark:text-zinc-500">

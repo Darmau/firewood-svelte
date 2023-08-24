@@ -3,6 +3,7 @@
   import Pagination from '$lib/components/Pagination.svelte';
   import addPageView from "$lib/functions/addPageView";
   import {onMount} from "svelte";
+  import HottestArticle from "$lib/components/HottestArticle.svelte";
 
   export let data;
   let isMobile = false;
@@ -52,25 +53,8 @@
     </div>
     <div class = "space-y-4 pt-8">
       <!--      检测屏幕宽度，小于1024时，只显示5篇-->
-      {#each data.hottestArticles.slice(0, isMobile ? 5 : undefined) as article}
-        <article class = "group">
-          <a href = {article.url}
-             class = "space-y-1"
-             target = "_blank"
-             on:click = {() => addPageView(article._id)}
-             data-umami-event = "article"
-             data-umami-event-source = "hottest"
-          >
-            <h3
-              class = "font-serif text-lg font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>
-            <p class = "text-sm text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-500">
-              {article.author}
-              ·
-              <span>{article.page_view}</span>
-            </p>
-          </a>
-        </article>
-      {/each}
+      <HottestArticle articles={data.hottestArticles.slice(0, isMobile ? 5 :
+      undefined)}/>
     </div>
   </aside>
 </div>

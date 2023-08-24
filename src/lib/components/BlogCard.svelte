@@ -1,6 +1,6 @@
 <script lang = "ts">
-  import generateDate from '$lib/functions/generateDate';
   import getDomain from "$lib/functions/getDomain";
+  import {convertDate} from "$lib/functions/convertDate";
 
   export let website;
 </script>
@@ -34,7 +34,7 @@
     <div class = "flex flex-col gap-1">
       <h3 class = "text-sm text-zinc-400 dark:text-zinc-500">上次更新</h3>
       <p
-        class = "text-zinc-800 dark:text-zinc-100">{generateDate(website.last_publish)}</p>
+        class = "text-zinc-800 dark:text-zinc-100">{convertDate(website.last_publish)}</p>
     </div>
   </div>
   {#if website.latest}
