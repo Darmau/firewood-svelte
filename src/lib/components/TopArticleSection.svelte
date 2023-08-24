@@ -2,7 +2,6 @@
 	import type { Article } from '$lib/types/article.type.js';
 	import CoverArticle from './CoverArticle.svelte';
 	import NormalArticle from './NormalArticle.svelte';
-	import TopArticle from "$lib/components/TopArticle.svelte";
 	export let title: string;
 	export let articles: Article[];
 	export let link: string;

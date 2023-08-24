@@ -1,7 +1,6 @@
 <script lang = "ts">
   import CoverArticle from '$lib/components/CoverArticle.svelte';
   import Pagination from '$lib/components/Pagination.svelte';
-  import addPageView from "$lib/functions/addPageView";
   import {onMount} from "svelte";
   import HottestArticle from "$lib/components/HottestArticle.svelte";
 
