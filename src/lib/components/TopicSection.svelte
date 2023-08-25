@@ -17,7 +17,7 @@
 </script>
 
 <section
-	class="hidden lg:block py-8 border-b border-zinc-200 dark:border-zinc-700/40">
+	class="hidden lg:block py-8">
 	<div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
 		<h2 class =
 					"text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">分类</h2>
