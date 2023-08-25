@@ -74,7 +74,8 @@
         <div class = "flex flex-col-reverse items-start gap-1">
           <h3 class = "text-sm text-zinc-400">近一年发布</h3>
           <p
-            class = "text-teal-700 dark:text-teal-300">{data.articleCountLastYear}篇
+            class = "text-teal-700 dark:text-teal-300">{data.articleCountLastYear}
+            篇
           </p>
         </div>
         <div class = "flex flex-col-reverse items-start gap-1">
@@ -89,26 +90,28 @@
         </div>
       </div>
       <!--      分类信息统计-->
-      <div class = "space-y-4">
-        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
-          文章分类</h3>
-        <ol class = "flex gap-4 flex-wrap items-start">
-          {#each data.categories as item}
-            <li
-              class = "flex gap-1 text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 p-2 text-sm rounded">
-              <span>{topicTranslate(Object.keys(item)[0])}</span>
-              <span class = "font-mono">({Object.values(item)[0]})</span>
-            </li>
-          {/each}
-        </ol>
-      </div>
+      {#if data.categories}
+        <div class = "space-y-4">
+          <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
+            文章分类</h3>
+          <ol class = "flex gap-4 flex-wrap items-start">
+            {#each data.categories as item}
+              <li
+                class = "flex gap-1 text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 p-2 text-sm rounded">
+                <span>{topicTranslate(Object.keys(item)[0])}</span>
+                <span class = "font-mono">({Object.values(item)[0]})</span>
+              </li>
+            {/each}
+          </ol>
+        </div>
+      {/if}
       <!--      抓取错误次数-->
       <div class = "flex gap-4">
         <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
           抓取错误次数
         </h3>
         <p
-          class="font-mono text-zinc-700 dark:text-zinc-300">{data.blog.crawl_error}</p>
+          class = "font-mono text-zinc-700 dark:text-zinc-300">{data.blog.crawl_error}</p>
       </div>
       <!--      按钮-->
       <div class = "flex gap-4 items-center">

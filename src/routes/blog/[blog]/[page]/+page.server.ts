@@ -2,6 +2,7 @@ import type { PageServerLoad } from "./$types";
 import { API_URL } from "$env/static/private";
 
 function sortCategoryByValue(obj: object) {
+	if(!obj) return [];
   // 将对象转换为[key, value]数组
   const entries = Object.entries(obj);
 
