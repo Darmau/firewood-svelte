@@ -19,7 +19,7 @@
 		{#if article.cover}
 			<div class="col-span-2 aspect-[4/3] rounded overflow-hidden">
 				<img
-					src={`${article.cover}/width=960`}
+					src={`${article.cover}/width=1200`}
 					alt={article.title}
 					class="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
 					width="408"
