@@ -40,7 +40,8 @@
 </svelte:head>
 
 <Topics />
-<div class = "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-7">
+<div class =
+			 "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-7 lg:gap-4">
 	<main class="px-6 py-4 lg:col-span-5 flex flex-col gap-4">
 		<TopArticleSection title="推荐" articles={data.feature} link="/feature/1" />
 		<div class="lg:hidden">
