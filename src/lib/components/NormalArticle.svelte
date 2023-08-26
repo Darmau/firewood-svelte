@@ -1,10 +1,10 @@
 <script lang="ts">
 	import addPageView from '$lib/functions/addPageView';
-	import generateDate from '$lib/functions/generateDate';
 	import Tags from './Tags.svelte';
 	import topicTranslate from '$lib/functions/topicTranslate';
 	import type { Article } from '$lib/types/article.type.js';
   import getDomain from "$lib/functions/getDomain";
+	import {convertDate} from "$lib/functions/convertDate";
 
 	export let article: Article;
 	export let topic: boolean = false;
@@ -74,7 +74,7 @@
 							datetime={article.publish_date}
 							class="inline-block text-zinc-400 dark:text-zinc-500"
 						>
-							{generateDate(article.publish_date)}
+							{convertDate(article.publish_date)}
 						</time>
 						<span>·</span>
 						<p class="text-zinc-400 dark:text-zinc-500">
@@ -117,14 +117,17 @@
 				<div class="flex gap-2 text-sm">
 					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a
-							href={`/blog/${getDomain(article.website)}/1`}>{article.author}</a>
+							href={`/blog/${getDomain(article.website)}/1`}
+							data-umami-event = "blog"
+							data-umami-event-source = "normal-article"
+						>{article.author}</a>
 					</h4>
 					<span>·</span>
 					<time
 						datetime={article.publish_date}
 						class="inline-block text-zinc-400 dark:text-zinc-500"
 					>
-						{generateDate(article.publish_date)}
+						{convertDate(article.publish_date)}
 					</time>
 					<span>·</span>
 					<p class="text-zinc-400 dark:text-zinc-500">

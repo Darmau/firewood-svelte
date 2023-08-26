@@ -1,5 +1,4 @@
 <script lang = "ts">
-  import CoverArticle from '$lib/components/CoverArticle.svelte';
   import NormalArticle from '$lib/components/NormalArticle.svelte';
   import Pagination from '$lib/components/Pagination.svelte';
   import RandomArticle from "$lib/components/RandomArticle.svelte";
@@ -32,11 +31,7 @@
     </div>
     <div class = "flex flex-col py-8 gap-8 md:gap-12">
       {#each data.articles as article}
-        {#if article.isFeatured}
-          <CoverArticle {article}/>
-        {:else}
-          <NormalArticle {article} topic = {true}/>
-        {/if}
+        <NormalArticle {article} topic = {true}/>
       {/each}
     </div>
     <Pagination

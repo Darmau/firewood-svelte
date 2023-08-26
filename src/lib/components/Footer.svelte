@@ -50,16 +50,29 @@
 				</p>
 				<div class="flex space-x-6">
 					<a
+						href="/rss.xml"
+						class="text-zinc-400 hover:text-teal-500"
+						target="_blank"
+						title="推荐文章订阅"
+						data-umami-event="rss"
+						data-umami-event-source="footer"
+					>
+						<span class="sr-only">推荐文章RSS</span>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+							<path fill-rule="evenodd" d="M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd" />
+						</svg>
+					</a>
+					<a
 						href="https://darmau.design"
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="站长的博客"
+						data-umami-event="darmau-design"
 					>
 						<span class="sr-only">可可托海没有海</span>
-						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-							<path
-								d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-							/>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+							<path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+							<path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
 						</svg>
 					</a>
 					<a
@@ -67,6 +80,7 @@
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="站长的推特"
+						data-umami-event="twitter"
 					>
 						<span class="sr-only">Twitter</span>
 						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -76,18 +90,31 @@
 						</svg>
 					</a>
 					<a
-						href="https://github.com/Darmau"
+						href="https://github.com/Darmau/firewood-svelte"
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
+						title="本站前端代码"
+						data-umami-event="github"
+						data-umami-event-project="svelte"
 					>
-						<span class="sr-only">GitHub</span>
-						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-							<path
-								fill-rule="evenodd"
-								d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-								clip-rule="evenodd"
-							/>
+						<span class="sr-only">本站前端代码</span>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+							<path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM8.547 4.505a8.25 8.25 0 1011.672 8.214l-.46-.46a2.252 2.252 0 01-.422-.586l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.211.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.654-.261a2.25 2.25 0 01-1.384-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.279-2.132z" clip-rule="evenodd" />
 						</svg>
+					</a>
+					<a
+						href="https://github.com/Darmau/firewood-nest"
+						class="text-zinc-400 hover:text-teal-500"
+						target="_blank"
+						title="本站后端代码"
+						data-umami-event="github"
+						data-umami-event-project="nest"
+					>
+						<span class="sr-only">本站后端代码</span>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+							<path fill-rule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clip-rule="evenodd" />
+						</svg>
+
 					</a>
 				</div>
 			</div>
