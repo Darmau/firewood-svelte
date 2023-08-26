@@ -54,6 +54,8 @@
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="推荐文章订阅"
+						data-umami-event="rss"
+						data-umami-event-source="footer"
 					>
 						<span class="sr-only">推荐文章RSS</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -65,6 +67,7 @@
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="站长的博客"
+						data-umami-event="darmau-design"
 					>
 						<span class="sr-only">可可托海没有海</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -77,6 +80,7 @@
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="站长的推特"
+						data-umami-event="twitter"
 					>
 						<span class="sr-only">Twitter</span>
 						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -90,6 +94,8 @@
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="本站前端代码"
+						data-umami-event="github"
+						data-umami-event-project="svelte"
 					>
 						<span class="sr-only">本站前端代码</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -101,6 +107,8 @@
 						class="text-zinc-400 hover:text-teal-500"
 						target="_blank"
 						title="本站后端代码"
+						data-umami-event="github"
+						data-umami-event-project="nest"
 					>
 						<span class="sr-only">本站后端代码</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">

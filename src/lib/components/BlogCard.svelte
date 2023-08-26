@@ -10,7 +10,9 @@
 >
   <a href = {`/blog/${getDomain(website.url)}/1`}
      class = "flex gap-2 items-center"
-     data-umami-event = "blog">
+     data-umami-event = "blog"
+     data-umami-event-source = "author"
+  >
     {#if website.cover}
       <img src = {website.cover} alt = {website.name}
            class = "w-5 h-5 dark:bg-white" width = "20" height = "20"/>

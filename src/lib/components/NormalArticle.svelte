@@ -117,7 +117,10 @@
 				<div class="flex gap-2 text-sm">
 					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a
-							href={`/blog/${getDomain(article.website)}/1`}>{article.author}</a>
+							href={`/blog/${getDomain(article.website)}/1`}
+							data-umami-event = "blog"
+							data-umami-event-source = "normal-article"
+						>{article.author}</a>
 					</h4>
 					<span>·</span>
 					<time
