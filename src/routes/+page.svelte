@@ -39,6 +39,8 @@
 		name="twitter:image"
 		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200"
 	/>
+	<link rel="alternate" type="application/rss+xml" title="积薪推荐文章"
+				href="https://firewood.news/rss.xml" />
 </svelte:head>
 
 <Topics />
