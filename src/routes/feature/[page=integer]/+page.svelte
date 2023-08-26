@@ -26,8 +26,25 @@
 
 <div class = "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-7">
   <main class = "px-6 py-8 md:py-12 lg:col-span-5">
-    <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
+    <div class =
+           "border-b border-gray-200 dark:border-gray-700 pb-5 flex justify-between items-center">
       <h1 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">推荐文章</h1>
+      <a
+        href = "/feature/rss.xml"
+        target = "_blank"
+        data-umami-event = "rss"
+        data-umami-event-source = "feature"
+        class =
+          "text-teal-600 hover:text-teal-400 dark:text-teal-400 dark:hover:text-teal-600 cursor-pointer"
+      >
+        <svg xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 20 20"
+             fill = "currentColor" class = "w-5 h-5">
+          <path
+            d = "M3.75 3a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V16C17 8.82 11.18 3 4 3h-.25z"/>
+          <path
+            d = "M3 8.75A.75.75 0 013.75 8H4a8 8 0 018 8v.25a.75.75 0 01-.75.75h-.5a.75.75 0 01-.75-.75V16a6 6 0 00-6-6h-.25A.75.75 0 013 9.25v-.5zM7 15a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+      </a>
     </div>
     <div class = "flex flex-col gap-8 md:gap-12">
       {#each data.featuredArticles as article}

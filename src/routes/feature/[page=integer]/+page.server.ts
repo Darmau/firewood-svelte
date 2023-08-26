@@ -30,6 +30,6 @@ export const load = (async ({ params: { page }, setHeaders }) => {
     featuredArticles: featuredArticleData,
     hottestArticles: hottestArticleData,
     count: articleCount,
-    page: Number(page),
+    page: Number(page)
   };
 }) satisfies PageServerLoad;

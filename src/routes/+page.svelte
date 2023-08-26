@@ -18,12 +18,14 @@
 </script>
 
 <svelte:head>
-	<title>积薪 - 依然相信文字的力量</title>
-	<meta name="description" content="找到值得关注的独立博客" />
+	<title>积薪</title>
+	<meta name="description"
+				content="中文独立博客导航。利用AI为文章进行分类和摘要，也有每天人工推荐的文章。在这个时代拒绝中心化、营造信息茧房的推荐算法，回归20年前互联网的精神和氛围" />
+	<meta name="keywords" content="博客, 中文博客, 独立博客, 博客导航" />
 	<meta property="og:url" content="https://firewood.news" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="积薪 - 依然相信文字的力量" />
-	<meta property="og:description" content="找到值得关注的独立博客" />
+	<meta property="og:title" content="积薪" />
+	<meta property="og:description" content="中文独立博客导航。利用AI为文章进行分类和摘要，也有每天人工推荐的文章。在这个时代拒绝中心化、营造信息茧房的推荐算法，回归20年前互联网的精神和氛围" />
 	<meta
 		property="og:image"
 		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200"
@@ -31,8 +33,8 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:domain" content="firewood.news" />
 	<meta property="twitter:url" content="https://firewood.news" />
-	<meta name="twitter:title" content="积薪 - 依然相信文字的力量" />
-	<meta name="twitter:description" content="找到值得关注的独立博客" />
+	<meta name="twitter:title" content="积薪" />
+	<meta name="twitter:description" content="中文独立博客导航。利用AI为文章进行分类和摘要，也有每天人工推荐的文章。在这个时代拒绝中心化、营造信息茧房的推荐算法，回归20年前互联网的精神和氛围" />
 	<meta
 		name="twitter:image"
 		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200"
