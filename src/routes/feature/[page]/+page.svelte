@@ -1,14 +1,9 @@
 <script lang = "ts">
   import CoverArticle from '$lib/components/CoverArticle.svelte';
   import Pagination from '$lib/components/Pagination.svelte';
-  import {onMount} from "svelte";
-  import HottestArticle from "$lib/components/HottestArticle.svelte";
+  import RandomArticle from "$lib/components/RandomArticle.svelte";
 
   export let data;
-  let isMobile = false;
-  onMount(() => {
-    isMobile = window.innerWidth < 1024;
-  })
 </script>
 
 <svelte:head>
@@ -48,12 +43,10 @@
   </main>
   <aside class = "px-6 py-8 lg:py-12 lg:col-span-2">
     <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
-      <h2 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">本周热门</h2>
+      <h2 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">随机传送</h2>
     </div>
-    <div class = "space-y-4 pt-8">
-      <!--      检测屏幕宽度，小于1024时，只显示5篇-->
-      <HottestArticle articles={data.hottestArticles.slice(0, isMobile ? 5 :
-      undefined)}/>
+    <div class = "space-y-4 mt-4">
+      <RandomArticle />
     </div>
   </aside>
 </div>
