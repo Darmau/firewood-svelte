@@ -1,20 +1,22 @@
-import type {RequestHandler} from "@sveltejs/kit";
-import {API_URL} from "$env/static/private";
-import type {Article} from "$lib/types/article.type.svelte";
+import type { RequestHandler } from '@sveltejs/kit';
+import { API_URL } from '$env/static/private';
+import type { Article } from '$lib/types/article.type.svelte';
 
 export const GET: RequestHandler = async () => {
-  const featureArticles = await fetch(`${API_URL}/article/featured?page=1&limit=15`).then(res => res.json());
-  const xml = gegerateFeed(featureArticles);
-  return new Response(xml, {
-    headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'max-age=7200'
-    }
-  });
-}
+	const featureArticles = await fetch(`${API_URL}/article/featured?page=1&limit=15`).then((res) =>
+		res.json()
+	);
+	const xml = gegerateFeed(featureArticles);
+	return new Response(xml, {
+		headers: {
+			'Content-Type': 'application/xml',
+			'Cache-Control': 'max-age=7200'
+		}
+	});
+};
 
 function gegerateFeed(articles: Article[]) {
-  return `
+	return `
      <?xml version="1.0" encoding="UTF-8" ?>
       <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
         <channel>
@@ -34,13 +36,16 @@ function gegerateFeed(articles: Article[]) {
           ${generateArticleFeed(articles)}
         </channel>
       </rss>
-  `.trim()
+  `.trim();
 }
 
 function generateArticleFeed(articles: Article[]) {
-  const articlesXml =  articles.map(article => {
-    const cover = article.cover ? `<enclosure url="${article.cover}/width=800" type="image/jpeg" />` : '';
-    return `
+	const articlesXml = articles
+		.map((article) => {
+			const cover = article.cover
+				? `<enclosure url="${article.cover}/width=800" type="image/jpeg" />`
+				: '';
+			return `
     <item>
       <title>${article.title}</title>
       <link>${article.url}</link>
@@ -50,7 +55,9 @@ function generateArticleFeed(articles: Article[]) {
       <author>${article.author}</author>
       ${cover}
     </item>
-  `
-  }).join('\n').trim()
-  return articlesXml;
+  `;
+		})
+		.join('\n')
+		.trim();
+	return articlesXml;
 }

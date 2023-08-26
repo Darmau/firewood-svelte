@@ -1,15 +1,15 @@
 export async function GET() {
-  // 一个时间生成函数。生成当地时间上午9点的ISO时间
-  function getISODate() {
-    const date = new Date();
-    date.setHours(9);
-    date.setMinutes(0);
-    date.setSeconds(0);
-    date.setMilliseconds(0);
-    return date.toISOString();
-  }
+	// 一个时间生成函数。生成当地时间上午9点的ISO时间
+	function getISODate() {
+		const date = new Date();
+		date.setHours(9);
+		date.setMinutes(0);
+		date.setSeconds(0);
+		date.setMilliseconds(0);
+		return date.toISOString();
+	}
 
-  const time = getISODate();
+	const time = getISODate();
 	return new Response(
 		`
       <?xml version="1.0" encoding="UTF-8" ?>
