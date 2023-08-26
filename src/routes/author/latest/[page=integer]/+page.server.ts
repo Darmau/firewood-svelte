@@ -1,6 +1,5 @@
 import type { PageServerLoad } from './$types';
 import { API_URL } from '$env/static/private';
-import type { Website } from '$lib/types/website.type.svelte';
 import { redirect } from '@sveltejs/kit';
 
 // 获取博客
@@ -16,16 +15,6 @@ export const load = (async ({ params: { page }, setHeaders }) => {
 		throw redirect(308, `/author/latest/1`);
 	}
 
-	const mergedWebsite = await Promise.all(
-		websites.map(async (website: Website) => {
-			const articleJson = await fetch(`${API_URL}/article?website=${website.url}&page=1&limit=3`);
-			const latest = await articleJson.json();
-			return {
-				...website,
-				latest
-			};
-		})
-	);
 	const count = await fetch(`${API_URL}/website/count`, {
 		method: 'Get',
 		headers: {
@@ -33,7 +22,7 @@ export const load = (async ({ params: { page }, setHeaders }) => {
 		}
 	});
 	return {
-		websites: mergedWebsite,
+		websites: websites,
 		count: count.json(),
 		page: Number(page)
 	};
