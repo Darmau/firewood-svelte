@@ -34,9 +34,11 @@
 			>按更新时间</a
 		>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 gap-8">
 		{#each data.websites as website}
-			<BlogCard {website} />
+			{#if website.article_count > 0}
+				<BlogCard {website} />
+			{/if}
 		{/each}
 	</div>
 	<Pagination
