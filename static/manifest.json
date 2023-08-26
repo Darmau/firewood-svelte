@@ -1,44 +1,44 @@
 {
-  "short_name": "积薪",
-  "name": "积薪：依然相信文字的力量",
-  "icons": [
-    {
-      "src": "/favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "64x64"
-    },
-    {
-      "src": "/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "id": "/?source=pwa",
-  "start_url": "/",
-  "background_color": "#fafafa",
-  "display": "standalone",
-  "scope": "/",
-  "theme_color": "#0d9488",
-  "shortcuts": [
-    {
-      "name": "推荐文章",
-      "short_name": "推荐",
-      "description": "站长不定期挑选的一些文章",
-      "url": "/feature/1",
-      "icons": [{ "src": "/feature.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "最新文章",
-      "short_name": "最新",
-      "description": "最新发布的文章",
-      "url": "/latest/1",
-      "icons": [{ "src": "/latest.png", "sizes": "192x192" }]
-    }
-  ],
-  "description": "中文独立博客分发站"
+	"short_name": "积薪",
+	"name": "积薪：依然相信文字的力量",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"type": "image/svg+xml",
+			"sizes": "64x64"
+		},
+		{
+			"src": "/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"id": "/?source=pwa",
+	"start_url": "/",
+	"background_color": "#fafafa",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#0d9488",
+	"shortcuts": [
+		{
+			"name": "推荐文章",
+			"short_name": "推荐",
+			"description": "站长不定期挑选的一些文章",
+			"url": "/feature/1",
+			"icons": [{ "src": "/feature.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "最新文章",
+			"short_name": "最新",
+			"description": "最新发布的文章",
+			"url": "/latest/1",
+			"icons": [{ "src": "/latest.png", "sizes": "192x192" }]
+		}
+	],
+	"description": "中文独立博客分发站"
 }
