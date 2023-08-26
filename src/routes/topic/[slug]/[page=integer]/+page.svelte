@@ -31,11 +31,7 @@
 	</div>
 	<div class="flex flex-col gap-12 md:gap-16">
 		{#each data.articles as article}
-			{#if article.isFeatured}
-				<CoverArticle {article} />
-			{:else}
-				<NormalArticle {article} />
-			{/if}
+			<NormalArticle {article} />
 		{/each}
 		{#if data.articles.length === 0}
 			<div class="text-center py-16">
