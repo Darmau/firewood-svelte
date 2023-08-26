@@ -1,5 +1,6 @@
 import type { PageServerLoad } from "./$types";
 import { API_URL } from "$env/static/private";
+import {redirect} from "@sveltejs/kit";
 
 function sortCategoryByValue(obj: object) {
 	if(!obj) return [];
@@ -21,6 +22,12 @@ export const load = (async ({ params: { blog, page }, setHeaders }) => {
 														.then(res => res.json());
   const articles = await fetch(`${API_URL}/article?website=${blogInfo.url}&page=${page}&limit=15`).then(res => res.json());
 
+	// 如果没有文章数据，重定向至第一页
+	if (articles.length === undefined || articles.length === 0) {
+		throw redirect(308, `/blog/${blog}/1`)
+	}
+
+
 	const articleCountLastYear = await fetch(`${API_URL}/website/last-year?id=${blogInfo._id}`).then(res => res.json());
 
 	const categories = sortCategoryByValue(blogInfo.categories);
@@ -34,6 +41,6 @@ export const load = (async ({ params: { blog, page }, setHeaders }) => {
 		categories: categories,
 		articleCount: articleCount,
 		url: blog,
-		page: page
+		page: Number(page)
 	};
 }) satisfies PageServerLoad;

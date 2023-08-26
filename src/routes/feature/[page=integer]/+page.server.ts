@@ -1,7 +1,6 @@
-import type {
-  PageServerLoad
-} from "../../../../.svelte-kit/types/src/routes/$types";
+import type { PageServerLoad } from './$types';
 import { API_URL } from '$env/static/private';
+import {redirect} from "@sveltejs/kit";
 
 // export const prerender = true;
 
@@ -13,6 +12,12 @@ export const load = (async ({ params: { page }, setHeaders }) => {
   const featuredArticles = await fetch(`${API_URL}/article/featured?page=${page}&limit=15`)
   const hottestArticles = await fetch(`${API_URL}/article/hottest?limit=10`)
   const featuredArticleData = await featuredArticles.json();
+
+  // 如果没有文章数据，重定向至第一页
+  if (featuredArticleData.length === undefined || featuredArticleData.length === 0) {
+    throw redirect(308, `/feature/1`)
+  }
+
   const hottestArticleData = await hottestArticles.json();
   const count = await fetch(`${API_URL}/article/count`,
     {
