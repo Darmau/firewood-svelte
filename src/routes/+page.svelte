@@ -59,7 +59,7 @@
 					class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100">最近发布</h2>
 				<div class="flex flex-col py-8 gap-12">
 				{#each data.random as article}
-					<NormalArticle article={article} />
+					<NormalArticle article={article} location="homepage"/>
 				{/each}
 				</div>
 			</section>

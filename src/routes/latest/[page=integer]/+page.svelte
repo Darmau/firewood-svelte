@@ -31,7 +31,7 @@
     </div>
     <div class = "flex flex-col py-8 gap-8 md:gap-12">
       {#each data.articles as article}
-        <NormalArticle {article} topic = {true}/>
+        <NormalArticle {article} topic = {true} location="latest"/>
       {/each}
     </div>
     <Pagination

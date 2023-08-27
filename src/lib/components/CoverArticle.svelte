@@ -5,6 +5,7 @@
 	import getDomain from "$lib/functions/getDomain";
 	import {convertDate} from "$lib/functions/convertDate";
 	export let article: Article;
+	export let location;
 </script>
 
 <article class="w-full col-span-1 md:col-span-2 py-8 lg:py-12">
@@ -14,7 +15,8 @@
 		target="_blank"
 		on:click={() => addPageView(article._id)}
 		data-umami-event="article"
-		data-umami-event-source = "feature"
+		data-umami-event-type = "feature"
+		data-umami-event-page = {location}
 	>
 		{#if article.cover}
 			<div class="col-span-2 aspect-[4/3] rounded overflow-hidden">

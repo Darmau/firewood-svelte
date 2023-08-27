@@ -3,6 +3,7 @@
   import {convertDate} from "$lib/functions/convertDate";
 
   export let website;
+  export let type;
 </script>
 
 <div
@@ -12,7 +13,8 @@
   <a href = {`/blog/${getDomain(website.url)}/1`}
      class = "flex gap-2 items-center"
      data-umami-event = "blog"
-     data-umami-event-source = "author"
+     data-umami-event-page = "author"
+     data-umami-event-type = {type}
   >
     {#if website.cover}
       <img src = {website.cover} alt = {website.name}
