@@ -33,7 +33,8 @@
         href = "/rss.xml"
         target = "_blank"
         data-umami-event = "rss"
-        data-umami-event-source = "feature"
+        data-umami-event-page = "feature"
+        data-umami-event-type = "firewood"
         class =
           "text-teal-600 hover:text-teal-400 dark:text-teal-400 dark:hover:text-teal-600 cursor-pointer"
       >
@@ -48,7 +49,7 @@
     </div>
     <div class = "flex flex-col gap-8 md:gap-12">
       {#each data.featuredArticles as article}
-        <CoverArticle {article}/>
+        <CoverArticle {article} location="feature"/>
       {/each}
     </div>
     <Pagination

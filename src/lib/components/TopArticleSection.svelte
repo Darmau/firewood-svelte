@@ -12,9 +12,9 @@
 	<div class="flex flex-col gap-8">
 		{#each articles as article, index}
 			{#if index === 0}
-				<CoverArticle {article} />
+				<CoverArticle {article} location="homepage" />
 			{:else}
-				<NormalArticle {article} />
+				<NormalArticle {article} location="homepage" isFeatured="true"/>
 			{/if}
 		{/each}
 	</div>

@@ -13,7 +13,7 @@
     target = "_blank"
     on:click = {() => addPageView(article._id)}
     data-umami-event = "article"
-    data-umami-event-source = "personal"
+    data-umami-event-page = "profile"
     title = {article.abstract || article.description}
     class = "flex flex-col-reverse gap-4 sm:flex-row sm:gap-8 group"
   >

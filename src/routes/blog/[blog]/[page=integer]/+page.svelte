@@ -121,7 +121,7 @@
           href = {data.blog.url}
           target = "_blank"
           data-umami-event = "blog"
-          data-umami-event-source = "profile"
+          data-umami-event-page = "profile"
         >访问博客
           <span class = "ml-2">
             <svg xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 20 20"
@@ -139,7 +139,8 @@
           href = {data.blog.rss}
           target = "_blank"
           data-umami-event = "rss"
-          data-umami-event-source = "profile"
+          data-umami-event-page = "profile"
+          data-umami-event-type = "blogger"
           class = "text-teal-600 hover:text-teal-400 dark:text-teal-400 dark:hover:text-teal-600"
         >
           <svg xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 20 20"
