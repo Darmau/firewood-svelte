@@ -143,13 +143,22 @@
 						<p class="flex gap-1 items-center leading-7 text-zinc-600 dark:text-zinc-400">
 							<svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-teal-600 dark:text-teal-400">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M9 7.5l3 4.5m0 0l3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-							</svg>							
-							维持本站运行有成本，你的赞助会用来支付服务器和数据库开销</p>
-						<img
-							class="w-64 h-64 rounded-lg object-cover object-center shadow-2xl"
-							src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/447aa0e7-c8de-49d0-2f54-2f94e8f90a00/width=640"
-							alt="Bookshelves"
-						/>
+							</svg>
+							维持本站运行有成本，你的赞助会用来支付服务器和数据库开销
+						</p>
+						<div
+							class="grid grid-cols-1 gap-4 justify-items-center mt-4 md:grid-cols-2">
+							<img
+								class="w-1/2 md:w-full lg:w-9/12 h-auto rounded-lg object-cover object-center shadow-xl"
+								src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/447aa0e7-c8de-49d0-2f54-2f94e8f90a00/width=640"
+								alt="Bookshelves"
+							/>
+							<img
+								class="w-1/2 md:w-full lg:w-9/12 h-auto rounded-lg object-cover object-center shadow-xl"
+								src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/e6dbdd31-4ebf-4527-99b9-f779e533c300/width=640"
+								alt="Bookshelves"
+							/>
+						</div>
 				</div>
 			</div>
 		</div>
