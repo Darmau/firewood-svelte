@@ -9,6 +9,7 @@
 	let page: number = 1;
 	async function getBlogs(newPage: number) {
 		page = newPage;
+		window.scroll(0, 0)
 		blogs = await fetch(`/api/blogs?page=${page}`).then((res) => res.json());
 	}
 	getBlogs(page);
