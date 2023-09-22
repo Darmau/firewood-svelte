@@ -8,6 +8,7 @@
 	let page: number = 1;
 	async function getArticles(newPage: number) {
 		page = newPage;
+		window.scroll(0, 0);
 		articles = (await fetch(`/api/articles?page=${page}`).then((res) => res.json())) || [];
 	}
 	getArticles(page);
