@@ -12,6 +12,9 @@
 			case 1:
 				currentTabPromise = import('$lib/components/AdminArticles.svelte');
 				break;
+			case 2:
+				currentTabPromise = import('$lib/components/AdminError.svelte');
+				break;
 			default:
 				currentTabPromise = import('$lib/components/AdminBlogs.svelte');
 				break;
@@ -24,7 +27,8 @@
 
 	const Tabs = [
 		{ name: '博客管理', index: 0 },
-		{ name: '文章管理', index: 1 }
+		{ name: '文章管理', index: 1 },
+		{ name: '抓取错误', index: 2 }
 	];
 
 	export let data;
