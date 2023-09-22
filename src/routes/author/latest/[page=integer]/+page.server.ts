@@ -7,7 +7,7 @@ export const load = (async ({ params: { page }, setHeaders }) => {
 	setHeaders({
 		'Cache-Control': 'max-age=600'
 	});
-	const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=12`);
+	const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=21`);
 	const websites = await websiteJson.json();
 
 	// 如果没有网站数据，重定向至第一页
