@@ -151,12 +151,12 @@
 							<img
 								class="w-1/2 md:w-full lg:w-9/12 h-auto rounded-lg object-cover object-center shadow-xl"
 								src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/447aa0e7-c8de-49d0-2f54-2f94e8f90a00/width=640"
-								alt="Bookshelves"
+								alt="微信"
 							/>
 							<img
 								class="w-1/2 md:w-full lg:w-9/12 h-auto rounded-lg object-cover object-center shadow-xl"
-								src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/e6dbdd31-4ebf-4527-99b9-f779e533c300/width=640"
-								alt="Bookshelves"
+								src="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/9334480a-c44c-4035-dcdc-56b5a6d37000/width=640"
+								alt="USDT"
 							/>
 						</div>
 				</div>
