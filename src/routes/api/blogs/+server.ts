@@ -5,7 +5,7 @@ import type { RequestHandler } from './$types';
 export const GET = (async ({ url }) => {
 	const page = url.searchParams.get('page');
 
-	const response = await fetch(`${API_URL}/website/all?page=${page}&limit=12`);
+	const response = await fetch(`${API_URL}/website/all?page=${page}&limit=24`);
 
 	return new Response(JSON.stringify(await response.json()));
 }) satisfies RequestHandler;

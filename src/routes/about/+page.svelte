@@ -172,7 +172,7 @@
 				收录标准
 			</h2>
 			<p class="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-				收不收录站长说了算。然而还是能总结出一些收录标准的：
+				不是所有博客都会收录，我会遵循以下偏好：
 			</p>
 		</div>
 		<dl
