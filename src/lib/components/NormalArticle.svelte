@@ -19,8 +19,6 @@
 		class="flex flex-col gap-4"
 		on:click={() => addPageView(article._id)}
 		data-umami-event="article"
-		data-umami-event-type = {isFeatured ? "feature" : "normal"}
-		data-umami-event-page = {location}
 		title={article.abstract || article.description}
 	>
 		{#if article.cover}
@@ -122,7 +120,6 @@
 						<a
 							href={`/blog/${getDomain(article.website)}/1`}
 							data-umami-event = "blog"
-							data-umami-event-source = "normal-article"
 						>{article.author}</a>
 					</h4>
 					<span>·</span>

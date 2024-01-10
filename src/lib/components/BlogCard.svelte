@@ -14,7 +14,6 @@
      class = "flex gap-2 items-center"
      data-umami-event = "blog"
      data-umami-event-page = "author"
-     data-umami-event-type = {type}
   >
     {#if website.cover}
       <img src = {website.cover} alt = {website.name}

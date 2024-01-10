@@ -18,7 +18,6 @@
     <a href = {randomArticle.crawl_error > 3 ? `/article/${randomArticle.url}` : randomArticle.url}
        target = "_blank"
        data-umami-event = "article"
-       data-umami-event-source = "random"
        class = "space-y-2 group"
     >
       <h4 class = "text-base font-bold text-teal-800 dark:text-teal-200">

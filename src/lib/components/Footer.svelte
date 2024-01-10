@@ -55,7 +55,6 @@
 						target="_blank"
 						title="推荐文章订阅"
 						data-umami-event="rss"
-						data-umami-event-source="footer"
 					>
 						<span class="sr-only">推荐文章RSS</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -95,7 +94,6 @@
 						target="_blank"
 						title="本站前端代码"
 						data-umami-event="github"
-						data-umami-event-project="svelte"
 					>
 						<span class="sr-only">本站前端代码</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -108,7 +106,6 @@
 						target="_blank"
 						title="本站后端代码"
 						data-umami-event="github"
-						data-umami-event-project="nest"
 					>
 						<span class="sr-only">本站后端代码</span>
 						<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
