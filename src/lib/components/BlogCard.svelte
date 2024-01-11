@@ -12,6 +12,7 @@
 >
   <a href = {`/blog/${getDomain(website.url)}/1`}
      class = "flex gap-2 items-center"
+     data-sveltekit-preload-data
   >
     {#if website.cover}
       <img src = {website.cover} alt = {website.name}

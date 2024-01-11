@@ -17,6 +17,7 @@
 			<a
 				href={topic.href}
 				class="whitespace-nowrap text-zinc-800 dark:text-zinc-100 transition-all duration-150 hover:text-teal-600 hover:font-medium dark:hover:text-teal-400"
+				data-sveltekit-preload-data="hover"
 				>{topic.label}</a
 			>
 		{/each}

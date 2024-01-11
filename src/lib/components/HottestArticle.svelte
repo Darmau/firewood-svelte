@@ -11,6 +11,8 @@ export let articles;
          class = "space-y-1"
          target = "_blank"
          on:click = {() => addPageView(article._id)}
+         data-sveltekit-preload-code="eager"
+         data-sveltekit-preload-data="hover"
       >
         <h3
           class = "font-serif text-lg font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>

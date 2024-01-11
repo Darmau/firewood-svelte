@@ -20,7 +20,8 @@
 	</div>
 </section>
 <div class="flex justify-end gap-1 py-4 text-slate-700 cursor-pointer group dark:text-slate-300">
-	<a href={link} class="font-medium group-hover:text-teal-600 dark:hover:text-teal-400">More</a>
+	<a href={link}
+		 class="font-medium group-hover:text-teal-600 dark:hover:text-teal-400" data-sveltekit-preload-data>More</a>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"
