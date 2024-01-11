@@ -201,11 +201,11 @@
 				请通过下方邮件提交
 			</h2>
 			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-				不保证提交就能收录
+				被收录的作者会定期邀请进入作者群，未被收录一般不会回复，但也偶尔回复不收录的原因
 			</p>
 			<div class="mt-10 flex items-center justify-center gap-x-6">
 				<a
-					href="mailto:submit@firewood.news?subject=%E6%8E%A8%E8%8D%90%E5%8D%9A%E5%AE%A2%20-%20%E7%A7%AF%E8%96%AA&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0D%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0D%0ARSS%EF%BC%9A"
+					href="mailto:submit@firewood.news?subject=%E7%94%B3%E8%AF%B7%E5%8D%9A%E5%AE%A2%E6%94%B6%E5%BD%95&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0ARSS%EF%BC%9A%0A%E7%AE%80%E4%BB%8B%EF%BC%9A"
 					target="_blank"
 					class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
 					>发邮件</a
