@@ -24,7 +24,7 @@
 	</div>
 	<div class="grid gap-4 grid-cols-2 mt-8">
 		{#each topics as topic}
-			<a href={topic.href}>
+			<a href={topic.href} data-sveltekit-preload-data>
 				<div class="bg-gray-200 relative overflow-hidden rounded-md group">
           <div class="absolute inset-0 flex items-center justify-center z-10">
 						<p class="text-white font-bold font-serif">{topic.label}</p>

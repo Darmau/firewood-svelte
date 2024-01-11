@@ -14,7 +14,6 @@
 		href={article.url}
 		target="_blank"
 		on:click={() => addPageView(article._id)}
-		data-umami-event="article"
 	>
 		{#if article.cover}
 			<div class="col-span-2 aspect-[4/3] rounded overflow-hidden">
@@ -57,7 +56,6 @@
 						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						<a href={`/blog/${getDomain(article.website)}/1`}
-						 data-umami-event="blog"
 						>
 							{article.author}
 						</a>
@@ -107,7 +105,6 @@
 						class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						<a href={`/blog/${getDomain(article.website)}/1`}}
-							 data-umami-event="blog"
 						>{article.author}</a>
 					</h4>
 					<span>·</span>

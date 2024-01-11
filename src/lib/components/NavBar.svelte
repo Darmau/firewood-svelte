@@ -56,7 +56,10 @@
 		</div>
 		<div class="hidden lg:flex lg:gap-x-12">
 			{#each navItems as nav}
-				<a href={nav.href} class="text-sm font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
+				<a
+					href={nav.href}
+					class="text-sm font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
+					data-sveltekit-preload-data
 					>{nav.label}</a
 				>
 			{/each}
@@ -106,6 +109,7 @@
 							<a
 								href={nav.href}
 								class="-mx-3 block rounded-lg px-3 py-2 text-base font-serif font-bold leading-7 hover:bg-zinc-50 text-zinc-800 dark:text-zinc-200 hover:text-teal-500"
+								data-sveltekit-preload-data
 								on:click={toogleMenu}
 								>{nav.label}</a
 							>
