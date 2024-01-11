@@ -34,11 +34,6 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-	<script
-		async
-		src="https://analytics.darmau.dev/script.js"
-		data-website-id="1bf2f73d-a236-43c4-af1c-2e45c30360de"
-	></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link

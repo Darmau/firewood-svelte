@@ -17,7 +17,6 @@
   {#if randomArticle}
     <a href = {randomArticle.crawl_error > 3 ? `/article/${randomArticle.url}` : randomArticle.url}
        target = "_blank"
-       data-umami-event = "article"
        class = "space-y-2 group"
     >
       <h4 class = "text-base font-bold text-teal-800 dark:text-teal-200">
@@ -60,7 +59,6 @@
     </div>
   {/if}
   <button on:click = {fetchRandomArticle} type = "button"
-          data-umami-event = "new random article"
           class = "inline-flex justify-centeru items-center px-4 py-2 font-bold leading-6 text-sm shadow rounded-md text-white bg-teal-500 hover:bg-teal-400 transition ease-in-out duration-150">
     {#if randomArticle}
       换一篇

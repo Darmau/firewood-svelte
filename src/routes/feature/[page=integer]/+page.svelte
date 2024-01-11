@@ -32,9 +32,6 @@
       <a
         href = "/rss.xml"
         target = "_blank"
-        data-umami-event = "rss"
-        data-umami-event-page = "feature"
-        data-umami-event-type = "firewood"
         class =
           "text-teal-600 hover:text-teal-400 dark:text-teal-400 dark:hover:text-teal-600 cursor-pointer"
       >

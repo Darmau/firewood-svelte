@@ -18,7 +18,6 @@
 		target="_blank"
 		class="flex flex-col gap-4"
 		on:click={() => addPageView(article._id)}
-		data-umami-event="article"
 		title={article.abstract || article.description}
 	>
 		{#if article.cover}
@@ -119,7 +118,6 @@
 					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a
 							href={`/blog/${getDomain(article.website)}/1`}
-							data-umami-event = "blog"
 						>{article.author}</a>
 					</h4>
 					<span>·</span>
