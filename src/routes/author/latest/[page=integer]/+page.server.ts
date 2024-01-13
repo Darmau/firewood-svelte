@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { API_URL } from '$env/static/private';
+import {API_URL, CACHE_URL} from '$env/static/private';
 import { redirect } from '@sveltejs/kit';
 
 // 获取博客
@@ -7,8 +7,16 @@ export const load = (async ({ params: { page }, setHeaders }) => {
 	setHeaders({
 		'Cache-Control': 'max-age=600'
 	});
-	const websiteJson = await fetch(`${API_URL}/website/latest?page=${page}&limit=21`);
-	const websites = await websiteJson.json();
+	const websites = await fetch(`${CACHE_URL}`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			key: `/website/latest?page=${page}&limit=21`
+		})
+	})
+	.then((res) => res.json());
 
 	// 如果没有网站数据，重定向至第一页
 	if (websites.length === undefined || websites.length === 0) {

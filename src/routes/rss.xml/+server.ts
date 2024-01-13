@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { API_URL } from '$env/static/private';
+import {API_URL} from '$env/static/private';
 import type { Article } from '$lib/types/article.type.svelte';
 
 export const GET: RequestHandler = async () => {
