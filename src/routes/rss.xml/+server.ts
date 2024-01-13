@@ -1,9 +1,18 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { API_URL } from '$env/static/private';
+import {CACHE_URL} from '$env/static/private';
 import type { Article } from '$lib/types/article.type.svelte';
 
 export const GET: RequestHandler = async () => {
-	const featureArticles = await fetch(`${API_URL}/article/featured?page=1&limit=15`).then((res) =>
+	const featureArticles = await fetch(`${CACHE_URL}`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			key: `/article/featured?page=1&limit=15`
+		})
+	})
+	.then((res) =>
 		res.json()
 	);
 	const xml = gegerateFeed(featureArticles);

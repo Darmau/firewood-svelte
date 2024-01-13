@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { API_URL } from '$env/static/private';
+import { API_URL, CACHE_URL } from '$env/static/private';
 import { redirect } from '@sveltejs/kit';
 
 // 负责获取最新的文章
@@ -7,11 +7,19 @@ export const load = (async ({ params: { page }, setHeaders }) => {
 	setHeaders({
 		'Cache-Control': 'max-age=600'
 	});
-	const articles = await fetch(`${API_URL}/article/latest?page=${page}&limit=15`);
-	const data = await articles.json();
+	const articles = await fetch(`${CACHE_URL}`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			key: `/article/latest?page=${page}&limit=15`
+		})
+	})
+	.then((res) => res.json());
 
 	// 如果没有文章数据，重定向至第一页
-	if (data.length === undefined || data.length === 0) {
+	if (articles.length === undefined || articles.length === 0) {
 		throw redirect(308, `/latest/1`);
 	}
 
@@ -26,7 +34,7 @@ export const load = (async ({ params: { page }, setHeaders }) => {
 	});
 	const articleCount = await count.json();
 	return {
-		articles: data,
+		articles: articles,
 		count: articleCount,
 		page: Number(page)
 	};
