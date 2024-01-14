@@ -9,7 +9,7 @@
 
 <article class="w-full col-span-1 md:col-span-2 py-8 lg:py-12">
 	<a
-		class="flex flex-col gap-6 md:grid md:grid-cols-5 md:gap-8 group"
+		class="flex flex-col-reverse gap-6 md:grid md:grid-cols-5 md:gap-8 group"
 		href={article.url}
 		target="_blank"
 		on:click={() => addPageView(article._id)}
