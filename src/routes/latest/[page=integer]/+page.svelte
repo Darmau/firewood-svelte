@@ -29,7 +29,7 @@
     <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
       <h1 class = "text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">最新文章</h1>
     </div>
-    <div class = "flex flex-col py-8 gap-8 md:gap-12">
+    <div class = "flex flex-col py-8 gap-8 md:gap-16">
       {#each data.articles as article}
         <NormalArticle {article} topic = {true} location="latest"/>
       {/each}
