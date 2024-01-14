@@ -28,9 +28,25 @@ export const load = (async ({fetch, setHeaders}) => {
   const randomArticles = await fetch(`${API_URL}/article/random-many`)
   .then((res) => res.json());
 
+  const articleCount = await fetch(`${API_URL}/article/count`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      type: 'all'
+    })
+  }).then((res) => res.json());
+
+  const websiteCount = await fetch(`${API_URL}/website/count`).then((res) => res.json());
+
   return {
     feature: featureArticles,
     hottest: hottestArticles,
-    random: randomArticles
+    random: randomArticles,
+    count: {
+      article: articleCount,
+      website: websiteCount
+    }
   };
 }) satisfies PageServerLoad;
