@@ -27,9 +27,9 @@
 <div class = "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-7">
   <main class = "px-6 py-8 md:py-12 lg:col-span-5">
     <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
-      <h1 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">最新文章</h1>
+      <h1 class = "text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">最新文章</h1>
     </div>
-    <div class = "flex flex-col py-8 gap-8 md:gap-12">
+    <div class = "flex flex-col py-8 gap-8 md:gap-16">
       {#each data.articles as article}
         <NormalArticle {article} topic = {true} location="latest"/>
       {/each}
@@ -43,7 +43,7 @@
   </main>
   <aside class = "px-6 py-8 lg:py-12 lg:col-span-2">
     <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
-      <h2 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">随机传送</h2>
+      <h2 class = "text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">随机传送</h2>
     </div>
     <div class = "space-y-4 mt-4">
       <RandomArticle />

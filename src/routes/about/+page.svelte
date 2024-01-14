@@ -64,7 +64,7 @@
 				class="mx-auto max-w-2xl flex flex-col lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
 			>
 				<h1
-					class="max-w-2xl text-4xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl lg:col-span-2 xl:col-auto"
+					class="max-w-2xl text-4xl font-medium tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl lg:col-span-2 xl:col-auto"
 				>
 					致敬那些还在写博客的人
 				</h1>
@@ -93,7 +93,7 @@
 	<div class="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
 		<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
 			<h2
-				class="text-3xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl"
+				class="text-3xl font-medium tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl"
 			>
 				关于本站
 			</h2>
@@ -128,13 +128,13 @@
 					<dl class="w-64 space-y-8 xl:w-80">
 						<div class="flex flex-col-reverse md:items-center gap-y-4">
 							<dt class="text-base leading-7 text-zinc-600 dark:text-zinc-400">收录文章</dt>
-							<dd class="text-5xl font-semibold tracking-tight text-teal-600 dark:text-teal-300">
+							<dd class="text-5xl font-medium tracking-tight text-teal-600 dark:text-teal-300">
 								{data.article}篇
 							</dd>
 						</div>
 						<div class="flex flex-col-reverse md:items-center gap-y-4">
 							<dt class="text-base leading-7 text-zinc-600 dark:text-zinc-400">收录博客</dt>
-							<dd class="text-5xl font-semibold tracking-tight text-teal-600 dark:text-teal-300">
+							<dd class="text-5xl font-medium tracking-tight text-teal-600 dark:text-teal-300">
 								{data.website}个
 							</dd>
 						</div>
@@ -167,7 +167,7 @@
 	<div class="mx-auto mt-32 max-w-7xl sm:mt-40">
 		<div class="mx-auto max-w-2xl lg:mx-0">
 			<h2
-				class="text-3xl font-serif font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl"
+				class="text-3xl font-medium tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl"
 			>
 				收录标准
 			</h2>
@@ -180,7 +180,7 @@
 		>
 			{#each rules as rule}
 				<div class="space-y-4">
-					<dt class="font-serif font-bold text-lg text-teal-600 dark:text-teal-300">
+					<dt class="font-medium text-lg text-teal-600 dark:text-teal-300">
 						{rule.title}
 					</dt>
 					<dd class="mt-1 text-zinc-600 dark:text-zinc-400">
@@ -194,10 +194,10 @@
 	<!-- 提交博客 -->
 	<div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="text-3xl font-serif font-bold text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+			<h2 class="text-3xl font-medium text-zinc-800 dark:text-zinc-100 sm:text-4xl">
 				如果你有值得推荐的博客
 			</h2>
-			<h2 class="mt-4 text-3xl font-serif font-bold text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+			<h2 class="mt-4 text-3xl font-medium text-zinc-800 dark:text-zinc-100 sm:text-4xl">
 				请通过下方邮件提交
 			</h2>
 			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
@@ -207,7 +207,7 @@
 				<a
 					href="mailto:submit@firewood.news?subject=%E7%94%B3%E8%AF%B7%E5%8D%9A%E5%AE%A2%E6%94%B6%E5%BD%95&body=%E5%8D%9A%E5%AE%A2%E5%90%8D%EF%BC%9A%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0ARSS%EF%BC%9A%0A%E7%AE%80%E4%BB%8B%EF%BC%9A"
 					target="_blank"
-					class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+					class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
 					>发邮件</a
 				>
 			</div>

@@ -58,7 +58,7 @@
         {/if}
         <h1
           class =
-            "font-bold font-serif text-2xl text-zinc-800 dark:text-zinc-100">{data.blog.name}</h1>
+            "font-medium text-2xl text-zinc-800 dark:text-zinc-100">{data.blog.name}</h1>
         <p
           class = "text-zinc-700 dark:text-zinc-300">{data.blog.description ||
         "貌似这位作者没有留下博客介绍"}
@@ -92,7 +92,7 @@
       <!--      分类信息统计-->
       {#if data.categories}
         <div class = "space-y-4">
-          <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
+          <h3 class = "text-base font-medium text-teal-800 dark:text-teal-300">
             文章分类</h3>
           <ol class = "flex gap-4 flex-wrap items-start">
             {#each data.categories as item}
@@ -107,7 +107,7 @@
       {/if}
       <!--      抓取错误次数-->
       <div class = "flex gap-4">
-        <h3 class = "text-base font-bold text-teal-800 dark:text-teal-300">
+        <h3 class = "text-base font-medium text-teal-800 dark:text-teal-300">
           抓取错误次数
         </h3>
         <p
@@ -117,7 +117,7 @@
       <div class = "flex gap-4 items-center">
         <a
           class =
-            "inline-flex justify-center items-center px-4 py-2 font-bold leading-6 text-sm shadow rounded-md text-white bg-teal-600 hover:bg-teal-500 transition ease-in-out duration-150"
+            "inline-flex justify-center items-center px-4 py-2 font-medium leading-6 text-sm shadow rounded-md text-white bg-teal-600 hover:bg-teal-500 transition ease-in-out duration-150"
           href = {data.blog.url}
           target = "_blank"
         >访问博客

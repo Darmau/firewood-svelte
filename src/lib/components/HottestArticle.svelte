@@ -15,7 +15,7 @@ export let articles;
          data-sveltekit-preload-data="hover"
       >
         <h3
-          class = "font-serif text-lg font-bold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>
+          class = "text-lg font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>
         <p class = "text-sm text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-500">
           {article.author}
           ·

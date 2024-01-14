@@ -44,8 +44,8 @@
 	{#each articles as article}
 		<article class="border-b pb-12 flex gap-4 md:gap-12 justify-between">
 			<div class="space-y-4">
-				<h4 class="text-sm font-bold font-serif text-zinc-800">{article.author}</h4>
-				<h3 class="text-2xl font-bold font-serif text-zinc-800">
+				<h4 class="text-sm font-medium text-zinc-800">{article.author}</h4>
+				<h3 class="text-2xl font-medium text-zinc-800">
 					<a href={article.url} target="_blank">{article.title}</a>
 				</h3>
 				<p class="text-zinc-600 pb-4">{article.description}</p>

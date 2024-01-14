@@ -50,14 +50,15 @@
 		<TopArticleSection title="推荐" articles={data.feature} link="/feature/1" />
 		<div class="lg:hidden">
 			<h2
-				class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100 mb-6">本周热门</h2>
+				class="text-2xl font-medium text-zinc-800 dark:text-zinc-100 mb-6">本周热门</h2>
 			<HottestArticle articles={data.hottest.slice(0, 5)} />
 		</div>
 		{#if loaded}
 			<section class="py-12">
 				<h2
-					class="text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-100">最近发布</h2>
-				<div class="flex flex-col py-8 gap-12">
+					class="text-2xl font-medium text-zinc-800 mb-8 dark:text-zinc-100">
+					最近发布</h2>
+				<div class="flex flex-col py-8 gap-12 lg:gap-16">
 				{#each data.random as article}
 					<NormalArticle article={article} location="homepage"/>
 				{/each}
@@ -67,7 +68,7 @@
 	</main>
 	<aside class = "px-6 py-8 lg:py-12 lg:col-span-2 hidden lg:block">
 		<div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
-			<h2 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">本周热门</h2>
+			<h2 class = "text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">本周热门</h2>
 		</div>
 		<div class = "space-y-4 pt-8">
 				<HottestArticle articles={data.hottest} />

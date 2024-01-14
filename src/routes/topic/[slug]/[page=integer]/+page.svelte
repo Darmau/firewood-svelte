@@ -25,7 +25,7 @@
 
 <main class="mx-auto max-w-4xl px-6 py-8 md:py-12">
 	<div class="border-b border-gray-200 dark:border-gray-700 pb-5 mb-8">
-		<h1 class="text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
+		<h1 class="text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">
 			{topicTranslate(data.slug)}
 		</h1>
 	</div>
@@ -35,8 +35,8 @@
 		{/each}
 		{#if data.articles.length === 0}
 			<div class="text-center py-16">
-				<p class="text-base font-semibold text-teal-600 dark:text-teal-300">尴尬了</p>
-				<h1 class="mt-4 text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+				<p class="text-base font-medium text-teal-600 dark:text-teal-300">尴尬了</p>
+				<h1 class="mt-4 text-3xl font-medium tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
 					该分类下暂时还没有文章
 				</h1>
 				<p class="mt-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
@@ -45,7 +45,7 @@
 				<div class="mt-10 flex items-center justify-center gap-x-6">
 					<a
 						href="/"
-						class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+						class="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
 						>返回首页</a
 					>
 				</div>
