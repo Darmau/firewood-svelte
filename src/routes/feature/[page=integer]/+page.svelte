@@ -28,7 +28,7 @@
   <main class = "px-6 py-8 md:py-12 lg:col-span-5">
     <div class =
            "border-b border-gray-200 dark:border-gray-700 pb-5 flex justify-between items-center">
-      <h1 class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">推荐文章</h1>
+      <h1 class = "text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">推荐文章</h1>
       <a
         href = "/rss.xml"
         target = "_blank"
@@ -59,7 +59,7 @@
   <aside class = "px-6 py-8 lg:py-12 lg:col-span-2">
     <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
       <h2
-        class = "text-base font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
+        class = "text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">
         随机传送</h2>
     </div>
     <div class = "space-y-4 mt-4">

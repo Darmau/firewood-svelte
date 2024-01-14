@@ -19,12 +19,12 @@
        target = "_blank"
        class = "space-y-2 group"
     >
-      <h4 class = "text-base font-bold text-teal-800 dark:text-teal-200">
+      <h4 class = "text-base font-medium text-teal-800 dark:text-teal-200">
         {randomArticle.author}
         ·
         <span class = "font-normal text-sm text-zinc-400 dark:text-zinc-600">{randomArticle.website}</span>
       </h4>
-      <h3 class = "text-xl font-serif font-bold break-words text-zinc-800 group-hover:text-teal-600 dark:text-zinc-100 group-hover:dark:group-hover:text-teal-400">{randomArticle.title}</h3>
+      <h3 class = "text-xl font-medium break-words text-zinc-800 group-hover:text-teal-600 dark:text-zinc-100 group-hover:dark:group-hover:text-teal-400">{randomArticle.title}</h3>
       {#if randomArticle.abstract}
         <p class = "text-base leading-6 text-zinc-600 dark:text-zinc-400 line-clamp-5">{randomArticle.abstract}</p>
       {/if}
@@ -59,7 +59,7 @@
     </div>
   {/if}
   <button on:click = {fetchRandomArticle} type = "button"
-          class = "inline-flex justify-centeru items-center px-4 py-2 font-bold leading-6 text-sm shadow rounded-md text-white bg-teal-500 hover:bg-teal-400 transition ease-in-out duration-150">
+          class = "inline-flex justify-centeru items-center px-4 py-2 font-medium leading-6 text-sm shadow rounded-md text-white bg-teal-500 hover:bg-teal-400 transition ease-in-out duration-150">
     {#if randomArticle}
       换一篇
     {:else}

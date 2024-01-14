@@ -113,7 +113,7 @@
 			<div
 				class="grid grid-cols-1 md:col-span-2 md:flex md:justify-between md:gap-8">
 					<div class="mt-10 md:mt-0">
-						<h3 class="font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
+						<h3 class="font-medium leading-6 text-zinc-800 dark:text-zinc-100">
 							文章分类
 						</h3>
 						<ul class="mt-6 grid grid-cols-3 gap-4 md:gap-6">
@@ -129,7 +129,7 @@
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
+						<h3 class="font-medium leading-6 text-zinc-800 dark:text-zinc-100">
 							全部文章
 						</h3>
 						<ul class="mt-6 grid grid-cols-2 md:gap-6 md:grid-cols-1">
@@ -145,7 +145,7 @@
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="font-serif font-bold leading-6 text-zinc-800 dark:text-zinc-100">
+						<h3 class="font-medium leading-6 text-zinc-800 dark:text-zinc-100">
 							关于
 						</h3>
 						<ul class="mt-6 grid grid-cols-2 md:gap-6 md:grid-cols-1">

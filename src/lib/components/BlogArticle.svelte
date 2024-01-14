@@ -18,7 +18,7 @@
     <div class = "space-y-4 flex-1">
       <h3
         class =
-          "font-serif font-bold text-2xl break-words text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>
+          "font-medium text-2xl break-words text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400">{article.title}</h3>
       {#if article.description}
         <p
           class =

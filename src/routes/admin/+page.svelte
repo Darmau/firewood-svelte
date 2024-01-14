@@ -49,7 +49,7 @@
 					on:click={() => switchTab(tab.index)}
 					class={`${
 						activeIndex === tab.index
-							? 'text-teal-600 dark:bg-zinc-800 dark:text-teal-400 font-bold'
+							? 'text-teal-600 dark:bg-zinc-800 dark:text-teal-400 font-medium'
 							: 'text-zinc-700 dark:text-zinc-300 hover:text-teal-600 hover:bg-zinc-50'
 					} group flex gap-x-3 rounded-md p-2 text-sm leading-6`}
 				>

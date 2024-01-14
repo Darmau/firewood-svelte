@@ -8,8 +8,6 @@
 
 	export let article: Article;
 	export let topic: boolean = false;
-	export let location;
-	export let isFeatured: boolean = false;
 </script>
 
 <article class="col-span-1">
@@ -43,7 +41,7 @@
 						>
 					{/if}
 					<h3
-						class="text-2xl font-serif font-bold break-words text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+						class="text-2xl font-medium break-words text-zinc-900 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						{article.title}
 					</h3>
@@ -65,7 +63,7 @@
 					{/if}
 					<div class="flex gap-2 text-sm">
 						<h4
-							class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
+							class="font-medium text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 						>
 							<a href={`/blog/${getDomain(article.website)}/1`}>{article.author}</a>
 						</h4>
@@ -93,7 +91,7 @@
 					>
 				{/if}
 				<h3
-					class="text-2xl font-serif font-bold break-words text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="text-2xl font-medium break-words text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -115,7 +113,7 @@
 					</div>
 				{/if}
 				<div class="flex gap-2 text-sm">
-					<h4 class="font-serif font-bold text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
+					<h4 class="font-medium text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a
 							href={`/blog/${getDomain(article.website)}/1`}
 						>{article.author}</a>

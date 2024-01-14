@@ -49,10 +49,10 @@
   {#each blogs as blog}
     <div class="border rounded p-6 space-y-4">
       <div class="flex justify-between">
-        <h3 class="font-serif text-lg font-bold text-zinc-800">{blog.name}</h3>
+        <h3 class="text-lg font-medium text-zinc-800">{blog.name}</h3>
         <button
           on:click={() => openEdit(blog)}
-          class="text-teal-700 text-sm hover:font-bold hover;text-teal-900">修改</button
+          class="text-teal-700 text-sm hover:font-medium hover;text-teal-900">修改</button
         >
       </div>
       <p class="text-zinc-600">{blog.description}</p>
