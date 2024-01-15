@@ -13,6 +13,8 @@
     target = "_blank"
     on:click = {() => addPageView(article._id)}
     title = {article.abstract || article.description}
+    data-umami-event = "article"
+    data-umami-event-type = "personal"
     class = "flex flex-col-reverse gap-4 sm:flex-row sm:gap-8 group"
   >
     <div class = "space-y-4 flex-1">

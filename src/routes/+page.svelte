@@ -77,7 +77,7 @@
           最近发布</h2>
         <div class = "flex flex-col py-8 gap-12 lg:gap-16">
           {#each data.random as article}
-            <NormalArticle article = {article} location = "homepage"/>
+            <NormalArticle article = {article} />
           {/each}
         </div>
       </section>

@@ -15,6 +15,8 @@
 		href={article.url}
 		target="_blank"
 		class="flex flex-col gap-4"
+		data-umami-event = "article"
+		data-umami-event-type = "normal"
 		on:click={() => addPageView(article._id)}
 		title={article.abstract || article.description}
 	>
@@ -65,7 +67,9 @@
 						<h4
 							class="font-medium text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 						>
-							<a href={`/blog/${getDomain(article.website)}/1`}>{article.author}</a>
+							<a href={`/blog/${getDomain(article.website)}/1`}
+								 data-umami-event = "blog"
+								 data-umami-event-type = "article">{article.author}</a>
 						</h4>
 						<span>·</span>
 						<time
@@ -116,6 +120,8 @@
 					<h4 class="font-medium text-zinc-800 dark:text-zinc-100 hover:text-teal-600">
 						<a
 							href={`/blog/${getDomain(article.website)}/1`}
+							data-umami-event = "blog"
+							data-umami-event-type = "article"
 						>{article.author}</a>
 					</h4>
 					<span>·</span>

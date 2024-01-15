@@ -12,6 +12,8 @@
 		class="flex flex-col-reverse gap-6 md:grid md:grid-cols-5 md:gap-8 group"
 		href={article.url}
 		target="_blank"
+		data-umami-event = "article"
+		data-umami-event-type = "cover"
 		on:click={() => addPageView(article._id)}
 	>
 		{#if article.cover}
@@ -47,6 +49,8 @@
 						class="font-medium text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						<a href={`/blog/${getDomain(article.website)}/1`}
+							 data-umami-event = "blog"
+							 data-umami-event-type = "article"
 						>
 							{article.author}
 						</a>
@@ -104,6 +108,8 @@
 						class="font-medium text-zinc-800 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400"
 					>
 						<a href={`/blog/${getDomain(article.website)}/1`}}
+							 data-umami-event = "blog"
+							 data-umami-event-type = "article"
 						>{article.author}</a>
 					</h4>
 					<span>·</span>
