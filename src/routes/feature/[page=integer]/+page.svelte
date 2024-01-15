@@ -14,14 +14,16 @@
   <meta property = "og:title" content = "推荐文章 - 积薪">
   <meta property = "og:description" content = "一些我觉得值得推荐的文章">
   <meta property = "og:image"
-        content = "https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200">
+        content =
+          "https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1024">
   <meta name = "twitter:card" content = "summary_large_image">
   <meta property = "twitter:domain" content = "firewood.news">
   <meta property = "twitter:url" content = "https://firewood.news/feature/1">
   <meta name = "twitter:title" content = "推荐文章 - 积薪">
   <meta name = "twitter:description" content = "一些我觉得值得推荐的文章">
   <meta name = "twitter:image"
-        content = "https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200">
+        content =
+          "https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1024">
 </svelte:head>
 
 <div class = "mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-7">

@@ -37,7 +37,7 @@
 	/>
 	<meta
 		property="og:image"
-		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200"
+		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1024"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:domain" content="firewood.news" />
@@ -49,7 +49,7 @@
 	/>
 	<meta
 		name="twitter:image"
-		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200"
+		content="https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1024"
 	/>
 </svelte:head>
 

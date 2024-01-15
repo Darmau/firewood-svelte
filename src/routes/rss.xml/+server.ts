@@ -29,7 +29,7 @@ function gegerateFeed(articles: Article[]) {
           <generator>积薪</generator>
           <image>
             <title>积薪</title>
-            <url>https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1200</url>
+            <url>https://imagedelivery.net/VyUbUTLtvl82TWWarMVgPw/4763b0f6-c1f8-4738-3a8c-e57b7fcd7000/width=1024</url>
             <link>https://firewood.news/</link>
           </image>
           <copyright>归属于原作者</copyright>
