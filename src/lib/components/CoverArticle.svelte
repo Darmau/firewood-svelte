@@ -1,6 +1,6 @@
 <script lang="ts">
 	import addPageView from '$lib/functions/addPageView';
-	import type { Article } from '$lib/types/article.type.js';
+	import type { Article } from '$lib/types/article.type';
 	import Tags from './Tags.svelte';
 	import getDomain from "$lib/functions/getDomain";
 	import {convertDate} from "$lib/functions/convertDate";
@@ -19,7 +19,7 @@
 		{#if article.cover}
 			<div class="col-span-3 space-y-4 md:space-y-6">
 				<h3
-					class="text-2xl md:text-4xl font-medium leading-relaxed text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="title text-2xl md:text-4xl font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -80,7 +80,7 @@
 			<!-- 如果没有封面图 -->
 			<div class="space-y-4 md:space-y-8 col-span-2 md:col-span-5">
 				<h3
-					class="text-3xl md:text-5xl font-medium leading-relaxed text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="big-title text-3xl md:text-5xl font-medium leading-relaxed text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -128,3 +128,12 @@
 		{/if}
 	</a>
 </article>
+
+<style>
+	.title {
+		line-height: 52px;
+	}
+	.big-title {
+		line-height: 64px;
+	}
+</style>

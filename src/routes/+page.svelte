@@ -1,21 +1,12 @@
-<script lang="ts">
-  import {onMount} from 'svelte';
+<script>
   import TopArticleSection from '$lib/components/TopArticleSection.svelte';
   import TopicSection from '$lib/components/TopicSection.svelte';
   import Topics from '$lib/components/Topics.svelte';
-	import type { PageServerData } from './$types';
   import HottestArticle from "$lib/components/HottestArticle.svelte";
   import NormalArticle from "$lib/components/NormalArticle.svelte";
-	import Stats from "$lib/components/Stats.svelte";
+  import Stats from "$lib/components/Stats.svelte";
 
-  export let data: PageServerData;
-  let loaded = false;
-  let isMobile = false;
-
-  onMount(async () => {
-    isMobile = window.innerWidth < 1024;
-    loaded = true;
-  });
+  export let data;
 </script>
 
 <svelte:head>
@@ -71,19 +62,17 @@
       >本周热门</h2>
       <HottestArticle articles = {data.hottest.slice(0, 5)}/>
     </div>
-    {#if loaded}
-      <section class = "py-12">
-        <h2
-          class = "text-2xl font-medium text-zinc-800 mb-8 dark:text-zinc-100"
-        >
-          最近发布</h2>
-        <div class = "flex flex-col py-8 gap-12 lg:gap-16">
-          {#each data.random as article}
-            <NormalArticle article = {article} />
-          {/each}
-        </div>
-      </section>
-    {/if}
+    <section class = "py-12">
+      <h2
+        class = "text-2xl font-medium text-zinc-800 mb-8 dark:text-zinc-100"
+      >
+        最近发布</h2>
+      <div class = "flex flex-col py-8 gap-12 lg:gap-16">
+        {#each data.random as article}
+          <NormalArticle article = {article}/>
+        {/each}
+      </div>
+    </section>
   </main>
   <aside class = "px-6 py-8 lg:py-12 lg:col-span-2 hidden lg:block">
     <div class = "border-b border-gray-200 dark:border-gray-700 pb-5">
@@ -94,7 +83,7 @@
     <div class = "space-y-4 pt-8">
       <HottestArticle articles = {data.hottest}/>
       <TopicSection/>
-			<Stats data= {data.count} />
+      <Stats data = {data.count}/>
     </div>
   </aside>
 </div>
