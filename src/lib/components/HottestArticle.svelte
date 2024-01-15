@@ -11,6 +11,8 @@ export let articles;
          class = "space-y-1"
          target = "_blank"
          on:click = {() => addPageView(article._id)}
+         data-umami-event = "article"
+         data-umami-event-type = "hottest"
          data-sveltekit-preload-code="eager"
          data-sveltekit-preload-data="hover"
       >

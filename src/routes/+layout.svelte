@@ -41,6 +41,7 @@
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
 		crossorigin="anonymous"
 	></script>
+	<script async src="https://umami.darmau.dev/script.js" data-website-id="4b820006-c3d7-42fe-91d1-8fe899140889"></script>
 </svelte:head>
 
 <NavBar show={showNavBar} />

@@ -119,6 +119,8 @@
           class =
             "inline-flex justify-center items-center px-4 py-2 font-medium leading-6 text-sm shadow rounded-md text-white bg-teal-600 hover:bg-teal-500 transition ease-in-out duration-150"
           href = {data.blog.url}
+          data-umami-event = "blog"
+          data-umami-event-type = "personal"
           target = "_blank"
         >访问博客
           <span class = "ml-2">
@@ -136,6 +138,8 @@
         <a
           href = {data.blog.rss}
           target = "_blank"
+          data-umami-event = "rss"
+          data-umami-event-type = "personal"
           class = "text-teal-600 hover:text-teal-400 dark:text-teal-400 dark:hover:text-teal-600"
         >
           <svg xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 20 20"

@@ -59,7 +59,7 @@
 				<a
 					href={nav.href}
 					class="text-sm font-medium leading-6 text-zinc-800 rounded-xl px-3 py-1 dark:text-zinc-200 hover:bg-zinc-50 hover:text-zinc-800"
-					data-sveltekit-preload-data
+					data-sveltekit-preload-data="hover"
 					>{nav.label}</a
 				>
 			{/each}
