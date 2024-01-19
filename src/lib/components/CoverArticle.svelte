@@ -17,9 +17,9 @@
 		on:click={() => addPageView(article._id)}
 	>
 		{#if article.cover}
-			<div class="col-span-3 space-y-4 md:space-y-6">
+			<div class="col-span-3 space-y-2 md:space-y-6">
 				<h3
-					class="title text-2xl md:text-4xl font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="title text-3xl leading-tight md:text-4xl font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -80,7 +80,7 @@
 			<!-- 如果没有封面图 -->
 			<div class="space-y-4 md:space-y-8 col-span-2 md:col-span-5">
 				<h3
-					class="big-title text-3xl md:text-5xl font-medium leading-relaxed text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
+					class="big-title text-3xl md:text-5xl font-medium leading-snug text-zinc-800 dark:text-zinc-100 group-hover:text-teal-600 dark:hover:text-teal-400"
 				>
 					{article.title}
 				</h3>
@@ -134,6 +134,6 @@
 		line-height: 52px;
 	}
 	.big-title {
-		line-height: 64px;
+		line-height: 1.2;
 	}
 </style>

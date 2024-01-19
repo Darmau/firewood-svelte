@@ -29,7 +29,9 @@
 
 <main class="mx-auto max-w-7xl px-6 py-8 md:py-12">
 	<div class="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-5 mb-8">
-		<h1 class="text-base font-medium leading-6 text-zinc-800 dark:text-zinc-100">作者</h1>
+		<h1
+			class="text-base font-medium leading-6 text-teal-800 dark:text-teal-100">作者
+		</h1>
 		<a href="/author/latest/1" class="text-sm text-teal-600 dark:text-teal-400 hover:font-medium"
 			>按更新时间</a
 		>
