@@ -8,8 +8,8 @@
 </script>
 
 <section class="py-8 border-b border-zinc-200 dark:border-zinc-700/40">
-	<h2 class="text-2xl font-medium text-zinc-800 dark:text-zinc-100">{title}</h2>
-	<div class="flex flex-col gap-8 md:gap-12">
+	<h2 class="text-2xl font-medium text-teal-800 dark:text-teal-100">{title}</h2>
+	<div class="flex flex-col gap-12 md:gap-12">
 		{#each articles as article, index}
 			{#if index === 0}
 				<CoverArticle {article}  />

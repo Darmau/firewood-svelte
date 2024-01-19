@@ -4,7 +4,7 @@ import addPageView from "$lib/functions/addPageView";
 export let articles;
 </script>
 
-<div class="space-y-4">
+<div class="space-y-8">
   {#each articles as article}
     <article class = "group">
       <a href = {article.url}

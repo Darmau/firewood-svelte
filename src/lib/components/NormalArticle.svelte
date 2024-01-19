@@ -21,7 +21,7 @@
 		title={article.abstract || article.description}
 	>
 		{#if article.cover}
-			<div class="flex flex-col gap-4 group lg:gap-6 lg:flex-row-reverse">
+			<div class="flex flex-col gap-6 group lg:gap-8 lg:flex-row-reverse">
 				<div
 					class="aspect-video md:aspect=[4/3] rounded overflow-hidden bg-slate-100 lg:aspect-square lg:w-40 lg:h-40 dark:bg-slate-900"
 				>
@@ -34,7 +34,7 @@
 						height="160"
 					/>
 				</div>
-				<div class="space-y-2 flex-1 md:space-y-4">
+				<div class="space-y-4 flex-1 md:space-y-8">
 					{#if topic}
 						<a
 							href={`/topic/${article.topic}/1`}
@@ -86,7 +86,7 @@
 				</div>
 			</div>
 		{:else}
-			<div class="space-y-2 md:space-y-4 group">
+			<div class="space-y-4 group">
 				{#if topic}
 					<a
 						href={`/topic/${article.topic}/1`}
