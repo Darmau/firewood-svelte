@@ -19,10 +19,10 @@ export const load = (async ({params: {page}, setHeaders}) => {
     headers: {
       'Content-Type': 'application/json'
     }
-  });
+  }).then((res) => res.json());
   return {
     websites: websites,
-    count: count.json(),
+    count: count,
     page: Number(page)
   };
 }) satisfies PageServerLoad;
